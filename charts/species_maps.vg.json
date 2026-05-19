@@ -1,0 +1,77 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "title": "Where are each species observed?",
+  
+    "data": {
+      "url": "data/seabirds.csv",
+      "format": {"type": "tsv"}
+    },
+  
+    "facet": {
+      "field": "species",
+      "type": "nominal",
+      "columns": 2
+    },
+  
+    "spec": {
+      "width": 350,
+      "height": 280,
+  
+      "projection": {
+        "type": "mercator",
+        "center": [133, -27],
+        "scale": 350
+      },
+  
+      "layer": [
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/ne_110m_admin_0_countries.topojson",
+            "format": {
+              "type": "topojson",
+              "feature": "ne_110m_admin_0_countries"
+            }
+          },
+  
+          "mark": {
+            "type": "geoshape",
+            "fill": "#d9d9d9",
+            "stroke": "white"
+          }
+        },
+  
+        {
+          "mark": {
+            "type": "circle",
+            "size": 10,
+            "opacity": 0.35
+          },
+  
+          "encoding": {
+            "longitude": {
+              "field": "decimalLongitude",
+              "type": "quantitative"
+            },
+  
+            "latitude": {
+              "field": "decimalLatitude",
+              "type": "quantitative"
+            },
+  
+            "color": {
+              "field": "species",
+              "type": "nominal",
+              "legend": null
+            },
+  
+            "tooltip": [
+              {"field": "species"},
+              {"field": "eventDate"},
+              {"field": "stateProvince"}
+            ]
+          }
+        }
+      ]
+    }
+  }

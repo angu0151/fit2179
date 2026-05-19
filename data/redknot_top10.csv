@@ -1,0 +1,41 @@
+country,country_code,continent,season,season_pop_pct,peak_pop_pct,days_occupied,peak_week
+England,ENG,Europe,breeding,24.701,31.85,28,2023-07-05
+Canada,CAN,North America,breeding,20.813,23.201,28,2023-06-28
+United States,USA,North America,breeding,11.386,15.969,28,2023-06-14
+Australia,AUS,Oceania,breeding,11.002,21.728,28,2023-07-05
+Netherlands,NLD,Europe,breeding,9.711,15.767,28,2023-06-21
+Germany,DEU,Europe,breeding,8.99,18.122,28,2023-06-14
+New Zealand,NZL,Oceania,breeding,6.029,7.861,28,2023-07-05
+Denmark,DNK,Europe,breeding,3.709,14.55,28,2023-06-14
+Ireland,IRL,Europe,breeding,1.054,1.419,28,2023-06-21
+Wales,WLS,Europe,breeding,0.837,1.273,28,2023-06-14
+England,ENG,Europe,nonbreeding,42.746,52.604,63,2023-01-04
+New Zealand,NZL,Oceania,nonbreeding,22.662,27.691,63,2023-02-15
+United States,USA,North America,nonbreeding,6.672,11.262,63,2023-02-01
+Scotland,SCT,Europe,nonbreeding,4.855,6.54,63,2023-01-18
+Australia,AUS,Oceania,nonbreeding,4.68,7.262,63,2023-02-22
+Argentina,ARG,South America,nonbreeding,3.498,4.678,63,2023-02-08
+Chile,CHL,South America,nonbreeding,2.83,4.94,63,2023-02-08
+Wales,WLS,Europe,nonbreeding,2.255,3.352,63,2023-01-04
+France,FRA,Europe,nonbreeding,2.095,3.154,63,2023-02-01
+Ireland,IRL,Europe,nonbreeding,2.045,3.022,63,2023-02-01
+England,ENG,Europe,postbreeding_migration,36.213,71.434,168,2023-09-20
+China,CHN,Asia,postbreeding_migration,13.375,44.713,70,2023-08-09
+Canada,CAN,North America,postbreeding_migration,10.433,20.268,112,2023-07-26
+Australia,AUS,Oceania,postbreeding_migration,6.59,23.302,154,2023-11-08
+New Zealand,NZL,Oceania,postbreeding_migration,5.622,20.132,168,2023-12-20
+Germany,DEU,Europe,postbreeding_migration,4.862,17.944,147,2023-10-18
+Mexico,MEX,North America,postbreeding_migration,4.341,10.601,98,2023-11-29
+United States,USA,North America,postbreeding_migration,3.582,10.81,168,2023-07-12
+Netherlands,NLD,Europe,postbreeding_migration,2.277,10.173,168,2023-10-18
+Scotland,SCT,Europe,postbreeding_migration,2.014,9.654,168,2023-11-29
+China,CHN,Asia,prebreeding_migration,79.317,89.772,70,2023-05-31
+England,ENG,Europe,prebreeding_migration,3.709,45.254,105,2023-03-01
+United States,USA,North America,prebreeding_migration,3.31,24.064,105,2023-06-07
+Australia,AUS,Oceania,prebreeding_migration,2.473,20.22,84,2023-04-05
+Iceland,ISL,Europe,prebreeding_migration,1.814,4.347,56,2023-05-17
+North Korea,PRK,Asia,prebreeding_migration,1.764,3.106,49,2023-05-24
+New Zealand,NZL,Oceania,prebreeding_migration,1.575,29.454,105,2023-03-01
+Argentina,ARG,South America,prebreeding_migration,1.522,14.684,63,2023-03-22
+Germany,DEU,Europe,prebreeding_migration,1.117,14.363,70,2023-06-07
+Denmark,DNK,Europe,prebreeding_migration,0.742,14.241,63,2023-06-07

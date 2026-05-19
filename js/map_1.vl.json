@@ -1,0 +1,143 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Grey Plover GPS tracking map",
+  "width": 420,
+  "height": 280,
+  "projection": {
+    "type": "mercator"
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/ne_110m_admin_0_countries.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_admin_0_countries"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#1a2436",
+        "stroke": "#253145",
+        "strokeWidth": 0.4
+      }
+    },
+    {
+      "data": {
+        "url": "../data/gps_1.csv"
+      },
+      "mark": {
+        "type": "line",
+        "color": "#e8a87c",
+        "opacity": 0.5,
+        "strokeWidth": 1.6
+      },
+      "encoding": {
+        "longitude": {
+          "field": "location-long",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "location-lat",
+          "type": "quantitative"
+        },
+        "order": {
+          "field": "timestamp",
+          "type": "temporal"
+        },
+        "tooltip": [
+          {
+            "value": "Grey Plover",
+            "title": "Species"
+          },
+          {
+            "field": "individual-local-identifier",
+            "type": "nominal",
+            "title": "Individual"
+          },
+          {
+            "field": "timestamp",
+            "type": "temporal",
+            "title": "Time"
+          },
+          {
+            "field": "location-long",
+            "type": "quantitative",
+            "title": "Longitude",
+            "format": ".3f"
+          },
+          {
+            "field": "location-lat",
+            "type": "quantitative",
+            "title": "Latitude",
+            "format": ".3f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "../data/gps_1.csv"
+      },
+      "mark": {
+        "type": "circle",
+        "color": "#e8a87c",
+        "opacity": 0.8,
+        "size": 20
+      },
+      "encoding": {
+        "longitude": {
+          "field": "location-long",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "location-lat",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "value": "Grey Plover",
+            "title": "Species"
+          },
+          {
+            "field": "individual-local-identifier",
+            "type": "nominal",
+            "title": "Individual"
+          },
+          {
+            "field": "timestamp",
+            "type": "temporal",
+            "title": "Time"
+          },
+          {
+            "field": "location-long",
+            "type": "quantitative",
+            "title": "Longitude",
+            "format": ".3f"
+          },
+          {
+            "field": "location-lat",
+            "type": "quantitative",
+            "title": "Latitude",
+            "format": ".3f"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "background": "#161c27",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "gridColor": "#253145",
+      "labelColor": "#64748b",
+      "titleColor": "#64748b"
+    },
+    "legend": {
+      "labelColor": "#64748b",
+      "titleColor": "#64748b"
+    }
+  }
+}

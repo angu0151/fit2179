@@ -1,0 +1,163 @@
+country,country_code,continent,season,season_label,season_pop_pct,peak_pop_pct,days_occupied,peak_week
+Albania,ALB,Europe,postbreeding_migration,Post-breeding Migration,0.006,0.028,49,2023-09-20
+Aland,ALD,Europe,postbreeding_migration,Post-breeding Migration,0.046,0.269,84,2023-07-19
+Aland,ALD,Europe,prebreeding_migration,Pre-breeding Migration,0.021,0.131,21,2023-05-31
+Argentina,ARG,South America,nonbreeding,Non-breeding,3.498,4.678,63,2023-02-08
+Argentina,ARG,South America,postbreeding_migration,Post-breeding Migration,0.953,4.03,35,2023-12-20
+Argentina,ARG,South America,prebreeding_migration,Pre-breeding Migration,1.522,14.684,63,2023-03-22
+Australia,AUS,Oceania,breeding,Breeding,11.002,21.728,28,2023-07-05
+Australia,AUS,Oceania,nonbreeding,Non-breeding,4.68,7.262,63,2023-02-22
+Australia,AUS,Oceania,postbreeding_migration,Post-breeding Migration,6.59,23.302,154,2023-11-08
+Australia,AUS,Oceania,prebreeding_migration,Pre-breeding Migration,2.473,20.22,84,2023-04-05
+Belgium,BEL,Europe,nonbreeding,Non-breeding,0.071,0.112,63,2023-01-18
+Belgium,BEL,Europe,postbreeding_migration,Post-breeding Migration,0.02,0.066,161,2023-11-29
+Belgium,BEL,Europe,prebreeding_migration,Pre-breeding Migration,0.004,0.071,105,2023-03-01
+Bulgaria,BGR,Europe,nonbreeding,Non-breeding,0.01,0.025,42,2023-01-18
+Belarus,BLR,Europe,postbreeding_migration,Post-breeding Migration,0.005,0.007,14,2023-09-06
+Brazil,BRA,South America,postbreeding_migration,Post-breeding Migration,0.337,1.636,49,2023-09-20
+Brazil,BRA,South America,prebreeding_migration,Pre-breeding Migration,0.34,6.822,42,2023-04-05
+Canada,CAN,North America,breeding,Breeding,20.813,23.201,28,2023-06-28
+Canada,CAN,North America,postbreeding_migration,Post-breeding Migration,10.433,20.268,112,2023-07-26
+Canada,CAN,North America,prebreeding_migration,Pre-breeding Migration,0.044,0.357,14,2023-06-07
+Chile,CHL,South America,nonbreeding,Non-breeding,2.83,4.94,63,2023-02-08
+Chile,CHL,South America,postbreeding_migration,Post-breeding Migration,0.737,3.448,35,2023-12-20
+Chile,CHL,South America,prebreeding_migration,Pre-breeding Migration,0.038,0.406,35,2023-03-01
+China,CHN,Asia,postbreeding_migration,Post-breeding Migration,13.375,44.713,70,2023-08-09
+China,CHN,Asia,prebreeding_migration,Pre-breeding Migration,79.317,89.772,70,2023-05-31
+Cuba,CUB,North America,nonbreeding,Non-breeding,0.036,0.224,42,2023-02-22
+Cuba,CUB,North America,prebreeding_migration,Pre-breeding Migration,0.011,0.438,42,2023-03-01
+Germany,DEU,Europe,breeding,Breeding,8.99,18.122,28,2023-06-14
+Germany,DEU,Europe,nonbreeding,Non-breeding,0.27,0.55,63,2023-12-27
+Germany,DEU,Europe,postbreeding_migration,Post-breeding Migration,4.862,17.944,147,2023-10-18
+Germany,DEU,Europe,prebreeding_migration,Pre-breeding Migration,1.117,14.363,70,2023-06-07
+Denmark,DNK,Europe,breeding,Breeding,3.709,14.55,28,2023-06-14
+Denmark,DNK,Europe,nonbreeding,Non-breeding,0.009,0.052,21,2023-01-04
+Denmark,DNK,Europe,postbreeding_migration,Post-breeding Migration,0.825,6.408,147,2023-07-19
+Denmark,DNK,Europe,prebreeding_migration,Pre-breeding Migration,0.742,14.241,63,2023-06-07
+England,ENG,Europe,breeding,Breeding,24.701,31.85,28,2023-07-05
+England,ENG,Europe,nonbreeding,Non-breeding,42.746,52.604,63,2023-01-04
+England,ENG,Europe,postbreeding_migration,Post-breeding Migration,36.213,71.434,168,2023-09-20
+England,ENG,Europe,prebreeding_migration,Pre-breeding Migration,3.709,45.254,105,2023-03-01
+Spain,ESP,Europe,breeding,Breeding,0.094,0.136,28,2023-06-14
+Spain,ESP,Europe,nonbreeding,Non-breeding,0.112,0.17,63,2023-12-27
+Spain,ESP,Europe,postbreeding_migration,Post-breeding Migration,0.071,0.174,168,2023-12-06
+Spain,ESP,Europe,prebreeding_migration,Pre-breeding Migration,0.044,0.211,105,2023-04-05
+Estonia,EST,Europe,postbreeding_migration,Post-breeding Migration,0.171,0.749,77,2023-07-19
+Estonia,EST,Europe,prebreeding_migration,Pre-breeding Migration,0.119,6.592,28,2023-06-07
+Finland,FIN,Europe,postbreeding_migration,Post-breeding Migration,0.343,0.965,84,2023-08-23
+Finland,FIN,Europe,prebreeding_migration,Pre-breeding Migration,0.159,4.992,35,2023-06-07
+France,FRA,Europe,breeding,Breeding,0.019,0.059,0,2023-06-14
+France,FRA,Europe,nonbreeding,Non-breeding,2.095,3.154,63,2023-02-01
+France,FRA,Europe,postbreeding_migration,Post-breeding Migration,0.498,1.931,161,2023-08-16
+France,FRA,Europe,prebreeding_migration,Pre-breeding Migration,0.068,0.818,98,2023-03-01
+Faroe Islands,FRO,Europe,postbreeding_migration,Post-breeding Migration,0.02,0.151,105,2023-08-30
+Georgia,GEO,Asia,postbreeding_migration,Post-breeding Migration,0.002,0.003,7,2023-09-13
+Guernsey,GGY,Europe,nonbreeding,Non-breeding,0.026,0.051,63,2023-01-11
+Guernsey,GGY,Europe,postbreeding_migration,Post-breeding Migration,0.004,0.019,154,2023-12-20
+Gambia,GMB,Africa,postbreeding_migration,Post-breeding Migration,0.082,0.111,7,2023-12-13
+Greece,GRC,Europe,nonbreeding,Non-breeding,0.02,0.066,35,2023-01-18
+Greece,GRC,Europe,postbreeding_migration,Post-breeding Migration,0.037,0.106,56,2023-08-23
+French Guiana,GUF,South America,postbreeding_migration,Post-breeding Migration,0.087,0.195,63,2023-09-13
+Guyana,GUY,South America,postbreeding_migration,Post-breeding Migration,0.066,0.144,63,2023-09-20
+Honduras,HND,North America,nonbreeding,Non-breeding,0.007,0.025,21,2023-02-01
+Indonesia,IDN,Asia,postbreeding_migration,Post-breeding Migration,0.004,0.005,0,2023-11-01
+Indonesia,IDN,Asia,prebreeding_migration,Pre-breeding Migration,0.008,0.02,0,2023-04-12
+Isle of Man,IMN,Europe,nonbreeding,Non-breeding,0.068,0.127,63,2023-02-08
+Isle of Man,IMN,Europe,postbreeding_migration,Post-breeding Migration,0.007,0.04,168,2023-12-20
+Ireland,IRL,Europe,breeding,Breeding,1.054,1.419,28,2023-06-21
+Ireland,IRL,Europe,nonbreeding,Non-breeding,2.045,3.022,63,2023-02-01
+Ireland,IRL,Europe,postbreeding_migration,Post-breeding Migration,0.692,2.128,168,2023-12-20
+Ireland,IRL,Europe,prebreeding_migration,Pre-breeding Migration,0.058,1.184,105,2023-03-01
+Iceland,ISL,Europe,breeding,Breeding,0.324,0.54,28,2023-06-14
+Iceland,ISL,Europe,postbreeding_migration,Post-breeding Migration,0.939,7.718,98,2023-07-19
+Iceland,ISL,Europe,prebreeding_migration,Pre-breeding Migration,1.814,4.347,56,2023-05-17
+Italy,ITA,Europe,postbreeding_migration,Post-breeding Migration,0.015,0.098,35,2023-09-13
+Jersey,JEY,Europe,nonbreeding,Non-breeding,0.01,0.024,56,2023-01-11
+Japan,JPN,Asia,postbreeding_migration,Post-breeding Migration,0.052,0.343,35,2023-08-30
+Cambodia,KHM,Asia,postbreeding_migration,Post-breeding Migration,0.021,0.038,21,2023-09-06
+South Korea,KOR,Asia,postbreeding_migration,Post-breeding Migration,0.668,2.71,63,2023-08-16
+South Korea,KOR,Asia,prebreeding_migration,Pre-breeding Migration,0.345,0.889,49,2023-04-12
+Lithuania,LTU,Europe,postbreeding_migration,Post-breeding Migration,0.014,0.073,84,2023-07-19
+Latvia,LVA,Europe,postbreeding_migration,Post-breeding Migration,0.038,0.13,77,2023-08-23
+Morocco,MAR,Africa,nonbreeding,Non-breeding,0.003,0.009,0,2023-12-27
+Morocco,MAR,Africa,postbreeding_migration,Post-breeding Migration,0.046,0.086,35,2023-09-27
+Morocco,MAR,Africa,prebreeding_migration,Pre-breeding Migration,0.004,0.036,0,2023-04-05
+Mexico,MEX,North America,nonbreeding,Non-breeding,0.83,2.807,35,2023-01-25
+Mexico,MEX,North America,postbreeding_migration,Post-breeding Migration,4.341,10.601,98,2023-11-29
+Mexico,MEX,North America,prebreeding_migration,Pre-breeding Migration,0.398,5.508,35,2023-03-29
+Myanmar,MMR,Asia,postbreeding_migration,Post-breeding Migration,0.002,0.02,0,2023-09-06
+Mauritania,MRT,Africa,nonbreeding,Non-breeding,1.362,1.504,21,2023-01-25
+Malaysia,MYS,Asia,nonbreeding,Non-breeding,0.045,0.061,21,2023-01-11
+Malaysia,MYS,Asia,postbreeding_migration,Post-breeding Migration,0.044,0.066,56,2023-08-30
+Malaysia,MYS,Asia,prebreeding_migration,Pre-breeding Migration,0.019,0.119,42,2023-04-05
+Nicaragua,NIC,North America,nonbreeding,Non-breeding,0.009,0.028,21,2023-02-01
+Northern Ireland,NIR,Europe,breeding,Breeding,0.109,0.185,28,2023-06-21
+Northern Ireland,NIR,Europe,nonbreeding,Non-breeding,1.043,1.285,63,2023-01-04
+Northern Ireland,NIR,Europe,postbreeding_migration,Post-breeding Migration,0.241,0.943,168,2023-12-20
+Northern Ireland,NIR,Europe,prebreeding_migration,Pre-breeding Migration,0.015,0.299,105,2023-03-01
+Netherlands,NLD,Europe,breeding,Breeding,9.711,15.767,28,2023-06-21
+Netherlands,NLD,Europe,nonbreeding,Non-breeding,0.777,1.209,63,2023-02-08
+Netherlands,NLD,Europe,postbreeding_migration,Post-breeding Migration,2.277,10.173,168,2023-10-18
+Netherlands,NLD,Europe,prebreeding_migration,Pre-breeding Migration,0.14,3.813,105,2023-06-07
+Norway,NOR,Europe,breeding,Breeding,0.582,0.673,28,2023-06-14
+Norway,NOR,Europe,postbreeding_migration,Post-breeding Migration,0.711,1.772,98,2023-08-23
+Norway,NOR,Europe,prebreeding_migration,Pre-breeding Migration,0.225,1.298,35,2023-06-07
+New Zealand,NZL,Oceania,breeding,Breeding,6.029,7.861,28,2023-07-05
+New Zealand,NZL,Oceania,nonbreeding,Non-breeding,22.662,27.691,63,2023-02-15
+New Zealand,NZL,Oceania,postbreeding_migration,Post-breeding Migration,5.622,20.132,168,2023-12-20
+New Zealand,NZL,Oceania,prebreeding_migration,Pre-breeding Migration,1.575,29.454,105,2023-03-01
+Panama,PAN,North America,nonbreeding,Non-breeding,0.015,0.025,63,2023-02-08
+Panama,PAN,North America,postbreeding_migration,Post-breeding Migration,0.002,0.014,63,2023-10-25
+Poland,POL,Europe,postbreeding_migration,Post-breeding Migration,0.088,0.548,105,2023-08-30
+Puerto Rico,PRI,North America,nonbreeding,Non-breeding,0.002,0.004,49,2023-12-27
+Puerto Rico,PRI,North America,postbreeding_migration,Post-breeding Migration,0.003,0.007,147,2023-10-25
+North Korea,PRK,Asia,postbreeding_migration,Post-breeding Migration,0.613,1.767,56,2023-08-16
+North Korea,PRK,Asia,prebreeding_migration,Pre-breeding Migration,1.764,3.106,49,2023-05-24
+Portugal,PRT,Europe,breeding,Breeding,0.016,0.035,21,2023-06-14
+Portugal,PRT,Europe,nonbreeding,Non-breeding,0.149,0.211,63,2023-12-27
+Portugal,PRT,Europe,postbreeding_migration,Post-breeding Migration,0.057,0.177,168,2023-12-20
+Portugal,PRT,Europe,prebreeding_migration,Pre-breeding Migration,0.043,0.194,105,2023-04-05
+Romania,ROU,Europe,postbreeding_migration,Post-breeding Migration,0.032,0.044,14,2023-09-13
+Russia,RUS,Asia,breeding,Breeding,0.231,0.263,0,2023-06-14
+Russia,RUS,Asia,postbreeding_migration,Post-breeding Migration,0.062,0.204,0,2023-08-30
+Russia,RUS,Asia,prebreeding_migration,Pre-breeding Migration,0.122,0.666,7,2023-06-07
+Scotland,SCT,Europe,breeding,Breeding,0.09,0.146,28,2023-06-21
+Scotland,SCT,Europe,nonbreeding,Non-breeding,4.855,6.54,63,2023-01-18
+Scotland,SCT,Europe,postbreeding_migration,Post-breeding Migration,2.014,9.654,168,2023-11-29
+Scotland,SCT,Europe,prebreeding_migration,Pre-breeding Migration,0.134,3.183,105,2023-03-01
+Senegal,SEN,Africa,nonbreeding,Non-breeding,0.281,0.439,21,2023-02-01
+Senegal,SEN,Africa,postbreeding_migration,Post-breeding Migration,0.222,0.297,7,2023-12-13
+Saint Pierre and Miquelon,SPM,North America,postbreeding_migration,Post-breeding Migration,0.019,0.071,98,2023-09-06
+Suriname,SUR,South America,postbreeding_migration,Post-breeding Migration,0.077,0.191,63,2023-09-13
+Sweden,SWE,Europe,breeding,Breeding,0.002,0.007,0,2023-07-05
+Sweden,SWE,Europe,postbreeding_migration,Post-breeding Migration,0.572,3.9,112,2023-07-19
+Sweden,SWE,Europe,prebreeding_migration,Pre-breeding Migration,0.016,0.321,35,2023-06-07
+Thailand,THA,Asia,nonbreeding,Non-breeding,0.297,0.527,63,2023-02-15
+Thailand,THA,Asia,postbreeding_migration,Post-breeding Migration,0.222,0.813,112,2023-09-06
+Thailand,THA,Asia,prebreeding_migration,Pre-breeding Migration,0.13,1.178,63,2023-04-05
+Trinidad and Tobago,TTO,North America,nonbreeding,Non-breeding,0.006,0.018,42,2023-02-22
+Trinidad and Tobago,TTO,North America,postbreeding_migration,Post-breeding Migration,0.018,0.08,119,2023-09-20
+Trinidad and Tobago,TTO,North America,prebreeding_migration,Pre-breeding Migration,0.002,0.01,42,2023-03-01
+Turkey,TUR,Asia,nonbreeding,Non-breeding,0.055,0.129,42,2023-01-18
+Turkey,TUR,Asia,postbreeding_migration,Post-breeding Migration,0.006,0.027,35,2023-09-13
+Taiwan,TWN,Asia,nonbreeding,Non-breeding,0.02,0.042,63,2023-12-27
+Taiwan,TWN,Asia,postbreeding_migration,Post-breeding Migration,0.016,0.042,154,2023-08-30
+Taiwan,TWN,Asia,prebreeding_migration,Pre-breeding Migration,0.033,0.387,105,2023-04-05
+Ukraine,UKR,Europe,postbreeding_migration,Post-breeding Migration,0.014,0.019,14,2023-09-13
+Uruguay,URY,South America,nonbreeding,Non-breeding,0.021,0.039,49,2023-02-22
+Uruguay,URY,South America,postbreeding_migration,Post-breeding Migration,0.027,0.08,112,2023-10-25
+Uruguay,URY,South America,prebreeding_migration,Pre-breeding Migration,0.017,0.191,84,2023-04-05
+United States,USA,North America,breeding,Breeding,11.386,15.969,28,2023-06-14
+United States,USA,North America,nonbreeding,Non-breeding,6.672,11.262,63,2023-02-01
+United States,USA,North America,postbreeding_migration,Post-breeding Migration,3.582,10.81,168,2023-07-12
+United States,USA,North America,prebreeding_migration,Pre-breeding Migration,3.31,24.064,105,2023-06-07
+Venezuela,VEN,South America,nonbreeding,Non-breeding,0.005,0.02,0,2023-02-22
+Venezuela,VEN,South America,postbreeding_migration,Post-breeding Migration,0.051,0.189,70,2023-09-20
+Venezuela,VEN,South America,prebreeding_migration,Pre-breeding Migration,0.011,0.034,21,2023-05-03
+Wales,WLS,Europe,breeding,Breeding,0.837,1.273,28,2023-06-14
+Wales,WLS,Europe,nonbreeding,Non-breeding,2.255,3.352,63,2023-01-04
+Wales,WLS,Europe,postbreeding_migration,Post-breeding Migration,0.749,3.028,168,2023-12-20
+Wales,WLS,Europe,prebreeding_migration,Pre-breeding Migration,0.064,1.294,105,2023-06-07
+South Africa,ZAF,Africa,nonbreeding,Non-breeding,0.056,0.097,7,2023-02-22
+South Africa,ZAF,Africa,postbreeding_migration,Post-breeding Migration,0.003,0.013,7,2023-11-22
+South Africa,ZAF,Africa,prebreeding_migration,Pre-breeding Migration,0.008,0.073,0,2023-03-01
