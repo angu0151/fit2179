@@ -820,27 +820,7 @@ vegaEmbed('#chart_ebird_lat', {
   data: { url: "data/ebird_weekly_lat.csv" },
   width: 820, height: 260,
   layer: [
-    {
-      // shaded band showing weekly variation in abundance centre
-      mark: { type:"area", opacity:0.12, interpolate:"monotone" },
-      encoding: {
-        x: {
-          field:"week_str", type:"temporal", title:null,
-          axis:{ format:"%b", labelColor:"#4a7a9b", gridColor:"#c2dff0",
-                 tickCount:"month", titleColor:"#4a7a9b" }
-        },
-        y: {
-          field:"weighted_lat", type:"quantitative",
-          title:"Abundance-weighted latitude (°N/S)",
-          axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b" }
-        },
-        y2: { value: 0 },
-        color: {
-          field:"species", type:"nominal",
-          scale:{ domain:SP_ORDER, range:SP_COLOURS }, legend:null
-        }
-      }
-    },
+
     {
       // main line
       mark: { type:"line", strokeWidth:2.5, interpolate:"monotone", opacity:0.95 },
