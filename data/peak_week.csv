@@ -1,0 +1,5 @@
+species,week_str,week_label,week_num,abundance_norm,avg_total_dist_km,n_individuals,total_lat_span,week_date,month_name,day_of_year
+Barn Swallow,2023-08-16,16 Aug,33,100.0,10746.0,9,54.0,2023-08-16,Aug,228
+Grey Plover,2023-09-27,27 Sep,39,100.0,14103.0,14,64.5,2023-09-27,Sep,270
+Red Knot,2023-10-11,11 Oct,41,100.0,24372.0,6,107.4,2023-10-11,Oct,284
+Upland Sandpiper,2023-08-16,16 Aug,33,100.0,14589.0,5,82.8,2023-08-16,Aug,228
