@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bird Migration Tracking</title>
+  <title>On the Wing — Bird Migration Tracking</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet"/>
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
@@ -93,10 +93,9 @@
     .sp-tag {
       display: inline-flex; align-items: center; gap: 0.5rem;
       padding: 0.38rem 1rem; border-radius: 999px;
-      font-size: 0.78rem; font-weight: 600;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.2);
-      color: #e8f4ff;
+      font-size: 0.78rem; font-weight: 700;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(255,255,255,0.6);
       font-family: var(--font-body);
     }
     .sp-tag-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
@@ -299,10 +298,10 @@
 <!-- ══ HERO ══════════════════════════════════════════════════ -->
 <header class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-eyebrow">Annie N · DV2</div>
+  <div class="hero-eyebrow">FIT2179 · Data Visualisation · Monash University</div>
   <h1>On the <em>Wing</em><br>Mapping Bird Migration</h1>
   <p class="hero-sub">
-    Every year, billions of birds leave their breeding grounds and travel thousands of kilometres to spend the season elsewhere. Using satellite GPS tracking and birdwatcher observations from eBird, this visualisation maps the routes of four species across the globe, and explains why these migrations are worth paying attention to.
+    Every year, billions of birds vanish from one part of the world and reappear in another — thousands of kilometres away. We have only recently been able to follow them. This visualisation uses GPS satellite tags and global birdwatcher data to map the journeys of four species, and to show what makes these migrations one of the most remarkable feats in the natural world.
   </p>
   <div class="hero-species">
     <span class="sp-tag" style="color:var(--c1)"><span class="sp-tag-dot" style="background:var(--c1)"></span>Grey Plover</span>
@@ -318,42 +317,68 @@
 
   <!-- ══ CHAPTER 1: THE ROUTES ════════════════════════════════ -->
   <section id="overview">
-    <div class="sec-label">Section 1</div>
-    <div class="sec-title">The migration of four species across Earth</div>
+    <div class="sec-label">Section 1 — Where They Go</div>
+    <div class="sec-title">The routes are ancient. The precision is extraordinary.</div>
     <div class="divider"></div>
     <p class="sec-desc">
-        Each trail shown below comes from a real GPS-tagged bird. 
-        These routes aren't random, they've been refined over millions of years, and the precision is remarkable. 
-        A Grey Plover tagged in Germany will return to within a few kilometres of the same West African beach every winter.
+      Each coloured trail on this map is a real path, recorded by a GPS tag attached to a wild bird.
+      These are not estimates or models — they are the actual movements of individual animals, transmitted
+      via satellite. The routes have been refined over millions of years of evolution, and the precision
+      is hard to believe: a Grey Plover tagged in Germany will return to within a few kilometres of the
+      same West African beach, year after year, without a map.
     </p>
     <div class="card">
       <div class="card-body-flush" style="padding:1.2rem;">
         <div id="map_all"></div>
         <div class="legend">
           <div class="leg-item"><div class="leg-line" style="background:var(--c1)"></div><div class="leg-dot" style="background:var(--c1)"></div><span>Grey Plover — breeds in Siberia, winters in West Africa &amp; South Asia</span></div>
-          <div class="leg-item"><div class="leg-line" style="background:var(--c2)"></div><div class="leg-dot" style="background:var(--c2)"></div><span>Barn Swallow — breeds in Europe &amp; Asia, winters in sub-Saharan Africa</span></div>
+          <div class="leg-item"><div class="leg-line" style="background:var(--c2)"></div><div class="leg-dot" style="background:var(--c2)"></div><span>Barn Swallow — GPS tracks show the South American subspecies (<em>H. r. erythrogaster</em>). Global range visible in eBird map below.</span></div>
           <div class="leg-item"><div class="leg-line" style="background:var(--c3)"></div><div class="leg-dot" style="background:var(--c3)"></div><span>Upland Sandpiper — breeds in North American prairies, winters in Argentina</span></div>
           <div class="leg-item"><div class="leg-line" style="background:var(--c4)"></div><div class="leg-dot" style="background:var(--c4)"></div><span>Red Knot — breeds in the High Arctic, winters as far south as Australasia</span></div>
         </div>
       </div>
     </div>
     <p class="chart-insight">
-      <span class="insight-icon">↑</span> The Red Knot's trail spans more latitude than the distance from Melbourne to the North Pole.
-      It is one of the longest migrations of any animal on Earth.
+      <span class="insight-icon">↑</span> The Red Knot (purple) travels further than any of the others — its trail stretches from the High Arctic
+      all the way to the coasts of Australia and New Zealand. That is roughly the same distance as flying
+      from Melbourne to London and back. Every year.
+    </p>
+    <div class="card gap-top">
+      <div class="card-head">Which direction do they fly? — compass bearing when actively migrating (GPS data, speed &gt;15 km/h)</div>
+      <div class="card-body"><div id="chart_compass"></div></div>
+    </div>
+    <p class="chart-insight">
+      <span class="insight-icon">↑</span> Grey Plovers spread their movement across all directions — reflecting a species that
+      travels between many different wintering sites across Europe, Africa and Asia.
+      The Upland Sandpiper shows a strong south and south-west bias, consistent with its direct
+      route from the North American prairies to the Argentine pampas.
+    </p>
+
+    <p class="chart-insight">
+      <span class="insight-icon">*</span> Note on Barn Swallow: the GPS-tagged birds shown here are a South American subspecies.
+      Their range looks different to what most people picture for a Barn Swallow (which is common across
+      Europe and Asia). See Section 2 for the full global picture from citizen science data.
     </p>
   </section>
 
   <!-- ══ CHAPTER 2: THE TIMING ═════════════════════════════════ -->
   <section id="abundance">
-    <div class="sec-label">Section 2</div>
-    <div class="sec-title">Migration over the Year</div>
+    <div class="sec-label">Section 2 — When They Move</div>
+    <div class="sec-title">Migration is a wave. It sweeps across the globe, week by week.</div>
     <div class="divider"></div>
     <p class="sec-desc">
-      Millions of citizen scientists recorded bird sightings via eBird throughout 2023. Each dot below
-      is a 27 km patch of land, coloured by how many birds were seen there that week. 
+      The map below is built from millions of bird sightings submitted by everyday birdwatchers through
+      eBird in 2023. Every dot represents a 27km patch of land where birds were recorded that week —
+      the bigger the dot, the more birds were seen. Use the slider to move through the year and watch
+      entire populations appear and disappear as migration unfolds.
     </p>
     <div class="callout">
- 
+      <strong>Try this:</strong> Start at January and drag slowly to October.
+      Watch the Upland Sandpiper (green) suddenly appear across North America in April — then vanish almost
+      overnight in August as the entire population departs for South America in one of the fastest mass
+      departures of any bird species. Then watch the Red Knot (purple) light up along the coastlines of
+      Europe and Australia in September and October. These are not gradual drifts. They are coordinated
+      mass movements involving millions of individual birds.
     </div>
     <div class="card">
       <div class="card-body">
@@ -371,80 +396,119 @@
         <div id="map_ebird"></div>
       </div>
     </div>
+    <div class="card gap-top">
+      <div class="card-head">When does each species peak? — relative abundance across 52 weeks per species (eBird 2023, global, normalised to each species' peak)</div>
+      <div class="card-body" style="display:flex; justify-content:center;"><div id="chart_lollipop"></div></div>
+    </div>
+
     <p class="chart-insight">
-      <span class="insight-icon">↑</span> Each species has a distinct migration window. Grey Plovers and Red Knots peak in
-      September-October. Barn Swallows and Upland Sandpipers peak in August. None of them overlap perfectly,
-      which means the same coastlines and wetlands serve different species at different times of year.
+      <span class="insight-icon">↑</span> Each species moves at a different time of year. Grey Plovers and Red Knots peak in
+      September–October. Barn Swallows and Upland Sandpipers peak in August. The same beaches and wetlands
+      that host one species in August may host a completely different species just six weeks later.
     </p>
 
     <div class="card gap-top">
-      <div class="card-head">When does each species peak? — relative abundance across 52 weeks (eBird 2023)</div>
-      <div class="card-body" style="display:flex; justify-content:center;"><div id="chart_lollipop"></div></div>
+      <div class="card-head">Migration seasons — relative abundance across 52 weeks per species (eBird 2023, global, normalised to each species' peak)</div>
+      <div class="card-body"><div id="chart_streamgraph"></div></div>
     </div>
     <p class="chart-insight">
-      <span class="insight-icon">↑</span> All four species are most visible in the August–October window -> the post-breeding
-      southward migration. The Barn Swallow has the broadest peak and the Grey Plover has the sharpest.
+      <span class="insight-icon">↑</span> Each flowing band shows when a species is most abundant globally.
+      Taller = more birds present. The Grey Plover (orange) stays relatively high all year — it is present
+      somewhere in the world in large numbers in every season. The Upland Sandpiper (green) surges sharply
+      in April–August then nearly disappears. The Barn Swallow (blue) peaks twice: a northward surge in
+      spring and a southward surge in late summer.
     </p>
   </section>
 
   <!-- ══ CHAPTER 3: THE SCALE ══════════════════════════════════ -->
   <section id="migration">
-    <div class="sec-label">Section 3</div>
-    <div class="sec-title">Comparing the four species/</div>
+    <div class="sec-label">Section 3 — How Far</div>
+    <div class="sec-title">The distances are almost impossible to comprehend.</div>
     <div class="divider"></div>
     <p class="sec-desc">
-      The distances involved in migration are difficult to comprehend. The figures below
-      are derived from GPS tracking data, real recorded movements. They reveal that
-      the Red Knot does not just migrate far but migrate to an extreme that most animals never approach.
+      To put these journeys into perspective: the average Australian drives about 15,000 km per year.
+      The Red Knot flies further than that — through storms, across open oceans, without roads or
+      service stations — purely on stored body fat. The figures below come directly from GPS data:
+      real distances recorded from real birds.
     </p>
 
     <div class="grid-2">
       <div class="card">
-        <div class="card-head">Average distance travelled per individual (km)</div>
+        <div class="card-head">Average distance per individual — each icon = 2,000 km (GPS data)</div>
         <div class="card-body"><div id="chart_dist"></div></div>
       </div>
       <div class="card">
-        <div class="card-head">Longest single day of travel (km)</div>
+        <div class="card-head">Typical travel day vs. longest single day — dot = typical, triangle = max (km)</div>
         <div class="card-body"><div id="chart_speed"></div></div>
       </div>
     </div>
     <p class="chart-insight">
-      <span class="insight-icon">↑</span> The Red Knot averages 24,000 km per individual -> roughly the circumference of
-      the Earth. On its longest recorded day, it flew 6,308 km without stopping. The Upland Sandpiper
-      recorded 6,514 km in a single day: non-stop from the Gulf Coast of the US to the South American pampas.
+      <span class="insight-icon">↑</span> The Red Knot's 12 icons says it all — it travels roughly the circumference of the Earth.
+      The dot-and-triangle chart reveals another layer: not just how far birds go on their biggest days,
+      but how far a <em>typical</em> moving day is. The Red Knot's typical day (2,300 km) is already
+      the Upland Sandpiper's maximum. These birds exist in a completely different league of endurance.
     </p>
 
     <div class="card gap-top">
-      <div class="card-head">North–south position by month — GPS median latitude per species</div>
+      <div class="card-head">Where in the world? — median north–south position of each species by month (GPS data)</div>
       <div class="card-body"><div id="chart_speed_dist"></div></div>
     </div>
+
+    <p class="chart-insight">
+      <span class="insight-icon">↑</span> 0° is the Equator — the middle of the Earth. Positive numbers are the Northern Hemisphere,
+      negative numbers are the Southern Hemisphere. The Arctic Circle sits at 66.5°N and the Antarctic
+      Circle at 66.5°S. The Grey Plover pushes above 70°N in summer — deep inside the Arctic —
+      then drops back below 20°N by winter. That annual swing happens every single year of its life.
+    </p>
 
   </section>
 
   <!-- ══ CHAPTER 4: THE JOURNEY DAY BY DAY ════════════════════ -->
   <section id="movement">
-    <div class="sec-label">Section 4</div>
-    <div class="sec-title">Migration is not constant</div>
+    <div class="sec-label">Section 4 — The Day-to-Day Reality</div>
+    <div class="sec-title">Birds don't fly non-stop. They sprint, rest, and sprint again.</div>
     <div class="divider"></div>
     <p class="sec-desc">
-      GPS tags record position every few hours, which means we can reconstruct each bird's daily
-      routine during migration.
+      Migration is often imagined as one continuous journey — but the reality is far more dramatic.
+      Birds alternate between explosive bursts of long-distance flight and extended rest periods at
+      stopover sites, where they eat intensively to rebuild the fat reserves burned on the previous leg.
+      Some birds lose 40–50% of their body weight during a single flight, then spend days or weeks
+      rebuilding before the next push. The GPS data lets us see this rhythm directly.
     </p>
 
     <div class="card" style="margin-bottom:1.4rem;">
-      <div class="card-head">Max single day vs. typical travel day — the sprint vs. cruise gap (km)</div>
-      <div class="card-body"><div id="chart_bearing"></div></div>
+      <div class="card-head">Travel intensity by month — how active is each species across the year? (GPS data, normalised per species)</div>
+      <div class="card-body"><div id="chart_heatmap"></div></div>
     </div>
+    <p class="chart-insight">
+      <span class="insight-icon">↑</span> Darker cells = more km travelled that month. Each row is normalised to its own
+      maximum so all four species are comparable side by side. The Grey Plover is most active in
+      June–July (Arctic breeding push). The Upland Sandpiper shows two intense pulses: April
+      (northward sprint) and July–August (southward return). The Red Knot is active almost
+      every month — it barely stops.
+    </p>
+
+    <div class="card gap-top">
+      <div class="card-head">Resting vs. flying — what percentage of tracked days was each species actually moving? (GPS data)</div>
+      <div class="card-body"><div id="chart_restfly"></div></div>
+    </div>
+    <p class="chart-insight">
+      <span class="insight-icon">↑</span> The Red Knot is almost never stationary — 98% of its tracked days involved more than 20 km of movement.
+      The Barn Swallow is the opposite: 83% of its days were rest days. This reveals two completely different
+      migration strategies — the Red Knot is a relentless long-haul traveller, while the Barn Swallow
+      moves in short bursts separated by long rest periods.
+    </p>
 
     <div class="card gap-top">
       <div class="card-head">Daily distance over time — each line is one tagged individual</div>
       <div class="card-body"><div id="chart_daily"></div></div>
     </div>
     <p class="chart-insight">
-      <span class="insight-icon">↑</span> The Red Knot's typical moving day is already 2,300 km, but its maximum was
-      6,308 km. That gap between typical and maximum reveals a bird that is capable of extraordinary
-      efforts when conditions demand it -> a tailwind, a closing weather window, or the urgency of
-      reaching a breeding ground before the brief Arctic summer ends.
+      <span class="insight-icon">↑</span> Look at the gap between the two bars for each species. The Red Knot's typical travel day
+      is 2,300 km — already extraordinary. But its maximum recorded day was 6,308 km. That near-tripling
+      of effort happens when conditions are right: a strong tailwind, a gap in the weather, or the urgency
+      of arriving at a breeding ground before the brief Arctic summer window closes.
+      Birds are not passive travellers. They read the weather and make decisions.
     </p>
   </section>
 
@@ -452,8 +516,9 @@
 
 <!-- ══ FOOTER ═════════════════════════════════════════════════ -->
 <footer>
-  33898855 &nbsp;·&nbsp; FIT2179 DV2<br>
- </footer>
+  Visualisation by [Your Name] &nbsp;·&nbsp; FIT2179 Data Visualisation &nbsp;·&nbsp; Monash University &nbsp;·&nbsp; 2026<br>
+  Data: <a href="https://www.movebank.org">Movebank</a> &nbsp;·&nbsp; <a href="https://ebird.org">eBird / Cornell Lab</a> &nbsp;·&nbsp; <a href="https://www.iucnredlist.org">IUCN Red List 2024</a>
+</footer>
 
 <!-- ══════════════════════════════════════════════════════════
      VEGA-LITE SCRIPTS
@@ -488,7 +553,7 @@ const BASE_MAP = {
 function gpsTip(name) {
   return [
     { value:name,                             title:"Species" },
-    { field:"individual-local-identifier",    type:"nominal",     title:"Individual" },
+    { field:"individual-local-identifier",    type:"nominal",     title:"Bird ID (tagged individual)" },
     { field:"timestamp",                      type:"temporal",    title:"Time" },
     { field:"location-long",                  type:"quantitative",title:"Longitude", format:".3f" },
     { field:"location-lat",                   type:"quantitative",title:"Latitude",  format:".3f" }
@@ -516,6 +581,13 @@ function gpsLayers(id) {
 // ── 1. COMBINED WORLD MAP ─────────────────────────────────────
 vegaEmbed('#map_all', {
   $schema:"https://vega.github.io/schema/vega-lite/v5.json",
+  title:{
+    text:"GPS Satellite Tracking Routes — Four Migratory Species",
+    subtitle:"Each coloured trail is a real path recorded by a satellite-tagged bird",
+    fontSize:14, subtitleFontSize:11, anchor:"start",
+    color:"#0f2a3d", subtitleColor:"#4a7a9b", fontWeight:"bold",
+    font:"'Playfair Display', Georgia, serif"
+  },
   width:860, height:440,
   projection:{ type:"equalEarth" },
   layer:[ BASE_MAP, ...([1,2,3,4].flatMap(gpsLayers)) ],
@@ -565,6 +637,13 @@ function getWeekData(weekIdx) {
 function initEbirdChart(initialData) {
   const spec = {
     $schema: "https://vega.github.io/schema/vega-lite/v5.json",
+    title:{
+      text:"Global eBird Sightings — Weekly Relative Abundance (2023)",
+      subtitle:"Dot size = number of birds seen in each 27km grid cell that week. Source: eBird / Cornell Lab of Ornithology",
+      fontSize:14, subtitleFontSize:11, anchor:"start",
+      color:"#0f2a3d", subtitleColor:"#4a7a9b", fontWeight:"bold",
+      font:"'Playfair Display', Georgia, serif"
+    },
     width: 820, height: 420,
     projection: { type: "equalEarth" },
     layer: [
@@ -683,8 +762,7 @@ const barSpec = (field, title, fmt) => ({
         axis:{ labelColor:"#4a7a9b", labelFontSize:11 } },
     x:{ field, type:"quantitative", title,
         axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b" } },
-    color:{ field:"species", type:"nominal",
-      scale:{ domain:SP_ORDER, range:SP_COLOURS }, legend:null },
+    color:{ value:"#1a6fa8" },
     tooltip:[
       { field:"species", type:"nominal",     title:"Species" },
       { field,           type:"quantitative",title, format:fmt }
@@ -694,64 +772,9 @@ const barSpec = (field, title, fmt) => ({
 });
 
 
-// chart_dist — total distance (unchanged, works well)
-vegaEmbed('#chart_dist', barSpec("avg_total_dist_km", "Distance (km)", ",.0f"), { renderer:"svg", actions:false }).catch(console.error);
 
-// chart_speed — REPLACED: max single day distance
-vegaEmbed('#chart_speed', {
-  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
-  data:{ url:SUM },
-  width:360, height:180,
-  mark:{ type:"bar", cornerRadiusEnd:0 },
-  encoding:{
-    y:{ field:"species", type:"nominal", sort:"-x", title:null,
-        axis:{ labelColor:"#4a7a9b", labelFontSize:11 } },
-    x:{ field:"max_daily_dist_km", type:"quantitative", title:"Km in a single day",
-        axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b" } },
-    color:{ field:"species", type:"nominal", scale:{ domain:SP_ORDER, range:SP_COLOURS }, legend:null },
-    tooltip:[
-      { field:"species",           type:"nominal",     title:"Species" },
-      { field:"max_daily_dist_km", type:"quantitative",title:"Max single day (km)", format:",.0f" }
-    ]
-  },
-  config:CFG
-}, { renderer:"svg", actions:false }).catch(console.error);
 
-// chart_pct — REPLACED: individuals + study duration as dot plot
-vegaEmbed('#chart_pct', {
-  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
-  data:{ url:SUM },
-  width:360, height:180,
-  layer:[
-    {
-      mark:{ type:"bar", color:"#c2dff0", cornerRadiusEnd:0 },
-      encoding:{
-        y:{ field:"species", type:"nominal", sort:{ field:"median_study_days", order:"descending" }, title:null,
-            axis:{ labelColor:"#4a7a9b", labelFontSize:11 } },
-        x:{ field:"median_study_days", type:"quantitative", title:"Median study duration (days)",
-            axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b" } }
-      }
-    },
-    {
-      mark:{ type:"text", align:"left", dx:5, fontSize:11, color:"#1a3a5c", fontWeight:600 },
-      encoding:{
-        y:{ field:"species", type:"nominal", sort:{ field:"median_study_days", order:"descending" } },
-        x:{ field:"median_study_days", type:"quantitative" },
-        text:{ field:"n_individuals", type:"quantitative",
-               format:"d" }
-      }
-    }
-  ],
-  encoding:{
-    tooltip:[
-      { field:"species",           type:"nominal",     title:"Species" },
-      { field:"n_individuals",     type:"quantitative",title:"Tagged individuals" },
-      { field:"median_study_days", type:"quantitative",title:"Median study days" },
-      { field:"total_fixes",       type:"quantitative",title:"Total GPS fixes" }
-    ]
-  },
-  config:CFG
-}, { renderer:"svg", actions:false }).catch(console.error);
+
 
 // ── 4. MOVEMENT PATTERN CHARTS (movement_metrics.csv) ─────────
 const MET = "data/movement_metrics.csv";
@@ -777,6 +800,39 @@ vegaEmbed('#chart_speed_dist', {
   data:{ url:"data/monthly_latitude.csv" },
   width:820, height:260,
   layer:[
+    {
+      // Reference lines: equator, Arctic Circle, Tropic of Cancer/Capricorn
+      data:{ values:[
+        { lat:90,  label:"North Pole (90°N)" },
+        { lat:66.5,label:"Arctic Circle (66.5°N)" },
+        { lat:23.5,label:"Tropic of Cancer (23.5°N)" },
+        { lat:0,   label:"Equator (0°)" },
+        { lat:-23.5,label:"Tropic of Capricorn (23.5°S)" },
+        { lat:-66.5,label:"Antarctic Circle (66.5°S)" }
+      ]},
+      mark:{ type:"rule", strokeDash:[4,3], opacity:0.45, strokeWidth:1 },
+      encoding:{
+        y:{ field:"lat", type:"quantitative" },
+        color:{ value:"#4a7a9b" },
+        tooltip:[ { field:"label", type:"nominal", title:"Reference line" } ]
+      }
+    },
+    {
+      // Reference labels
+      data:{ values:[
+        { lat:66.5, label:"Arctic Circle" },
+        { lat:23.5, label:"Tropic of Cancer" },
+        { lat:0,    label:"Equator" },
+        { lat:-23.5,label:"Tropic of Capricorn" }
+      ]},
+      mark:{ type:"text", align:"right", dx:-4, fontSize:9, fontStyle:"italic", opacity:0.7 },
+      encoding:{
+        x:{ value:0 },
+        y:{ field:"lat", type:"quantitative" },
+        text:{ field:"label", type:"nominal" },
+        color:{ value:"#4a7a9b" }
+      }
+    },
     {
       // shaded band — IQR range
       mark:{ type:"area", opacity:0.15, interpolate:"monotone" },
@@ -830,39 +886,6 @@ vegaEmbed('#chart_speed_dist', {
   config:CFG
 }, { renderer:"svg", actions:false }).catch(console.error);
 
-// 4b. Max day vs typical moving day — grouped bar
-vegaEmbed('#chart_bearing', {
-  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
-  data:{ values:[
-    { species:"Grey Plover",      metric:"Typical moving day", km:45.4  },
-    { species:"Grey Plover",      metric:"Single longest day",  km:3422  },
-    { species:"Barn Swallow",     metric:"Typical moving day", km:55.7  },
-    { species:"Barn Swallow",     metric:"Single longest day",  km:1277  },
-    { species:"Upland Sandpiper", metric:"Typical moving day", km:377.9 },
-    { species:"Upland Sandpiper", metric:"Single longest day",  km:6514  },
-    { species:"Red Knot",         metric:"Typical moving day", km:2314.9},
-    { species:"Red Knot",         metric:"Single longest day",  km:6308  }
-  ]},
-  width:380, height:220,
-  mark:{ type:"bar", cornerRadiusEnd:0 },
-  encoding:{
-    y:{ field:"species",  type:"nominal", sort:SP_ORDER, title:null,
-        axis:{ labelColor:"#4a7a9b", labelFontSize:11 } },
-    x:{ field:"km", type:"quantitative", title:"Distance (km)",
-        axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b" } },
-    color:{ field:"metric", type:"nominal",
-      scale:{ domain:["Typical moving day","Single longest day"], range:["#a0c8e0","#1a6fa8"] },
-      title:null,
-      legend:{ orient:"top", labelColor:"#4a7a9b", titleColor:"#4a7a9b", labelFontSize:11 } },
-    yOffset:{ field:"metric", type:"nominal" },
-    tooltip:[
-      { field:"species", type:"nominal",     title:"Species" },
-      { field:"metric",  type:"nominal",     title:"Metric" },
-      { field:"km",      type:"quantitative",title:"Distance (km)", format:",.0f" }
-    ]
-  },
-  config:CFG
-}, { renderer:"svg", actions:false }).catch(console.error);
 
 
 // 4d. Daily distance line
@@ -892,19 +915,273 @@ vegaEmbed('#chart_daily', {
 
 
 // ── SMALL MULTIPLES: seasonal abundance cycle ────────────────
+
+
+
+
+
+// ══════════════════════════════════════════════════════════════
+// ISOTYPE — total distance per species (each icon = 2,000 km)
+// ══════════════════════════════════════════════════════════════
+vegaEmbed('#chart_dist', {
+  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
+  data:{ values:[
+    // Red Knot: 24372 / 2000 = 12.2 → 12 icons
+    ...Array.from({length:12}, (_,i) => ({ species:"Red Knot",         icon:i+1, km_repr:2000 })),
+    // Upland Sandpiper: 14589 / 2000 = 7.3 → 7 icons
+    ...Array.from({length:7},  (_,i) => ({ species:"Upland Sandpiper", icon:i+1, km_repr:2000 })),
+    // Grey Plover: 14103 / 2000 = 7.1 → 7 icons
+    ...Array.from({length:7},  (_,i) => ({ species:"Grey Plover",      icon:i+1, km_repr:2000 })),
+    // Barn Swallow: 10746 / 2000 = 5.4 → 5 icons
+    ...Array.from({length:5},  (_,i) => ({ species:"Barn Swallow",     icon:i+1, km_repr:2000 })),
+  ]},
+  width:400, height:200,
+  mark:{ type:"point", shape:"M0,-1 L0.3,-0.4 L1,-0.4 L0.5,0.1 L0.7,0.8 L0,-0.2 L-0.7,0.8 L-0.5,0.1 L-1,-0.4 L-0.3,-0.4 Z", filled:true, size:220 },
+  encoding:{
+    x:{ field:"icon", type:"ordinal", title:null,
+        axis:{ labels:false, ticks:false, domain:false, grid:false } },
+    y:{ field:"species", type:"nominal", sort:SP_ORDER, title:null,
+        axis:{ labelColor:"#0f2a3d", labelFontSize:12 } },
+    color:{ field:"species", type:"nominal",
+      scale:{ domain:SP_ORDER, range:SP_COLOURS }, legend:null },
+    tooltip:[
+      { field:"species",  type:"nominal",     title:"Species" },
+      { field:"icon",     type:"quantitative",title:"Icons shown" }
+    ]
+  },
+  config:CFG
+}, { renderer:"svg", actions:false }).catch(console.error);
+
+// ══════════════════════════════════════════════════════════════
+// DOT + RANGE — typical day (circle) vs max day (triangle)
+// ══════════════════════════════════════════════════════════════
+vegaEmbed('#chart_speed', {
+  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
+  data:{ values:[
+    { species:"Grey Plover",      metric:"Typical moving day", km:45.4   },
+    { species:"Grey Plover",      metric:"Longest single day",  km:3422   },
+    { species:"Barn Swallow",     metric:"Typical moving day", km:55.7   },
+    { species:"Barn Swallow",     metric:"Longest single day",  km:1277   },
+    { species:"Upland Sandpiper", metric:"Typical moving day", km:377.9  },
+    { species:"Upland Sandpiper", metric:"Longest single day",  km:6514   },
+    { species:"Red Knot",         metric:"Typical moving day", km:2314.9 },
+    { species:"Red Knot",         metric:"Longest single day",  km:6308   }
+  ]},
+  width:400, height:200,
+  layer:[
+    {
+      // connecting line between typical and max per species
+      transform:[
+        { pivot:"metric", value:"km", groupby:["species"] }
+      ],
+      mark:{ type:"rule", strokeWidth:2, opacity:0.4 },
+      encoding:{
+        y:{ field:"species", type:"nominal", sort:SP_ORDER, title:null,
+            axis:{ labelColor:"#0f2a3d", labelFontSize:12 } },
+        x:{ field:"Typical moving day", type:"quantitative" },
+        x2:{ field:"Longest single day" },
+        color:{ field:"species", type:"nominal",
+          scale:{ domain:SP_ORDER, range:SP_COLOURS }, legend:null }
+      }
+    },
+    {
+      // dot = typical day
+      transform:[{ filter:"datum.metric === 'Typical moving day'" }],
+      mark:{ type:"point", filled:true, size:120, shape:"circle" },
+      encoding:{
+        y:{ field:"species", type:"nominal", sort:SP_ORDER },
+        x:{ field:"km", type:"quantitative", title:"Distance (km)",
+            axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b" } },
+        color:{ field:"species", type:"nominal",
+          scale:{ domain:SP_ORDER, range:SP_COLOURS }, legend:null },
+        tooltip:[
+          { field:"species", type:"nominal",     title:"Species" },
+          { field:"metric",  type:"nominal",     title:"Metric" },
+          { field:"km",      type:"quantitative",title:"Distance (km)", format:",.0f" }
+        ]
+      }
+    },
+    {
+      // triangle = max day
+      transform:[{ filter:"datum.metric === 'Longest single day'" }],
+      mark:{ type:"point", filled:true, size:160, shape:"triangle-right" },
+      encoding:{
+        y:{ field:"species", type:"nominal", sort:SP_ORDER },
+        x:{ field:"km", type:"quantitative" },
+        color:{ field:"species", type:"nominal",
+          scale:{ domain:SP_ORDER, range:SP_COLOURS }, legend:null },
+        tooltip:[
+          { field:"species", type:"nominal",     title:"Species" },
+          { field:"metric",  type:"nominal",     title:"Metric" },
+          { field:"km",      type:"quantitative",title:"Distance (km)", format:",.0f" }
+        ]
+      }
+    },
+    {
+      // manual legend — circle label
+      data:{ values:[{ x:4000, y:"Barn Swallow", label:"● Typical day" }] },
+      mark:{ type:"text", fontSize:10, align:"left", color:"#4a7a9b" },
+      encoding:{
+        x:{ field:"x", type:"quantitative" },
+        y:{ field:"y", type:"nominal", sort:SP_ORDER },
+        text:{ field:"label", type:"nominal" }
+      }
+    },
+    {
+      // manual legend — triangle label
+      data:{ values:[{ x:4000, y:"Grey Plover", label:"▶ Longest day" }] },
+      mark:{ type:"text", fontSize:10, align:"left", color:"#4a7a9b" },
+      encoding:{
+        x:{ field:"x", type:"quantitative" },
+        y:{ field:"y", type:"nominal", sort:SP_ORDER },
+        text:{ field:"label", type:"nominal" }
+      }
+    }
+  ],
+  resolve:{ scale:{ color:"shared" } },
+  config:CFG
+}, { renderer:"svg", actions:false }).catch(console.error);
+
+// ══════════════════════════════════════════════════════════════
+// HEATMAP — travel intensity by species x month
+// ══════════════════════════════════════════════════════════════
+vegaEmbed('#chart_heatmap', {
+  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
+  data:{ url:"data/heatmap_activity.csv" },
+  width:760, height:160,
+  mark:{ type:"rect" },
+  encoding:{
+    y:{ field:"species", type:"nominal", sort:SP_ORDER, title:null,
+        axis:{ labelColor:"#0f2a3d", labelFontSize:12 } },
+    x:{ field:"month", type:"ordinal",
+        sort:[1,2,3,4,5,6,7,8,9,10,11,12], title:null,
+        axis:{
+          labelExpr:"['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][datum.value-1]",
+          labelColor:"#4a7a9b", labelFontSize:11, domainColor:"#c2dff0"
+        }
+    },
+    color:{
+      field:"normalised", type:"quantitative",
+      title:"Activity (% of peak)",
+      scale:{ scheme:"blues", domain:[0,100] },
+      legend:{ orient:"right", labelColor:"#4a7a9b", titleColor:"#4a7a9b",
+               labelFontSize:10, gradientLength:120 }
+    },
+    tooltip:[
+      { field:"species",         type:"nominal",     title:"Species" },
+      { field:"month_name",      type:"nominal",     title:"Month" },
+      { field:"median_daily_km", type:"quantitative",title:"Median daily dist (km)", format:".0f" },
+      { field:"normalised",      type:"quantitative",title:"Activity (% of peak)", format:".0f" }
+    ]
+  },
+  config:CFG
+}, { renderer:"svg", actions:false }).catch(console.error);
+
+// ══════════════════════════════════════════════════════════════
+// VIZ 11 — Compass direction (Grey Plover + Barn Swallow)
+// ══════════════════════════════════════════════════════════════
+vegaEmbed('#chart_compass', {
+  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
+  data:{ url:"data/compass_direction.csv" },
+  transform:[{ filter:"datum.species === 'Grey Plover' || datum.species === 'Barn Swallow'" }],
+  width:760, height:180,
+  mark:{ type:"bar", cornerRadiusEnd:0 },
+  encoding:{
+    column:{ field:"species", type:"nominal",
+      header:{ labelColor:"#0f2a3d", labelFontSize:12,
+               labelFont:"'Playfair Display',Georgia,serif",
+               labelFontWeight:"bold", title:null } },
+    x:{ field:"compass", type:"ordinal",
+        sort:["N","NE","E","SE","S","SW","W","NW"],
+        title:"Direction of flight",
+        axis:{ labelColor:"#4a7a9b", titleColor:"#4a7a9b", gridColor:"#c2dff0" } },
+    y:{ field:"pct", type:"quantitative", title:"% of active GPS fixes",
+        axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b" } },
+    color:{ value:"#1a6fa8" },
+    tooltip:[
+      { field:"species", type:"nominal",     title:"Species" },
+      { field:"compass", type:"nominal",     title:"Direction" },
+      { field:"pct",     type:"quantitative",title:"% of fixes", format:".1f" }
+    ]
+  },
+  config:{ ...CFG, facet:{ spacing:30 } }
+}, { renderer:"svg", actions:false }).catch(console.error);
+
+// ══════════════════════════════════════════════════════════════
+// VIZ 9 — Resting vs Flying stacked bar
+// ══════════════════════════════════════════════════════════════
+vegaEmbed('#chart_restfly', {
+  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
+  data:{ url:"data/rest_vs_fly.csv" },
+  width:760, height:180,
+  mark:{ type:"bar" },
+  encoding:{
+    y:{ field:"species", type:"nominal", sort:SP_ORDER, title:null,
+        axis:{ labelColor:"#4a7a9b", labelFontSize:12 } },
+    x:{ field:"pct", type:"quantitative", title:"% of tracked days",
+        axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b" },
+        scale:{ domain:[0,100] } },
+    color:{ field:"state", type:"nominal",
+      scale:{ domain:["Flying (>20 km/day)","Resting (<20 km/day)"],
+              range:["#1a6fa8","#c2dff0"] },
+      title:null,
+      legend:{ orient:"top", labelColor:"#4a7a9b", titleColor:"#4a7a9b", labelFontSize:11 } },
+    order:{ field:"state", sort:"descending" },
+    tooltip:[
+      { field:"species", type:"nominal",     title:"Species" },
+      { field:"state",   type:"nominal",     title:"State" },
+      { field:"days",    type:"quantitative",title:"Days" },
+      { field:"pct",     type:"quantitative",title:"% of days", format:".1f" }
+    ]
+  },
+  config:CFG
+}, { renderer:"svg", actions:false }).catch(console.error);
+
+// ══════════════════════════════════════════════════════════════
+// STREAMGRAPH — weekly abundance stacked area
+// ══════════════════════════════════════════════════════════════
+vegaEmbed('#chart_streamgraph', {
+  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
+  data:{ url:"data/streamgraph.csv" },
+  width:820, height:260,
+  mark:{ type:"area", interpolate:"monotone", opacity:0.82 },
+  encoding:{
+    x:{ field:"week_str", type:"temporal", title:null,
+        axis:{ format:"%b", labelColor:"#4a7a9b", gridColor:"#c2dff0",
+               tickCount:"month", titleColor:"#4a7a9b" } },
+    y:{ field:"abundance_pct", type:"quantitative",
+        title:"Relative abundance (% of each species peak)",
+        stack:"zero",
+        axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b" } },
+    color:{ field:"species", type:"nominal",
+      scale:{ domain:SP_ORDER, range:SP_COLOURS }, title:"Species",
+      legend:{ orient:"top", labelColor:"#4a7a9b", titleColor:"#4a7a9b", labelFontSize:11 } },
+    order:{ field:"species", sort:"descending" },
+    tooltip:[
+      { field:"species",       type:"nominal",     title:"Species" },
+      { field:"week_str",      type:"temporal",    title:"Week", format:"%d %b" },
+      { field:"abundance_pct", type:"quantitative",title:"Relative abundance (%)", format:".1f" }
+    ]
+  },
+  config:CFG
+}, { renderer:"svg", actions:false }).catch(console.error);
+
+// ══════════════════════════════════════════════════════════════
+// SMALL MULTIPLES — seasonal abundance per species (chart_lollipop)
+// ══════════════════════════════════════════════════════════════
+
+// ══════════════════════════════════════════════════════════════
+// SMALL MULTIPLES — seasonal abundance per species (chart_lollipop)
+// ══════════════════════════════════════════════════════════════
 vegaEmbed('#chart_lollipop', {
   $schema:"https://vega.github.io/schema/vega-lite/v5.json",
   data:{ url:"data/ebird_radial.csv" },
   facet:{
-    field:"species", type:"nominal",
-    sort: SP_ORDER,
-    header:{
-      labelColor:"#0f2a3d", labelFontSize:13,
+    field:"species", type:"nominal", sort:SP_ORDER,
+    header:{ labelColor:"#0f2a3d", labelFontSize:13,
       labelFont:"'Playfair Display', Georgia, serif",
-      labelFontWeight:"bold",
-      title:null,
-      labelOrient:"top", labelAnchor:"start"
-    }
+      labelFontWeight:"bold", title:null,
+      labelOrient:"top", labelAnchor:"start" }
   },
   columns:2,
   spec:{
@@ -916,14 +1193,11 @@ vegaEmbed('#chart_lollipop', {
           x:{ field:"week_num", type:"quantitative", title:null,
               scale:{ domain:[1,52] },
               axis:{ values:[1,14,27,40,52],
-                     labelExpr:"['Jan','Apr','Jul','Oct','Dec'][indexof([1,14,27,40,52], datum.value)]",
-                     labelColor:"#4a7a9b", gridColor:"#c2dff0", tickColor:"#c2dff0",
-                     domainColor:"#c2dff0" } },
-          y:{ field:"abundance_norm", type:"quantitative",
-              title:"Relative abundance (%)",
+                labelExpr:"['Jan','Apr','Jul','Oct','Dec'][indexof([1,14,27,40,52],datum.value)]",
+                labelColor:"#4a7a9b", gridColor:"#c2dff0", tickColor:"#c2dff0", domainColor:"#c2dff0" } },
+          y:{ field:"abundance_norm", type:"quantitative", title:"Relative abundance (%)",
               scale:{ domain:[0,100] },
-              axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b",
-                     titleColor:"#4a7a9b", tickCount:3 } },
+              axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b", tickCount:3 } },
           color:{ field:"species", type:"nominal",
             scale:{ domain:SP_ORDER, range:SP_COLOURS }, legend:null }
         }
