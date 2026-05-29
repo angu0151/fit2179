@@ -1,1225 +1,1332 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>On the Wing — Bird Migration Tracking</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>On the Wing - Bird Migration</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --c1:#c45e1a; --c2:#1a6fa8; --c3:#2a7a4a; --c4:#7c3aad; --c5:#b34d68; --c6:#b78a2f;
+  --bg:#e8f4fb; --surface:#ffffff; --surface2:#f0f8fc;
+  --border:#c2dff0; --border2:#a8cfe8;
+  --text:#0f2a3d; --text2:#1e4a6a; --muted:#4a7a9b; --accent:#1a6fa8;
+  --fd:'Playfair Display',Georgia,serif;
+  --fb:'Source Sans 3',system-ui,sans-serif;
+}
+body{font-family:var(--fb);background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet"/>
-  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+/* heading title */
+.hero{background:linear-gradient(150deg,#1a5f8a 0%,#1e6fa0 55%,#1a7ab5 100%);
+  padding:5rem 7% 4.5rem;overflow:hidden;border-bottom:4px solid var(--accent);position:relative}
+.hero::after{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 60% at 85% 30%,rgba(255,255,255,0.06) 0%,transparent 65%);
+  pointer-events:none}
+.hero-eyebrow{font-size:0.7rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;
+  color:#a8dff0;margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem}
+.hero-eyebrow::before{content:'';display:inline-block;width:24px;height:1px;background:#a8dff0}
+.hero h1{font-family:var(--fd);font-size:clamp(2.8rem,5.5vw,4.8rem);font-weight:700;
+  line-height:1.05;color:#f0f8ff;max-width:750px;letter-spacing:-0.01em}
+.hero h1 em{font-style:italic;color:#7ec8e8}
+.hero-sub{margin-top:1.3rem;max-width:640px;font-size:1rem;color:#a8cfe8;line-height:1.8}
+.hero-sub-small{
+  margin-top:0.8rem;
+  max-width:620px;
+  font-size:0.92rem;
+  color:#b7d7e8;
+  line-height:1.7;
+}
+.hero-tags{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:2rem}
+.sp-tag{display:inline-flex;align-items:center;gap:0.5rem;padding:0.35rem 1rem;
+  border-radius:999px;font-size:0.78rem;font-weight:700;
+  background:rgba(255,255,255,0.92);font-family:var(--fb)}
+.sp-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 
-  <style>
-    /* ══ RESET & TOKENS ══════════════════════════════════════ */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    :root {
-      /* Species colours — richer/darker so they pop on light bg */
-      --c1: #c45e1a;   /* Grey Plover       — burnt orange  */
-      --c2: #1a6fa8;   /* Barn Swallow      — deep sky blue */
-      --c3: #2a7a4a;   /* Upland Sandpiper  — forest green  */
-      --c4: #7c3aad;   /* Red Knot          — purple        */
+.note{
+  font-size:0.8rem;
+  color:var(--muted);
+}
 
-      /* Light sky-blue palette */
-      --bg:       #e8f4fb;
-      --bg2:      #daeef7;
-      --surface:  #ffffff;
-      --surface2: #f0f8fc;
-      --border:   #c2dff0;
-      --border2:  #a8cfe8;
-      --text:     #0f2a3d;
-      --text2:    #1e4a6a;
-      --muted:    #4a7a9b;
-      --accent:   #1a6fa8;
+/* main block of body */
+main{max-width:1140px;margin:0 auto;padding:4rem 5% 6rem}
+section{margin-bottom:5rem}
 
-      --font-display: 'Playfair Display', Georgia, serif;
-      --font-body:    'Source Sans 3', system-ui, sans-serif;
-    }
+/* headings for sections */
+.sec-label{font-size:0.72rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:0.5rem;display:flex;align-items:center;gap:0.6rem}
+.sec-label::before{content:'';display:inline-block;width:20px;height:1px;background:var(--accent)}
+.sec-title{font-family:var(--fd);font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:700;
+  color:var(--text);line-height:1.15;margin-bottom:0.7rem}
+  .sec-desc{
+  padding-top:0.5rem;
+  font-size:0.96rem;
+  color:var(--muted);
+  max-width:100%;
+  line-height:1.8;
+  margin-bottom:1.8rem;
+}
 
-    body {
-      font-family: var(--font-body);
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      font-size: 16px;
-    }
 
-    /* ══ HERO — big infographic masthead ═════════════════════ */
-    .hero {
-      position: relative;
-      background: linear-gradient(150deg, #1a5f8a 0%, #1e6fa0 55%, #1a7ab5 100%);
-      padding: 5rem 7% 4.5rem;
-      overflow: hidden;
-      border-bottom: 4px solid var(--accent);
-    }
-    /* Decorative flight path lines */
-    .hero::after {
-      content: '';
-      position: absolute; inset: 0;
-      background-image:
-        radial-gradient(ellipse 70% 60% at 85% 30%, rgba(26,111,168,0.18) 0%, transparent 65%),
-        radial-gradient(ellipse 50% 80% at 10% 80%, rgba(196,94,26,0.10) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .hero-bg { display: none; }
-    .hero-eyebrow {
-      font-family: var(--font-body);
-      font-size: 0.7rem; font-weight: 600;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: #7ec8e8; margin-bottom: 1rem;
-      display: flex; align-items: center; gap: 0.6rem;
-    }
-    .hero-eyebrow::before {
-      content: ''; display: inline-block;
-      width: 24px; height: 1px; background: #7ec8e8;
-    }
-    .hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2.8rem, 5.5vw, 4.8rem);
-      font-weight: 700; line-height: 1.05;
-      color: #f0f8ff; max-width: 750px;
-      letter-spacing: -0.01em;
-    }
-    .hero h1 em { font-style: italic; color: #7ec8e8; }
-    .hero-sub {
-      margin-top: 1.3rem; max-width: 580px;
-      font-size: 1.05rem; color: #a8cfe8; line-height: 1.8;
-    }
-    .hero-species {
-      display: flex; flex-wrap: wrap; gap: 0.6rem;
-      margin-top: 2.2rem;
-    }
-    .sp-tag {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      padding: 0.38rem 1rem; border-radius: 999px;
-      font-size: 0.78rem; font-weight: 700;
-      background: rgba(255,255,255,0.92);
-      border: 1px solid rgba(255,255,255,0.6);
-      font-family: var(--font-body);
-    }
-    .sp-tag-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.divider{width:36px;height:3px;background:var(--accent);margin:0.7rem 0 1.4rem;border-radius:2px}
 
-    /* ══ MAIN LAYOUT ═════════════════════════════════════════ */
-    main { max-width: 1140px; margin: 0 auto; padding: 4rem 5% 6rem; }
-    section { margin-bottom: 5rem; }
+/* cards */
+.card{background:var(--surface);border:1px solid rgba(194,223,240,0.6);box-shadow:0 2px 12px rgba(26,111,168,0.06)}
+.card-head{padding:0.9rem 1.3rem 0.7rem;border-bottom:none;
+  font-size:1rem;font-weight:700;letter-spacing:0;text-transform:none;
+  color:var(--text);background:var(--surface);
+  font-family:'Playfair Display',Georgia,serif}
+  .card-body{padding:1.2rem;overflow-x:hidden}
+.card-body-flush{overflow-x:auto}
 
-    /* ══ SECTION HEADERS — big infographic numbers ═══════════ */
-    .sec-label {
-      font-size: 0.66rem; font-weight: 700;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--accent); margin-bottom: 0.5rem;
-      display: flex; align-items: center; gap: 0.6rem;
-    }
-    .sec-label::before {
-      content: ''; display: inline-block;
-      width: 20px; height: 1px; background: var(--accent);
-    }
-    .sec-title {
-      font-family: var(--font-display);
-      font-size: clamp(1.6rem, 2.8vw, 2.2rem);
-      font-weight: 700; color: var(--text);
-      line-height: 1.15; margin-bottom: 0.7rem;
-    }
-    .sec-desc {
-      font-size: 0.96rem; color: var(--muted);
-      max-width: 720px; line-height: 1.8;
-      margin-bottom: 1.8rem;
-    }
-    .divider {
-      width: 36px; height: 3px;
-      background: var(--accent);
-      margin: 0.7rem 0 1.4rem;
-      border-radius: 2px;
-    }
+/* gridlines */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.gap-top{margin-top:1.8rem}
 
-    /* ══ NARRATIVE CALLOUT — infographic pull-quote style ════ */
-    .callout {
-      background: var(--surface2);
-      border-left: 4px solid var(--accent);
-      border-radius: 0;
-      padding: 1.2rem 1.6rem;
-      font-size: 0.96rem; color: var(--text2);
-      line-height: 1.8; margin-bottom: 1.8rem;
-      max-width: 800px;
-    }
-    .callout strong { color: var(--text); }
+/* callouts with line */
+.callout{background:var(--surface2);border-left:4px solid var(--accent);   margin-top: 32px;
+  padding:1.2rem 1.6rem;font-size:0.88rem;color:var(--text2);
+  line-height:1.8;margin-bottom:1.8rem;max-width:100%}
+.callout strong{color:var(--text)}
 
-    /* ══ CARDS ═══════════════════════════════════════════════ */
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 0; overflow: hidden;
-      box-shadow: 0 2px 12px rgba(26,111,168,0.06);
-    }
-    .card-head {
-      padding: 0.85rem 1.3rem;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.72rem; font-weight: 700;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--muted);
-      background: var(--surface2);
-    }
-    .card-body { padding: 1.2rem; overflow-x: auto; }
-    .card-body-flush { overflow-x: auto; }
+/* text insights  */
+.insight{
+  font-size:0.96rem;
+  color:var(--text2);
+  line-height:1.8;
+  margin-top:1rem;
+  margin-bottom:1.6rem;
+  padding-left:1rem;
+  border-left:3px solid rgba(26,111,168,0.35);
+  font-style:normal;
+}
+.insight-icon{font-style:normal;font-weight:700;color:var(--accent);margin-right:0.3rem;font-size:0.8rem}
 
-    /* ══ GRIDS ═══════════════════════════════════════════════ */
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
-    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.4rem; }
-    .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.4rem; }
-    .gap-top { margin-top: 1.4rem; }
+/* legends */
+.legend{display:flex;flex-wrap:wrap;gap:0.5rem 1.8rem;margin-top:1rem;
+  padding-top:0.9rem;border-top:1px solid var(--border)}
+.leg-item{display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;color:var(--muted)}
+.leg-line{width:22px;height:3px;border-radius:2px}
+.leg-dot{width:8px;height:8px;border-radius:50%}
 
-    /* ══ STAT TILES — big infographic numbers ════════════════ */
-    .stat-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; margin-bottom: 2rem; }
-    .stat-tile {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px; padding: 1.4rem 1.2rem;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(26,111,168,0.06);
-      border-top: 3px solid var(--accent);
-    }
-    .stat-val {
-      font-family: var(--font-display);
-      font-size: 2.2rem; color: var(--accent);
-      line-height: 1; font-weight: 700;
-    }
-    .stat-label {
-      font-size: 0.7rem; font-weight: 700;
-      letter-spacing: 0.09em; text-transform: uppercase;
-      color: var(--muted); margin-top: 0.5rem;
-    }
-    .stat-sub { font-size: 0.7rem; color: #8ab4cc; margin-top: 0.2rem; }
+/* eBIRD control buttons */
+.ebird-controls{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;flex-wrap:wrap}
+.ebird-controls label{font-size:0.82rem;color:var(--muted);font-weight:700}
+.week-slider{flex:1;min-width:200px;max-width:400px;appearance:none;height:5px;
+  background:var(--border2);border-radius:3px;outline:none;cursor:pointer}
+.week-slider::-webkit-slider-thumb{appearance:none;width:18px;height:18px;
+  border-radius:50%;background:var(--accent);cursor:pointer;border:2px solid white;
+  box-shadow:0 1px 4px rgba(0,0,0,0.2)}
+.week-display{font-family:var(--fd);font-size:1rem;color:var(--accent);min-width:110px;font-weight:700}
+.sp-toggle-row{display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.sp-toggle{padding:0.25rem 0.85rem;border-radius:999px;font-size:0.74rem;font-weight:500;
+  border:1px solid currentColor;cursor:pointer;background:transparent;
+  transition:all 0.18s;font-family:var(--fb);opacity:0.75}
+.sp-toggle.off{opacity:0.28;filter:saturate(0.3)}
+.sp-toggle:not(.off){background:currentColor;opacity:0.72}
+.sp-toggle:not(.off){color:white;-webkit-text-fill-color:white}
 
-    /* ══ SPECIES CARDS ═══════════════════════════════════════ */
-    .sp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; }
-    .sp-card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 0; overflow: hidden;
-      box-shadow: 0 2px 10px rgba(26,111,168,0.07);
-    }
-    .sp-card-stripe { height: 4px; }
-    .sp-card-head { padding: 1rem 1.2rem; border-bottom: 1px solid var(--border); background: var(--surface2); }
-    .sp-card-sci { font-size: 0.7rem; font-style: italic; color: var(--muted); margin-bottom: 0.2rem; }
-    .sp-card-name { font-family: var(--font-display); font-size: 1.05rem; color: var(--text); font-weight: 700; }
-    .sp-card-meta { font-size: 0.74rem; color: var(--muted); margin-top: 0.3rem; }
-    .sp-card-body { padding: 1rem; overflow-x: auto; }
+/* conservation statistics */
+.big-stat{text-align:center;padding:2rem;background:var(--surface2);border:1px solid var(--border)}
+.big-stat .num{font-family:var(--fd);font-size:3.5rem;font-weight:700;line-height:1}
+.big-stat .label{font-size:0.85rem;color:var(--muted);margin-top:0.5rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em}
+.big-stat .sub{font-size:0.8rem;color:var(--muted);margin-top:0.3rem}
 
-    /* ══ EBIRD CONTROLS ══════════════════════════════════════ */
-    .ebird-controls {
-      display: flex; align-items: center; gap: 1rem;
-      margin-bottom: 1.2rem; flex-wrap: wrap;
-    }
-    .ebird-controls label { font-size: 0.82rem; color: var(--muted); font-weight: 700; }
-    .week-slider {
-      flex: 1; min-width: 200px; max-width: 400px;
-      appearance: none; height: 5px;
-      background: var(--border2); border-radius: 3px; outline: none; cursor: pointer;
-    }
-    .week-slider::-webkit-slider-thumb {
-      appearance: none; width: 18px; height: 18px;
-      border-radius: 50%; background: var(--accent);
-      cursor: pointer; border: 2px solid white;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-    }
-    .week-display {
-      font-family: var(--font-display); font-size: 1rem;
-      color: var(--accent); min-width: 110px; font-weight: 700;
-    }
-    .sp-toggle-row { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
-    .sp-toggle {
-      padding: 0.32rem 1rem; border-radius: 999px;
-      font-size: 0.78rem; font-weight: 600;
-      border: 1.5px solid currentColor; cursor: pointer;
-      background: transparent; transition: opacity 0.2s, background 0.2s;
-      font-family: var(--font-body); color: var(--text2);
-    }
-    .sp-toggle.off { opacity: 0.28; }
+.stat-trio{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-bottom:1.8rem}
 
-    /* ══ CONSERVATION TABLE ══════════════════════════════════ */
-    .iucn-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
-    .iucn-table th {
-      text-align: left; padding: 0.65rem 1rem;
-      font-size: 0.66rem; font-weight: 700;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--muted); border-bottom: 2px solid var(--border);
-      background: var(--surface2);
-    }
-    .iucn-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); vertical-align: middle; color: var(--text2); }
-    .iucn-table tr:last-child td { border-bottom: none; }
-    .iucn-table tr:hover td { background: var(--surface2); }
-    .badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; }
-    .lc { background: #d1fae5; color: #065f46; }
-    .nt { background: #fef3c7; color: #92400e; }
-    .vu { background: #ffedd5; color: #9a3412; }
-    .en { background: #fee2e2; color: #991b1b; }
-    .trend-up   { color: #059669; font-weight: 600; }
-    .trend-down { color: #dc2626; font-weight: 600; }
-    .col-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; vertical-align: middle; margin-right: 7px; }
+/* choropleth maps */
+.choro-controls{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center}
+.choro-select{padding:0.35rem 0.7rem;border:1px solid var(--border);background:var(--surface);
+  color:var(--text2);font-family:var(--fb);font-size:0.82rem;cursor:pointer;
+  border-radius:4px;outline:none;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%235a7a8e'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 0.6rem center;padding-right:1.8rem}
 
-    /* ══ LEGEND ══════════════════════════════════════════════ */
-    .legend { display: flex; flex-wrap: wrap; gap: 0.5rem 1.8rem; margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid var(--border); }
-    .leg-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); }
-    .leg-line { width: 22px; height: 3px; border-radius: 2px; }
-    .leg-dot { width: 8px; height: 8px; border-radius: 50%; }
+/* footer */
+footer{text-align:center;padding:2.5rem 5%;border-top:2px solid var(--border);
+  font-size:0.78rem;color:var(--muted);background:var(--surface)}
+footer a{color:var(--accent);text-decoration:none}
 
-    /* ══ CHART INSIGHT CAPTIONS ═════════════════════════════ */
-    .chart-insight {
-      font-size: 0.88rem; color: var(--text2);
-      max-width: 820px; line-height: 1.7;
-      margin-top: 0.9rem; margin-bottom: 0.4rem;
-      padding-left: 1.2rem;
-      border-left: 2px solid var(--accent);
-      font-style: italic;
-    }
-    .insight-icon {
-      font-style: normal; font-weight: 700;
-      color: var(--accent); margin-right: 0.3rem;
-      font-size: 0.8rem;
-    }
-
-    /* ══ FOOTER ══════════════════════════════════════════════ */
-    footer {
-      text-align: center; padding: 2.5rem 5%;
-      border-top: 2px solid var(--border);
-      font-size: 0.78rem; color: var(--muted);
-      background: var(--surface);
-    }
-    footer a { color: var(--accent); text-decoration: none; }
-
-    /* ══ RESPONSIVE ══════════════════════════════════════════ */
-    @media (max-width: 760px) {
-      .grid-2, .grid-3, .grid-4, .stat-grid, .sp-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+@media(max-width:760px){
+  .grid-2,.stat-trio{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
 
-<!-- ══ HERO ══════════════════════════════════════════════════ -->
+<!-- title heading -->
 <header class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-eyebrow">FIT2179 · Data Visualisation · Monash University</div>
-  <h1>On the <em>Wing</em><br>Mapping Bird Migration</h1>
-  <p class="hero-sub">
-    Every year, billions of birds vanish from one part of the world and reappear in another — thousands of kilometres away. We have only recently been able to follow them. This visualisation uses GPS satellite tags and global birdwatcher data to map the journeys of four species, and to show what makes these migrations one of the most remarkable feats in the natural world.
+  <div class="hero-eyebrow">FIT2179 · DV2 · Annie Nguyen · 33898855</div>
+  <h1>On the <em>Wing</em></h1>
+
+  <p class="hero-sub-small">
+    Every year, migratory birds travel thousands of kilometres between continents, 
+    linking ecosystems across the globe through recurring seasonal journeys.
+
+    This visualisation follows six species across their annual migrations using
+    GPS tracking and global birdwatching data.
   </p>
-  <div class="hero-species">
-    <span class="sp-tag" style="color:var(--c1)"><span class="sp-tag-dot" style="background:var(--c1)"></span>Grey Plover</span>
-    <span class="sp-tag" style="color:var(--c2)"><span class="sp-tag-dot" style="background:var(--c2)"></span>Barn Swallow</span>
-    <span class="sp-tag" style="color:var(--c3)"><span class="sp-tag-dot" style="background:var(--c3)"></span>Upland Sandpiper</span>
-    <span class="sp-tag" style="color:var(--c4)"><span class="sp-tag-dot" style="background:var(--c4)"></span>Red Knot</span>
+  <div class="hero-tags">
+    <span class="sp-tag" style="color:var(--c1)"><span class="sp-dot" style="background:var(--c1)"></span>Grey Plover</span>
+    <span class="sp-tag" style="color:var(--c2)"><span class="sp-dot" style="background:var(--c2)"></span>Barn Swallow</span>
+    <span class="sp-tag" style="color:var(--c3)"><span class="sp-dot" style="background:var(--c3)"></span>Upland Sandpiper</span>
+    <span class="sp-tag" style="color:var(--c4)"><span class="sp-dot" style="background:var(--c4)"></span>Red Knot</span>
+    <span class="sp-tag" style="color:var(--c5)"><span class="sp-dot" style="background:var(--c5)"></span>Bar-tailed Godwit</span>
+    <span class="sp-tag" style="color:var(--c6)"><span class="sp-dot" style="background:var(--c6)"></span>Far Eastern Curlew</span>
   </div>
 </header>
 
-
-<!-- ══ MAIN ══════════════════════════════════════════════════ -->
 <main>
 
-  <!-- ══ CHAPTER 1: THE ROUTES ════════════════════════════════ -->
-  <section id="overview">
-    <div class="sec-label">Section 1 — Where They Go</div>
-    <div class="sec-title">The routes are ancient. The precision is extraordinary.</div>
-    <div class="divider"></div>
-    <p class="sec-desc">
-      Each coloured trail on this map is a real path, recorded by a GPS tag attached to a wild bird.
-      These are not estimates or models — they are the actual movements of individual animals, transmitted
-      via satellite. The routes have been refined over millions of years of evolution, and the precision
-      is hard to believe: a Grey Plover tagged in Germany will return to within a few kilometres of the
-      same West African beach, year after year, without a map.
-    </p>
-    <div class="card">
-      <div class="card-body-flush" style="padding:1.2rem;">
-        <div id="map_all"></div>
-        <div class="legend">
-          <div class="leg-item"><div class="leg-line" style="background:var(--c1)"></div><div class="leg-dot" style="background:var(--c1)"></div><span>Grey Plover — breeds in Siberia, winters in West Africa &amp; South Asia</span></div>
-          <div class="leg-item"><div class="leg-line" style="background:var(--c2)"></div><div class="leg-dot" style="background:var(--c2)"></div><span>Barn Swallow — GPS tracks show the South American subspecies (<em>H. r. erythrogaster</em>). Global range visible in eBird map below.</span></div>
-          <div class="leg-item"><div class="leg-line" style="background:var(--c3)"></div><div class="leg-dot" style="background:var(--c3)"></div><span>Upland Sandpiper — breeds in North American prairies, winters in Argentina</span></div>
-          <div class="leg-item"><div class="leg-line" style="background:var(--c4)"></div><div class="leg-dot" style="background:var(--c4)"></div><span>Red Knot — breeds in the High Arctic, winters as far south as Australasia</span></div>
-        </div>
+<!-- title part 1 -->
+<section id="routes">
+  <div class="sec-label">Part 1 - The Routes</div>
+  <div class="sec-title">Six species. Six journeys. One planet.</div>
+  <div class="divider"></div>
+  <p class="sec-desc">
+    Every year, migratory birds repeat journeys that span oceans, deserts and continents. Despite travelling thousands of kilometres, many return to the same breeding and wintering sites with remarkable precision.
+  
+    The six birds shown below represent very different migration strategies, yet all rely on a network of habitats spread across the globe.
+  
+    One of these birds, a Grey Plover named Yanis, will reappear later in the story.
+  </p>
+
+
+
+
+  <div class="card">
+    <div class="card-body-flush" style="padding:1.2rem">
+      <div id="map_all"></div>
+      <div style="margin-top:0.8rem;padding-top:0.7rem">
+        <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem">Toggle species visibility</div>
+        <div class="sp-toggle-row" style="margin-top:0">
+        <button class="sp-toggle" style="color:var(--c1);border-color:var(--c1)" data-map1="1">Grey Plover</button>
+        <button class="sp-toggle" style="color:var(--c2);border-color:var(--c2)" data-map1="2">Barn Swallow</button>
+        <button class="sp-toggle" style="color:var(--c3);border-color:var(--c3)" data-map1="3">Upland Sandpiper</button>
+        <button class="sp-toggle" style="color:var(--c4);border-color:var(--c4)" data-map1="4">Red Knot</button>
+        <button class="sp-toggle" style="color:var(--c5);border-color:var(--c5)" data-map1="5">Bar-tailed Godwit</button>
+        <button class="sp-toggle" style="color:var(--c6);border-color:var(--c6)" data-map1="6">Far Eastern Curlew</button> </div>
       </div>
     </div>
-    <p class="chart-insight">
-      <span class="insight-icon">↑</span> The Red Knot (purple) travels further than any of the others — its trail stretches from the High Arctic
-      all the way to the coasts of Australia and New Zealand. That is roughly the same distance as flying
-      from Melbourne to London and back. Every year.
-    </p>
-    <div class="card gap-top">
-      <div class="card-head">Which direction do they fly? — compass bearing when actively migrating (GPS data, speed &gt;15 km/h)</div>
-      <div class="card-body"><div id="chart_compass"></div></div>
-    </div>
-    <p class="chart-insight">
-      <span class="insight-icon">↑</span> Grey Plovers spread their movement across all directions — reflecting a species that
-      travels between many different wintering sites across Europe, Africa and Asia.
-      The Upland Sandpiper shows a strong south and south-west bias, consistent with its direct
-      route from the North American prairies to the Argentine pampas.
-    </p>
+  </div>
 
-    <p class="chart-insight">
-      <span class="insight-icon">*</span> Note on Barn Swallow: the GPS-tagged birds shown here are a South American subspecies.
-      Their range looks different to what most people picture for a Barn Swallow (which is common across
-      Europe and Asia). See Section 2 for the full global picture from citizen science data.
-    </p>
-  </section>
+ 
+  <p class="insight"><span class="insight-icon">*</span> 
+    Barn Swallow GPS tracks show the South American breeding subspecies 
+    (<em>H. r. erythrogaster</em>). The global Barn Swallow range, including the 
+    familiar European and Asian populations, is shown in Part 2's eBird map.</p>
 
-  <!-- ══ CHAPTER 2: THE TIMING ═════════════════════════════════ -->
-  <section id="abundance">
-    <div class="sec-label">Section 2 — When They Move</div>
-    <div class="sec-title">Migration is a wave. It sweeps across the globe, week by week.</div>
-    <div class="divider"></div>
-    <p class="sec-desc">
-      The map below is built from millions of bird sightings submitted by everyday birdwatchers through
-      eBird in 2023. Every dot represents a 27km patch of land where birds were recorded that week —
-      the bigger the dot, the more birds were seen. Use the slider to move through the year and watch
-      entire populations appear and disappear as migration unfolds.
+    <p class="sec-desc">  
+      The routes reveal that migration is rarely a direct journey between two locations. 
+      Most species rely on a sequence of stopover sites where they rest and refuel before continuing. A disruption at any point along this 
+      chain can affect birds thousands of kilometres away, highlighting how migration links ecosystems across entire continents
+   
     </p>
-    <div class="callout">
-      <strong>Try this:</strong> Start at January and drag slowly to October.
-      Watch the Upland Sandpiper (green) suddenly appear across North America in April — then vanish almost
-      overnight in August as the entire population departs for South America in one of the fastest mass
-      departures of any bird species. Then watch the Red Knot (purple) light up along the coastlines of
-      Europe and Australia in September and October. These are not gradual drifts. They are coordinated
-      mass movements involving millions of individual birds.
+  
+
+</section>
+
+<!-- title part 2 -->
+<section id="timing">
+  <div class="sec-label">Part 2 - The Timing</div>
+  <div class="sec-title">Migration unfolds across the year. </div>
+  <div class="divider"></div>
+  <p class="sec-desc">Migration is not a single event. Different species move at different times of the year, creating a constantly changing pattern of movement across the globe.
+
+    Use the slider below to follow how bird populations shift from week to week.</p>
+ 
+
+
+    <div class="callout"><div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:0.6rem">Key insight</div>
+    Migration peaks rarely occur at the same time. 
+    While one species may be breeding in the Arctic, another may already be returning to the Southern Hemisphere.
+    
     </div>
-    <div class="card">
-      <div class="card-body">
-        <div class="ebird-controls">
-          <label for="weekSlider">Week:</label>
-          <input type="range" id="weekSlider" class="week-slider" min="0" max="51" value="0"/>
-          <span class="week-display" id="weekDisplay">2023-01-04</span>
-        </div>
+  
+  
+  <div class="card">
+    <div class="card-body">
+      <div id="map_ebird"></div>
+      <div class="ebird-controls" style="margin-top:1rem;margin-bottom:0.5rem">
+        <label for="weekSlider">Week:</label>
+        <input type="range" id="weekSlider" class="week-slider" min="0" max="51" value="0"/>
+        <span class="week-display" id="weekDisplay">2023-01-04</span>
+      </div>
+      <div style="padding-top:0.4rem">
+        <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem">Toggle species visibility</div>
         <div class="sp-toggle-row">
-          <button class="sp-toggle" style="color:var(--c1); border-color:var(--c1);" data-sp="1">Grey Plover</button>
-          <button class="sp-toggle" style="color:var(--c2); border-color:var(--c2);" data-sp="2">Barn Swallow</button>
-          <button class="sp-toggle" style="color:var(--c3); border-color:var(--c3);" data-sp="3">Upland Sandpiper</button>
-          <button class="sp-toggle" style="color:var(--c4); border-color:var(--c4);" data-sp="4">Red Knot</button>
+          <button class="sp-toggle" style="color:var(--c1);border-color:var(--c1)" data-sp="1">Grey Plover</button>
+          <button class="sp-toggle" style="color:var(--c2);border-color:var(--c2)" data-sp="2">Barn Swallow</button>
+          <button class="sp-toggle" style="color:var(--c3);border-color:var(--c3)" data-sp="3">Upland Sandpiper</button>
+          <button class="sp-toggle" style="color:var(--c4);border-color:var(--c4)" data-sp="4">Red Knot</button>
         </div>
-        <div id="map_ebird"></div>
       </div>
     </div>
-    <div class="card gap-top">
-      <div class="card-head">When does each species peak? — relative abundance across 52 weeks per species (eBird 2023, global, normalised to each species' peak)</div>
-      <div class="card-body" style="display:flex; justify-content:center;"><div id="chart_lollipop"></div></div>
-    </div>
+  </div>
+  <p class="note">The eBird weekly data covers four species (Grey Plover, Barn Swallow, Upland Sandpiper, Red Knot). Bar-tailed Godwit and Far Eastern Curlew are shown in 
+    Part 4's regional analysis instead. </p>
 
-    <p class="chart-insight">
-      <span class="insight-icon">↑</span> Each species moves at a different time of year. Grey Plovers and Red Knots peak in
-      September–October. Barn Swallows and Upland Sandpipers peak in August. The same beaches and wetlands
-      that host one species in August may host a completely different species just six weeks later.
-    </p>
 
-    <div class="card gap-top">
-      <div class="card-head">Migration seasons — relative abundance across 52 weeks per species (eBird 2023, global, normalised to each species' peak)</div>
-      <div class="card-body"><div id="chart_streamgraph"></div></div>
-    </div>
-    <p class="chart-insight">
-      <span class="insight-icon">↑</span> Each flowing band shows when a species is most abundant globally.
-      Taller = more birds present. The Grey Plover (orange) stays relatively high all year — it is present
-      somewhere in the world in large numbers in every season. The Upland Sandpiper (green) surges sharply
-      in April–August then nearly disappears. The Barn Swallow (blue) peaks twice: a northward surge in
-      spring and a southward surge in late summer.
-    </p>
-  </section>
-
-  <!-- ══ CHAPTER 3: THE SCALE ══════════════════════════════════ -->
-  <section id="migration">
-    <div class="sec-label">Section 3 — How Far</div>
-    <div class="sec-title">The distances are almost impossible to comprehend.</div>
-    <div class="divider"></div>
     <p class="sec-desc">
-      To put these journeys into perspective: the average Australian drives about 15,000 km per year.
-      The Red Knot flies further than that — through storms, across open oceans, without roads or
-      service stations — purely on stored body fat. The figures below come directly from GPS data:
-      real distances recorded from real birds.
+      As the weeks progress, population centres shift across the map. Some species concentrate in northern breeding grounds during the middle of the year before rapidly moving south, while others follow entirely different schedules. Rather than occurring as a single global event, migration unfolds as a sequence of overlapping movements that continuously reshape where birds are found throughout the year.
+      <br><br>
+      These differences in timing reduce competition for resources and allow birds to take advantage of
+       seasonal food availability in different parts of the world. 
+       This creates a constantly shifting pattern where some birds are breeding while others are already beginning their return journeys.
     </p>
 
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-head">Average distance per individual — each icon = 2,000 km (GPS data)</div>
-        <div class="card-body"><div id="chart_dist"></div></div>
-      </div>
-      <div class="card">
-        <div class="card-head">Typical travel day vs. longest single day — dot = typical, triangle = max (km)</div>
-        <div class="card-body"><div id="chart_speed"></div></div>
-      </div>
-    </div>
-    <p class="chart-insight">
-      <span class="insight-icon">↑</span> The Red Knot's 12 icons says it all — it travels roughly the circumference of the Earth.
-      The dot-and-triangle chart reveals another layer: not just how far birds go on their biggest days,
-      but how far a <em>typical</em> moving day is. The Red Knot's typical day (2,300 km) is already
-      the Upland Sandpiper's maximum. These birds exist in a completely different league of endurance.
-    </p>
+    
+  
 
-    <div class="card gap-top">
-      <div class="card-head">Where in the world? — median north–south position of each species by month (GPS data)</div>
-      <div class="card-body"><div id="chart_speed_dist"></div></div>
-    </div>
+  <div class="card gap-top">
+    <div class="card-head">Migration Peaks at Different Times 
+   </div>
+    <div class="card-body" style="display:flex;justify-content:center"><div id="chart_multiples"></div></div>
+  </div>
 
-    <p class="chart-insight">
-      <span class="insight-icon">↑</span> 0° is the Equator — the middle of the Earth. Positive numbers are the Northern Hemisphere,
-      negative numbers are the Southern Hemisphere. The Arctic Circle sits at 66.5°N and the Antarctic
-      Circle at 66.5°S. The Grey Plover pushes above 70°N in summer — deep inside the Arctic —
-      then drops back below 20°N by winter. That annual swing happens every single year of its life.
-    </p>
+  <p class="sec-desc">
+    When species are viewed together, periods of intense overlap become visible. 
+    The middle months of the year show the greatest combined migration activity as 
+    multiple species move between breeding and non-breeding grounds simultaneously. 
+    These periods represent times when migratory networks are supporting large numbers 
+    of birds across multiple flyways at once. </p>
+  <div class="card gap-top">
+    <div class="card-head">Migration Seasons Overlap Across Species</div>
+    <div class="card-body"><div id="chart_stream"></div></div>
+  </div>
 
+  <p class="sec-desc">Unlike the previous charts, the circular layout removes the idea of a beginning and end. 
+    This emphasises that migration is a repeating cycle rather than a one-off journey. 
+    The differing shapes around the circle also reveal how each species has evolved its own seasonal rhythm, 
+    with some concentrated into short migration windows and others spread more evenly throughout the year.</p>
+  <div class="card gap-top">
+        <div class="card-head">Each Species Follows its own Yearly Rhythm</div>
+    <div class="card-body" style="display:flex;justify-content:center"><div id="chart_radial"></div></div>
+  </div>
+  <p class="insight">Together, these visualisations reveal that migration is not a single coordinated event. Instead, species follow distinct seasonal schedules that collectively create a continuous cycle of movement across the globe.</p>
+
+  
   </section>
 
-  <!-- ══ CHAPTER 4: THE JOURNEY DAY BY DAY ════════════════════ -->
-  <section id="movement">
-    <div class="sec-label">Section 4 — The Day-to-Day Reality</div>
-    <div class="sec-title">Birds don't fly non-stop. They sprint, rest, and sprint again.</div>
-    <div class="divider"></div>
-    <p class="sec-desc">
-      Migration is often imagined as one continuous journey — but the reality is far more dramatic.
-      Birds alternate between explosive bursts of long-distance flight and extended rest periods at
-      stopover sites, where they eat intensively to rebuild the fat reserves burned on the previous leg.
-      Some birds lose 40–50% of their body weight during a single flight, then spend days or weeks
-      rebuilding before the next push. The GPS data lets us see this rhythm directly.
-    </p>
+<!-- title part 3 -->
+<section id="scale">
+  <div class="sec-label">Part 3 - The Scale</div>
+  <div class="sec-title">How far do migratory birds actually travel?</div>
+  <div class="divider"></div>
+  <p class="sec-desc">
+    Migration distances can be difficult to interpret in isolation. By comparing species directly, 
+    it becomes clear that some journeys are several times longer than others. The Bar-tailed Godwit 
+    stands apart from every other species, completing annual 
+    movements that rival intercontinental commercial flights and demonstrating the extraordinary 
+    physical demands of long-distance migration.
+   </p>
 
-    <div class="card" style="margin-bottom:1.4rem;">
-      <div class="card-head">Travel intensity by month — how active is each species across the year? (GPS data, normalised per species)</div>
-      <div class="card-body"><div id="chart_heatmap"></div></div>
+    <div class="callout"><div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:0.6rem">Key insight</div>
+   
+      The Bar-tailed Godwit travels roughly 28,000 km each year. 
+      That is equivalent to flying from Melbourne to London and back again.
+      </div>
+
+  <div class="grid-2" style="max-width:860px">
+    <div class="card">
+      <div class="card-head">Total journey distance</div>
+      <div class="card-body"><div id="chart_isotype"></div></div>
     </div>
-    <p class="chart-insight">
-      <span class="insight-icon">↑</span> Darker cells = more km travelled that month. Each row is normalised to its own
-      maximum so all four species are comparable side by side. The Grey Plover is most active in
-      June–July (Arctic breeding push). The Upland Sandpiper shows two intense pulses: April
-      (northward sprint) and July–August (southward return). The Red Knot is active almost
-      every month — it barely stops.
-    </p>
+    <div class="card">
+      <div class="card-head">Typical vs. Maximum Daily Distance</div>
+      <div class="card-body"><div id="chart_dotrange"></div></div>
+    </div>
+  </div>
+  <p class="insight">Each dot in the left chart represents 2,000 km. Count the Bar-tailed Godwit's dots, 14 of them, or about 27,000 km total. In the right chart, the circle shows a typical travel day and the arrow shows the longest single day ever recorded. 
+    The Bar-tailed Godwit reaches 11,690 km — far beyond every other species shown here. That is the distance from Sydney to London, 
+    flown non-stop over the open Pacific.</p>
 
+  <div class="card gap-top">
+     <div class="card-head">Monthly position</div>
+   
+    <div class="card-body"><div id="chart_latitude"></div></div>
+  </div>
+  <p class="insight">The steepness of each line reveals how rapidly species shift between regions. 
+    Red Knots and Grey Plovers move across large portions of the globe within only a few months, 
+    while other species occupy narrower latitude ranges. 
+    These contrasting patterns demonstrate that migration strategies vary substantially even among 
+    birds that undertake long-distance journeys.</p>
+
+  <div class="card gap-top">
+    <div class="card-head">Monthly travel intensity</div>
+    <div class="card-body"><div id="chart_heatmap"></div></div>
+  </div>
+  <p class="insight">Migration is not evenly distributed throughout the year. Most species show short periods of intense movement separated by longer periods spent breeding, wintering or resting. The concentration of darker cells highlights how migration often occurs in bursts, with large distances covered over relatively short periods of time.</p>
+
+  <p class="sec-desc">
+    The previous visualisations showed migration at the species level. Following a single bird reveals how these large-scale patterns emerge from individual journeys. Yanis' movements illustrate how migratory birds alternate between long periods in breeding and wintering areas and relatively short but intensive migration phases connecting them.
+  </p>
+  
     <div class="card gap-top">
-      <div class="card-head">Resting vs. flying — what percentage of tracked days was each species actually moving? (GPS data)</div>
-      <div class="card-body"><div id="chart_restfly"></div></div>
-    </div>
-    <p class="chart-insight">
-      <span class="insight-icon">↑</span> The Red Knot is almost never stationary — 98% of its tracked days involved more than 20 km of movement.
-      The Barn Swallow is the opposite: 83% of its days were rest days. This reveals two completely different
-      migration strategies — the Red Knot is a relentless long-haul traveller, while the Barn Swallow
-      moves in short bursts separated by long rest periods.
-    </p>
+    <div class="card-head">Annual migration cycle — Grey Plover “Yanis” (2012)</div>
+    <div class="card-body"><div id="chart_journey"></div></div>
+  </div>
 
-    <div class="card gap-top">
-      <div class="card-head">Daily distance over time — each line is one tagged individual</div>
-      <div class="card-body"><div id="chart_daily"></div></div>
+  <div class="callout"><div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:0.6rem">Key insight</div>
+  
+    <strong>Yanis travelled from Western Europe to the Arctic and back again within a single year.</strong>
+    This journey covered thousands of kilometres and depended on multiple stopover locations across continents.
     </div>
-    <p class="chart-insight">
-      <span class="insight-icon">↑</span> Look at the gap between the two bars for each species. The Red Knot's typical travel day
-      is 2,300 km — already extraordinary. But its maximum recorded day was 6,308 km. That near-tripling
-      of effort happens when conditions are right: a strong tailwind, a gap in the weather, or the urgency
-      of arriving at a breeding ground before the brief Arctic summer window closes.
-      Birds are not passive travellers. They read the weather and make decisions.
-    </p>
-  </section>
+
+ </section>
+
+<!-- title part 4 -->
+<section id="australia">
+  <div class="sec-label">Part 4 - Australia's Role</div>
+  <div class="sec-title">Why Australia Matters.</div>
+  <div class="divider"></div>
+
+  <p class="sec-desc">
+    For many migratory species, Australia is not just a destination — it is a critical lifeline.
+    Millions of shorebirds arrive on Australian coastlines each year after journeys spanning tens of thousands of kilometres,
+    relying on intertidal mudflats and wetlands to rest and feed before returning north to breed.
+    <br> <br>
+    Although migration depends on a network of habitats across many countries, 
+    some locations support a disproportionately large share of the global population during key stages of the annual cycle. 
+   The map and decline chart below draw on eBird's 2023 Status and Trends data and a 2023 Australian Government-funded
+    study tracking 14 shorebird species across Australia over 28 years.
+  </p>
+
+  <div class="callout"><div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:0.6rem">Key insight</div>Australia holds 80.9% of the world's Far Eastern Curlew population during the non-breeding season.
+    This means habitat loss or disturbance in Australia can affect a substantial proportion of the global population.
+    <strong>That species has already declined by 64% in Australia over the past 30 years.</strong>
+    Together, these figures highlight Australia's outsized importance within the East Asian-Australasian Flyway.</div>
+
+  <div class="card">
+    <div class="card-head">Which countries matter most?</div>
+    <div class="card-body">
+      <div class="choro-controls">
+        <label style="font-size:0.82rem;color:var(--muted);font-weight:700">Species:</label>
+        <select id="choroSpecies" class="choro-select">
+          <option value="Far Eastern Curlew">Far Eastern Curlew</option>
+          <option value="Bar-tailed Godwit">Bar-tailed Godwit</option>
+          <option value="Red Knot">Red Knot</option>
+          <option value="Grey Plover">Grey Plover</option>
+          <option value="Barn Swallow">Barn Swallow</option>
+          <option value="Upland Sandpiper">Upland Sandpiper</option>
+        </select>
+        <label style="font-size:0.82rem;color:var(--muted);font-weight:700">Season:</label>
+        <select id="choroSeason" class="choro-select">
+          <option value="Non-breeding">Non-breeding</option>
+          <option value="Pre-breeding Migration">Pre-breeding Migration</option>
+          <option value="Post-breeding Migration">Post-breeding Migration</option>
+          <option value="Breeding">Breeding</option>
+        </select>
+      </div>
+      <div id="choro_insight" style="
+        font-size:0.88rem;
+        color:var(--muted);
+        line-height:1.7;
+        margin:0.7rem 0 0.4rem;
+        padding:0.5rem 0.9rem;
+        background:transparent;
+        border-left:2px solid rgba(26,111,168,0.3);
+        font-style:italic;
+        min-height:2rem;
+      "></div>
+      <div id="map_choropleth"></div>
+      <div id="choro_caption" style="font-size:0.78rem;color:var(--muted);font-style:italic;margin-top:0.6rem"></div>
+    </div>
+  </div>
+
+  <div class="card gap-top">
+    <div class="card-head">Are these birds disappearing?</div>
+    <div class="card-body"><div id="chart_trends"></div></div>
+  </div>
+
+  <p class="sec-desc">
+    The conservation importance of Australia becomes even clearer when population trends are considered. Despite the ecological significance of these species, most have experienced substantial declines over recent decades. The contrast between Australia's importance as habitat and the scale of ongoing declines highlights the urgency of coordinated conservation efforts across the flyway.
+    <br><br>
+    These migrations connect Australia to ecosystems across the entire globe. A shorebird arriving on an Australian beach
+    may have spent part of the year in Siberia, Alaska or New Zealand. Conservation therefore depends not on a single country,
+    but on cooperation across entire flyways.
+  </p>
+</section>
 
 </main>
 
-<!-- ══ FOOTER ═════════════════════════════════════════════════ -->
-<footer>
-  Visualisation by [Your Name] &nbsp;·&nbsp; FIT2179 Data Visualisation &nbsp;·&nbsp; Monash University &nbsp;·&nbsp; 2026<br>
-  Data: <a href="https://www.movebank.org">Movebank</a> &nbsp;·&nbsp; <a href="https://ebird.org">eBird / Cornell Lab</a> &nbsp;·&nbsp; <a href="https://www.iucnredlist.org">IUCN Red List 2024</a>
+<footer style="text-align:left;padding:2.5rem 5%;border-top:2px solid var(--border);background:var(--surface);font-size:0.82rem;color:var(--muted);line-height:2;">
+  <div style="max-width:1140px;margin:0 auto;">
+    <p style="font-family:'Playfair Display',Georgia,serif;font-size:1rem;color:var(--text);font-weight:700;margin-bottom:0.5rem">Data Sources</p>
+    <p><strong style="color:var(--text)">GPS &amp; Geolocator Tracking</strong> - Movebank Animal Tracking Database (<a href="https://www.movebank.org" style="color:var(--accent)">movebank.org</a>). Studies: Wader migration German Wadden Sea (Grey Plover); Barn Swallow migration tracking; Upland Sandpiper migration; Red Knot migration; Bar-tailed Godwit geolocator tracking New Zealand 2013–2014; Full annual cycle tracking of Far Eastern Curlew.</p>
+    <p><strong style="color:var(--text)">eBird Weekly Abundance</strong> - eBird Status and Trends, 2023 (<a href="https://ebird.org/science/status-and-trends" style="color:var(--accent)">science.ebird.org</a>). Cornell Lab of Ornithology. Species: Grey Plover, Barn Swallow, Upland Sandpiper, Red Knot.</p>
+    <p><strong style="color:var(--text)">eBird Regional Abundance</strong> - eBird Status and Trends Regional Statistics, 2023. Species: Grey Plover (bkbplo), Barn Swallow (barswa), Upland Sandpiper (uplsan), Red Knot (redkno), Bar-tailed Godwit (batgod), Far Eastern Curlew (faecur).</p>
+    <p><strong style="color:var(--text)">Australian Shorebird Population Trends</strong> - Rogers D.I., Fuller R.A. &amp; Amano T. (2023). <em>Australia's migratory shorebirds: Trends and prospects.</em> NESP Marine and Coastal Hub, University of Queensland. (<a href="https://www.nespmarinecoastal.edu.au" style="color:var(--accent)">nespmarinecoastal.edu.au</a>)</p>
+     <p style="margin-top:1rem;border-top:1px solid var(--border);padding-top:1rem;">
+      Annie Nguyen &middot; FIT2179 DV2 &middot;
+      AI tools used for code assistance.
+    </p>
+  </div>
 </footer>
 
-<!-- ══════════════════════════════════════════════════════════
-     VEGA-LITE SCRIPTS
-══════════════════════════════════════════════════════════════ -->
 <script>
-// ── Palette & config ──────────────────────────────────────────
-const C = { 1:"#c45e1a", 2:"#1a6fa8", 3:"#2a7a4a", 4:"#7c3aad" };
-const SP_NAMES  = { 1:"Grey Plover", 2:"Barn Swallow", 3:"Upland Sandpiper", 4:"Red Knot" };
-const SP_ORDER  = ["Grey Plover","Barn Swallow","Upland Sandpiper","Red Knot"];
-const SP_COLOURS= ["#c45e1a","#1a6fa8","#2a7a4a","#7c3aad"];
+// colours for each of the birds
+const C = {1:'#c45e1a',2:'#1a6fa8',3:'#2a7a4a',4:'#7c3aad',5:'#b34d68',6:'#b78a2f'};
+const SP_NAMES = {1:'Grey Plover',2:'Barn Swallow',3:'Upland Sandpiper',
+                  4:'Red Knot',5:'Bar-tailed Godwit',6:'Far Eastern Curlew'};
+const SP_ORDER  = ['Grey Plover','Barn Swallow','Upland Sandpiper',
+                   'Red Knot','Bar-tailed Godwit','Far Eastern Curlew'];
+const SP_COLOURS= ['#d4896a','#6aa0c8','#6aa082','#a078c8','#d46a88','#c8a050'];
 
-const TOPO = "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/ne_110m_admin_0_countries.topojson";
+const TOPO = 'https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/ne_110m_admin_0_countries.topojson';
 
 const CFG = {
-  background:"#ffffff",
-  view:{ stroke:null },
-  font:"'Source Sans 3', system-ui, sans-serif",
-  axis:{
-    gridColor:"#c2dff0", gridOpacity:0.8,
-    labelColor:"#4a7a9b", titleColor:"#4a7a9b",
-    domainColor:"#c2dff0", tickColor:"#c2dff0",
-    labelFontSize:11, titleFontSize:11
-  },
-  legend:{ labelColor:"#4a7a9b", titleColor:"#4a7a9b", labelFontSize:11 }
+  background:'#ffffff', view:{stroke:null},
+  font:"'Source Sans 3',system-ui,sans-serif",
+  axis:{gridColor:'#c2dff0',gridOpacity:0.8,labelColor:'#4a7a9b',titleColor:'#4a7a9b',
+        domainColor:'#c2dff0',tickColor:'#c2dff0',labelFontSize:11,titleFontSize:11},
+  legend:{labelColor:'#4a7a9b',titleColor:'#4a7a9b',labelFontSize:11}
 };
 
 const BASE_MAP = {
-  data:{ url:TOPO, format:{ type:"topojson", feature:"ne_110m_admin_0_countries" } },
-  mark:{ type:"geoshape", fill:"#d0e8f5", stroke:"#a0c8e0", strokeWidth:0.5 }
+  data:{url:TOPO,format:{type:'topojson',feature:'ne_110m_admin_0_countries'}},
+  mark:{type:'geoshape',fill:'#edf5f9',stroke:'#c8dae4',strokeWidth:0.3}
 };
 
-function gpsTip(name) {
-  return [
-    { value:name,                             title:"Species" },
-    { field:"individual-local-identifier",    type:"nominal",     title:"Bird ID (tagged individual)" },
-    { field:"timestamp",                      type:"temporal",    title:"Time" },
-    { field:"location-long",                  type:"quantitative",title:"Longitude", format:".3f" },
-    { field:"location-lat",                   type:"quantitative",title:"Latitude",  format:".3f" }
-  ];
-}
+// first gps world MAP
 
-function gpsLayers(id) {
-  const name = SP_NAMES[id], col = C[id], file = `data/gps_${id}.csv`;
-  const tip = gpsTip(name);
-  return [
-    { data:{ url:file },
-      mark:{ type:"line", color:col, opacity:0.5, strokeWidth:1.6 },
-      encoding:{ longitude:{ field:"location-long",type:"quantitative" },
-                 latitude: { field:"location-lat", type:"quantitative" },
-                 order:    { field:"timestamp",    type:"temporal" },
-                 tooltip:tip } },
-    { data:{ url:file },
-      mark:{ type:"circle", color:col, opacity:0.8, size:20 },
-      encoding:{ longitude:{ field:"location-long",type:"quantitative" },
-                 latitude: { field:"location-lat", type:"quantitative" },
-                 tooltip:tip } }
-  ];
-}
+let map1Active={1:true,2:true,3:true,4:true,5:true,6:true};
+let map1View=null;
+let gpsBySpecies={};
 
-// ── 1. COMBINED WORLD MAP ─────────────────────────────────────
-vegaEmbed('#map_all', {
-  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
-  title:{
-    text:"GPS Satellite Tracking Routes — Four Migratory Species",
-    subtitle:"Each coloured trail is a real path recorded by a satellite-tagged bird",
-    fontSize:14, subtitleFontSize:11, anchor:"start",
-    color:"#0f2a3d", subtitleColor:"#4a7a9b", fontWeight:"bold",
-    font:"'Playfair Display', Georgia, serif"
-  },
-  width:860, height:440,
-  projection:{ type:"equalEarth" },
-  layer:[ BASE_MAP, ...([1,2,3,4].flatMap(gpsLayers)) ],
+// Single combined spec — one named data source, colour by species
+const map1Spec={
+  $schema:'https://vega.github.io/schema/vega-lite/v5.json',
+  title:{text:'Migration Routes Recorded from Tagged Birds',
+         fontSize:13,anchor:'start',
+         color:'#0f2535',fontWeight:'bold',
+         font:"'Playfair Display',Georgia,serif"},
+  width:860,height:380,
+  projection:{type:'equalEarth'},
+  layer:[
+    BASE_MAP,
+    {
+      // lines only — no dots, cleaner with multiple species
+      data:{name:'gps_source'},
+      mark:{type:'line',opacity:0.55,strokeWidth:1.4},
+      encoding:{
+        longitude:{field:'location-long',type:'quantitative'},
+        latitude: {field:'location-lat', type:'quantitative'},
+        order:    {field:'timestamp',    type:'temporal'},
+        color:    {field:'species',      type:'nominal',
+                   scale:{domain:SP_ORDER,range:SP_COLOURS},legend:null},
+        detail:   {field:'individual-local-identifier',type:'nominal'},
+        tooltip:[
+          {field:'species',                     type:'nominal',  title:'Species'},
+          {field:'timestamp',                   type:'temporal', title:'Time'},
+          {field:'location-long',type:'quantitative',title:'Longitude',format:'.3f'},
+          {field:'location-lat', type:'quantitative',title:'Latitude', format:'.3f'}
+        ]
+      }
+    }
+    ,{
+      // Far Eastern Curlew annotation callout
+      data:{values:[{lon:150,lat:-15,label:"Far Eastern Curlew"}]},
+      mark:{type:'text',fontSize:10,fontWeight:600,color:'#c47a00',
+            align:'left',dx:6,dy:-6},
+      encoding:{
+        longitude:{field:'lon',type:'quantitative'},
+        latitude:{field:'lat',type:'quantitative'},
+        text:{field:'label',type:'nominal'}
+      }
+    }
+  ],
   config:CFG
-}, { renderer:"svg", actions:{ export:true, source:true, editor:true } }).catch(console.error);
+};
 
-// ── 2. eBIRD ABUNDANCE MAP ────────────────────────────────────
-// Strategy:
-//  1. Fetch CSV once, group by week into a lookup map (instant access)
-//  2. Embed the chart ONCE with the first week's data
-//  3. On slider change, use vega.changeset() to INSERT new rows and
-//     REMOVE old ones — the base map is never re-drawn, only the dots change
-//  This gives smooth, near-instant transitions between weeks.
-
-const WEEKS = [];
-for (let w = 0; w < 52; w++) {
-  const d = new Date('2023-01-04T00:00:00Z');
-  d.setUTCDate(d.getUTCDate() + w * 7);
-  WEEKS.push(d.toISOString().slice(0, 10));
+function getActiveGpsData(){
+  const rows=[];
+  [1,2,3,4,5,6].forEach(id=>{
+    if(map1Active[id] && gpsBySpecies[id]) rows.push(...gpsBySpecies[id]);
+  });
+  return rows;
 }
 
-let ebirdActive   = { 1:true, 2:true, 3:true, 4:true };
-let ebirdByWeek   = {};   // { "2023-01-04": [...rows], ... }
-let ebirdView     = null;
-let currentWeekIdx = 0;
+function updateMap1(){
+  if(!map1View) return;
+  const cs=vega.changeset().remove(()=>true).insert(getActiveGpsData());
+  map1View.change('gps_source',cs).run();
+}
 
-function parseCSV(text) {
-  const lines   = text.trim().split('\n');
-  const headers = lines[0].split(',').map(h => h.trim());
-  return lines.slice(1).map(line => {
-    const vals = line.split(',');
-    const obj  = {};
-    headers.forEach((h, i) => {
-      const v = vals[i];
-      obj[h]  = (v !== undefined && v !== '' && !isNaN(v)) ? +v : (v || '');
-    });
+// Fetch gps_all.csv once, group by species_id, init map
+fetch('data/gps_all.csv').then(r=>r.text()).then(text=>{
+  const rows=parseCSV(text);
+  rows.forEach(d=>{
+    const id=+d.species_id;
+    if(!gpsBySpecies[id]) gpsBySpecies[id]=[];
+    gpsBySpecies[id].push(d);
+  });
+  vegaEmbed('#map_all',map1Spec,{renderer:'canvas',actions:false})
+    .then(r=>{
+      map1View=r.view;
+      map1View.insert('gps_source',getActiveGpsData()).run();
+    }).catch(console.error);
+}).catch(console.error);
+
+document.querySelectorAll('[data-map1]').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    const id=+this.dataset.map1;
+    map1Active[id]=!map1Active[id];
+    this.classList.toggle('off');
+    updateMap1();
+  });
+});
+
+// Keep gpsLayers for any other usage (journey chart etc)
+function gpsTip(name){
+  return [
+    {value:name,title:'Species'},
+    {field:'individual-local-identifier',type:'nominal',title:'Bird ID'},
+    {field:'timestamp',type:'temporal',title:'Time'},
+    {field:'location-long',type:'quantitative',title:'Longitude',format:'.3f'},
+    {field:'location-lat',type:'quantitative',title:'Latitude',format:'.3f'}
+  ];
+}
+
+// animated world map
+const WEEKS=[];
+for(let w=0;w<52;w++){const d=new Date('2023-01-04T00:00:00Z');d.setUTCDate(d.getUTCDate()+w*7);WEEKS.push(d.toISOString().slice(0,10));}
+let ebirdActive={1:true,2:true,3:true,4:true},ebirdByWeek={},ebirdView=null,curWeek=0;
+
+function parseCSV(text){
+  const lines=text.trim().split('\n'),headers=lines[0].split(',').map(h=>h.trim());
+  return lines.slice(1).map(line=>{
+    const vals=line.split(','),obj={};
+    headers.forEach((h,i)=>{const v=vals[i];obj[h]=(v!==undefined&&v!==''&&!isNaN(v))?+v:(v||'');});
     return obj;
   });
 }
 
-function getWeekData(weekIdx) {
-  const rows = ebirdByWeek[WEEKS[weekIdx]] || [];
-  return rows.filter(d => ebirdActive[d.species_id]);
+function getWeekData(wi){
+  return(ebirdByWeek[WEEKS[wi]]||[]).filter(d=>ebirdActive[d.species_id]);
 }
 
-// Embed chart ONCE with placeholder data, keep view reference
-function initEbirdChart(initialData) {
-  const spec = {
-    $schema: "https://vega.github.io/schema/vega-lite/v5.json",
-    title:{
-      text:"Global eBird Sightings — Weekly Relative Abundance (2023)",
-      subtitle:"Dot size = number of birds seen in each 27km grid cell that week. Source: eBird / Cornell Lab of Ornithology",
-      fontSize:14, subtitleFontSize:11, anchor:"start",
-      color:"#0f2a3d", subtitleColor:"#4a7a9b", fontWeight:"bold",
-      font:"'Playfair Display', Georgia, serif"
-    },
-    width: 820, height: 420,
-    projection: { type: "equalEarth" },
-    layer: [
-      BASE_MAP,
-      {
-        name: "ebird_layer",            // named so we can target it
-        data: { name: "ebird_source" }, // named data source = we can push changesets
-        mark: { type: "circle", opacity: 0.78, filled: true },
-        encoding: {
-          longitude: { field: "longitude",  type: "quantitative" },
-          latitude:  { field: "latitude",   type: "quantitative" },
-          color: {
-            field: "species", type: "nominal",
-            scale: { domain: SP_ORDER, range: SP_COLOURS },
-            legend: {
-              orient: "bottom-right",
-              labelColor: "#4a7a9b", titleColor: "#4a7a9b",
-              title: "Species", labelFontSize: 11
-            }
-          },
-          size: {
-            field: "abundance", type: "quantitative",
-            scale: { range: [10, 420] }, legend: null
-          },
-          tooltip: [
-            { field: "species",   type: "nominal",     title: "Species" },
-            { field: "week",      type: "nominal",     title: "Week" },
-            { field: "longitude", type: "quantitative",title: "Longitude", format: ".2f" },
-            { field: "latitude",  type: "quantitative",title: "Latitude",  format: ".2f" },
-            { field: "abundance", type: "quantitative",title: "Abundance", format: ".2f" }
-          ]
-        }
+function initEbird(data){
+  const spec={
+    $schema:'https://vega.github.io/schema/vega-lite/v5.json',
+    title:{text:'Global eBird Sightings - Weekly Relative Abundance (2023)',
+           subtitle:'Dot size = number of birds seen in each 27km grid cell that week. Source: eBird / Cornell Lab',
+           fontSize:14,subtitleFontSize:11,anchor:'start',color:'#0f2a3d',subtitleColor:'#4a7a9b',
+           font:"'Playfair Display',Georgia,serif"},
+    width:820,height:420,projection:{type:'equalEarth'},
+    layer:[BASE_MAP,{
+      name:'ebird_source',data:{name:'ebird_source'},
+      mark:{type:'circle',opacity:0.78,filled:true},
+      encoding:{
+        longitude:{field:'longitude',type:'quantitative'},
+        latitude:{field:'latitude',type:'quantitative'},
+        color:{field:'species',type:'nominal',scale:{domain:SP_ORDER.slice(0,4),range:SP_COLOURS.slice(0,4)},
+               legend:null},
+        size:{field:'abundance',type:'quantitative',scale:{range:[10,420]},legend:null},
+        tooltip:[{field:'species',type:'nominal',title:'Species'},
+                 {field:'week',type:'nominal',title:'Week'},
+                 {field:'longitude',type:'quantitative',title:'Longitude',format:'.2f'},
+                 {field:'latitude',type:'quantitative',title:'Latitude',format:'.2f'},
+                 {field:'abundance',type:'quantitative',title:'Abundance',format:'.2f'}]
       }
-    ],
-    config: CFG
+    }],config:CFG
   };
-
-  vegaEmbed('#map_ebird', spec, { renderer: "canvas", actions: false })
-    .then(result => {
-      ebirdView = result.view;
-      // Insert initial week data
-      ebirdView
-        .insert("ebird_source", initialData)
-        .run();
-    })
+  vegaEmbed('#map_ebird',spec,{renderer:'canvas',actions:false})
+    .then(r=>{ebirdView=r.view;ebirdView.insert('ebird_source',data).run();})
     .catch(console.error);
 }
 
-// Swap data using changeset — remove all current rows, insert new week's rows
-// This avoids any re-embed, the base map is untouched
-function updateEbirdWeek(weekIdx) {
-  if (!ebirdView) return;
-  document.getElementById('weekDisplay').textContent = WEEKS[weekIdx];
-  const newData  = getWeekData(weekIdx);
-  // Remove everything currently in the source, insert the new week
-  const cs = vega.changeset()
-    .remove(() => true)   // remove all existing marks
-    .insert(newData);     // insert new week's rows
-  ebirdView.change("ebird_source", cs).run();
+function updateEbird(wi){
+  if(!ebirdView)return;
+  document.getElementById('weekDisplay').textContent=WEEKS[wi];
+  const cs=vega.changeset().remove(()=>true).insert(getWeekData(wi));
+  ebirdView.change('ebird_source',cs).run();
 }
 
-// Throttle: fire at most once per animation frame while dragging
-let rafPending = false;
-function throttledUpdate(weekIdx) {
-  document.getElementById('weekDisplay').textContent = WEEKS[weekIdx];
-  if (rafPending) return;
-  rafPending = true;
-  requestAnimationFrame(() => {
-    updateEbirdWeek(weekIdx);
-    rafPending = false;
-  });
-}
+let rafPending=false;
+fetch('data/ebird_all.csv').then(r=>r.text()).then(text=>{
+  const rows=parseCSV(text);
+  rows.forEach(d=>{if(!ebirdByWeek[d.week])ebirdByWeek[d.week]=[];ebirdByWeek[d.week].push(d);});
+  initEbird(getWeekData(0));
+  document.getElementById('weekDisplay').textContent=WEEKS[0];
+}).catch(console.error);
 
-// ── Load data, group by week, then init chart ─────────────────
-fetch('data/ebird_all.csv')
-  .then(r => r.text())
-  .then(text => {
-    const rows = parseCSV(text);
-    // Group into lookup map by week string
-    rows.forEach(d => {
-      if (!ebirdByWeek[d.week]) ebirdByWeek[d.week] = [];
-      ebirdByWeek[d.week].push(d);
-    });
-    console.log(`eBird loaded: ${rows.length} rows across ${Object.keys(ebirdByWeek).length} weeks`);
-    initEbirdChart(getWeekData(0));
-    document.getElementById('weekDisplay').textContent = WEEKS[0];
-  })
-  .catch(err => console.error('eBird load failed:', err));
-
-// Slider — use throttled requestAnimationFrame for smooth dragging
-document.getElementById('weekSlider').addEventListener('input', function() {
-  currentWeekIdx = +this.value;
-  throttledUpdate(currentWeekIdx);
+document.getElementById('weekSlider').addEventListener('input',function(){
+  curWeek=+this.value;
+  document.getElementById('weekDisplay').textContent=WEEKS[curWeek];
+  if(rafPending)return;rafPending=true;
+  requestAnimationFrame(()=>{updateEbird(curWeek);rafPending=false;});
 });
-
-// Species toggles — immediate re-draw since it's a button click not a drag
-document.querySelectorAll('.sp-toggle').forEach(btn => {
-  btn.addEventListener('click', function() {
-    const id = +this.dataset.sp;
-    ebirdActive[id] = !ebirdActive[id];
-    this.classList.toggle('off');
-    updateEbirdWeek(currentWeekIdx);
+document.querySelectorAll('[data-sp]').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    const id=+this.dataset.sp;ebirdActive[id]=!ebirdActive[id];
+    this.classList.toggle('off');updateEbird(curWeek);
   });
 });
 
-// ── 3. MIGRATION STRATEGY CHARTS (species_summary.csv) ────────
-const SUM = "data/species_summary.csv";
-
-const barSpec = (field, title, fmt) => ({
-  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
-  data:{ url:SUM },
-  width:360, height:180,
-  mark:{ type:"bar", cornerRadiusEnd:3 },
-  encoding:{
-    y:{ field:"species", type:"nominal", sort:"-x", title:null,
-        axis:{ labelColor:"#4a7a9b", labelFontSize:11 } },
-    x:{ field, type:"quantitative", title,
-        axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b" } },
-    color:{ value:"#1a6fa8" },
-    tooltip:[
-      { field:"species", type:"nominal",     title:"Species" },
-      { field,           type:"quantitative",title, format:fmt }
-    ]
-  },
-  config:CFG
-});
-
-
-
-
-
-
-// ── 4. MOVEMENT PATTERN CHARTS (movement_metrics.csv) ─────────
-const MET = "data/movement_metrics.csv";
-const STATE_SCALE = { domain:["Migrating","Foraging/Resting"], range:["#1a6fa8","#c45e1a"] };
-
-// 4a. Monthly latitude — north/south position across the year
-// Use month (integer 1-12) as quantitative so x-axis spaces correctly
-const MONTH_LABELS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-const monthAxis = {
-  field:"month", type:"quantitative",
-  title:null,
-  scale:{ domain:[1,12], nice:false },
-  axis:{
-    values:[1,2,3,4,5,6,7,8,9,10,11,12],
-    labelExpr:"['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][datum.value-1]",
-    labelColor:"#4a7a9b", titleColor:"#4a7a9b", gridColor:"#c2dff0",
-    tickCount:12
-  }
-};
-
-vegaEmbed('#chart_speed_dist', {
-  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
-  data:{ url:"data/monthly_latitude.csv" },
-  width:820, height:260,
-  layer:[
-    {
-      // Reference lines: equator, Arctic Circle, Tropic of Cancer/Capricorn
-      data:{ values:[
-        { lat:90,  label:"North Pole (90°N)" },
-        { lat:66.5,label:"Arctic Circle (66.5°N)" },
-        { lat:23.5,label:"Tropic of Cancer (23.5°N)" },
-        { lat:0,   label:"Equator (0°)" },
-        { lat:-23.5,label:"Tropic of Capricorn (23.5°S)" },
-        { lat:-66.5,label:"Antarctic Circle (66.5°S)" }
-      ]},
-      mark:{ type:"rule", strokeDash:[4,3], opacity:0.45, strokeWidth:1 },
-      encoding:{
-        y:{ field:"lat", type:"quantitative" },
-        color:{ value:"#4a7a9b" },
-        tooltip:[ { field:"label", type:"nominal", title:"Reference line" } ]
-      }
-    },
-    {
-      // Reference labels
-      data:{ values:[
-        { lat:66.5, label:"Arctic Circle" },
-        { lat:23.5, label:"Tropic of Cancer" },
-        { lat:0,    label:"Equator" },
-        { lat:-23.5,label:"Tropic of Capricorn" }
-      ]},
-      mark:{ type:"text", align:"right", dx:-4, fontSize:9, fontStyle:"italic", opacity:0.7 },
-      encoding:{
-        x:{ value:0 },
-        y:{ field:"lat", type:"quantitative" },
-        text:{ field:"label", type:"nominal" },
-        color:{ value:"#4a7a9b" }
-      }
-    },
-    {
-      // shaded band — IQR range
-      mark:{ type:"area", opacity:0.15, interpolate:"monotone" },
-      encoding:{
-        x: monthAxis,
-        y:{ field:"q25_lat", type:"quantitative", title:"Latitude (°N/S)",
-            axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b" } },
-        y2:{ field:"q75_lat" },
-        color:{ field:"species", type:"nominal",
-          scale:{ domain:SP_ORDER, range:SP_COLOURS }, legend:null }
-      }
-    },
-    {
-      // median line
-      mark:{ type:"line", opacity:0.95, strokeWidth:2.5, interpolate:"monotone" },
-      encoding:{
-        x: monthAxis,
-        y:{ field:"median_lat", type:"quantitative" },
-        color:{ field:"species", type:"nominal",
-          scale:{ domain:SP_ORDER, range:SP_COLOURS },
-          title:"Species",
-          legend:{ orient:"top", labelColor:"#4a7a9b", titleColor:"#4a7a9b", labelFontSize:11 } },
-        tooltip:[
-          { field:"species",    type:"nominal",     title:"Species" },
-          { field:"month_name", type:"nominal",     title:"Month" },
-          { field:"median_lat", type:"quantitative",title:"Median latitude (°)", format:".1f" },
-          { field:"q25_lat",    type:"quantitative",title:"Lower quartile (°)",  format:".1f" },
-          { field:"q75_lat",    type:"quantitative",title:"Upper quartile (°)",  format:".1f" },
-          { field:"n_fixes",    type:"quantitative",title:"GPS fixes" }
-        ]
-      }
-    },
-    {
-      // dots at each monthly data point
-      mark:{ type:"point", opacity:0.95, size:55, filled:true },
-      encoding:{
-        x: monthAxis,
-        y:{ field:"median_lat", type:"quantitative" },
-        color:{ field:"species", type:"nominal",
-          scale:{ domain:SP_ORDER, range:SP_COLOURS }, legend:null },
-        tooltip:[
-          { field:"species",    type:"nominal",     title:"Species" },
-          { field:"month_name", type:"nominal",     title:"Month" },
-          { field:"median_lat", type:"quantitative",title:"Median latitude (°)", format:".1f" },
-          { field:"n_fixes",    type:"quantitative",title:"GPS fixes" }
-        ]
-      }
-    }
-  ],
-  resolve:{ scale:{ color:"shared" } },
-  config:CFG
-}, { renderer:"svg", actions:false }).catch(console.error);
-
-
-
-// 4d. Daily distance line
-vegaEmbed('#chart_daily', {
-  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
-  data:{ url:"data/daily_summary.csv" },
-  width:920, height:240,
-  transform:[{ filter:"datum.daily_dist_km < 2000" }],
-  mark:{ type:"line", opacity:0.55, strokeWidth:1.4, interpolate:"monotone" },
-  encoding:{
-    x:{ field:"date", type:"temporal", title:"Date",
-        axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b", format:"%b %Y" } },
-    y:{ field:"daily_dist_km", type:"quantitative", title:"Daily distance (km)",
-        axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b" } },
-    color:{ field:"species", type:"nominal", scale:{ domain:SP_ORDER, range:SP_COLOURS },
-      title:"Species", legend:{ orient:"top-right", labelColor:"#4a7a9b", titleColor:"#4a7a9b" } },
-    detail:{ field:"individual-local-identifier", type:"nominal" },
-    tooltip:[
-      { field:"species",                   type:"nominal",     title:"Species" },
-      { field:"date",                      type:"temporal",    title:"Date" },
-      { field:"daily_dist_km",             type:"quantitative",title:"Daily dist (km)", format:".0f" },
-      { field:"individual-local-identifier",type:"nominal",    title:"Individual" }
-    ]
-  },
-  config:CFG
-}, { renderer:"svg", actions:false }).catch(console.error);
-
-
-// ── SMALL MULTIPLES: seasonal abundance cycle ────────────────
-
-
-
-
-
-// ══════════════════════════════════════════════════════════════
-// ISOTYPE — total distance per species (each icon = 2,000 km)
-// ══════════════════════════════════════════════════════════════
-vegaEmbed('#chart_dist', {
-  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
-  data:{ values:[
-    // Red Knot: 24372 / 2000 = 12.2 → 12 icons
-    ...Array.from({length:12}, (_,i) => ({ species:"Red Knot",         icon:i+1, km_repr:2000 })),
-    // Upland Sandpiper: 14589 / 2000 = 7.3 → 7 icons
-    ...Array.from({length:7},  (_,i) => ({ species:"Upland Sandpiper", icon:i+1, km_repr:2000 })),
-    // Grey Plover: 14103 / 2000 = 7.1 → 7 icons
-    ...Array.from({length:7},  (_,i) => ({ species:"Grey Plover",      icon:i+1, km_repr:2000 })),
-    // Barn Swallow: 10746 / 2000 = 5.4 → 5 icons
-    ...Array.from({length:5},  (_,i) => ({ species:"Barn Swallow",     icon:i+1, km_repr:2000 })),
-  ]},
-  width:400, height:200,
-  mark:{ type:"point", shape:"M0,-1 L0.3,-0.4 L1,-0.4 L0.5,0.1 L0.7,0.8 L0,-0.2 L-0.7,0.8 L-0.5,0.1 L-1,-0.4 L-0.3,-0.4 Z", filled:true, size:220 },
-  encoding:{
-    x:{ field:"icon", type:"ordinal", title:null,
-        axis:{ labels:false, ticks:false, domain:false, grid:false } },
-    y:{ field:"species", type:"nominal", sort:SP_ORDER, title:null,
-        axis:{ labelColor:"#0f2a3d", labelFontSize:12 } },
-    color:{ field:"species", type:"nominal",
-      scale:{ domain:SP_ORDER, range:SP_COLOURS }, legend:null },
-    tooltip:[
-      { field:"species",  type:"nominal",     title:"Species" },
-      { field:"icon",     type:"quantitative",title:"Icons shown" }
-    ]
-  },
-  config:CFG
-}, { renderer:"svg", actions:false }).catch(console.error);
-
-// ══════════════════════════════════════════════════════════════
-// DOT + RANGE — typical day (circle) vs max day (triangle)
-// ══════════════════════════════════════════════════════════════
-vegaEmbed('#chart_speed', {
-  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
-  data:{ values:[
-    { species:"Grey Plover",      metric:"Typical moving day", km:45.4   },
-    { species:"Grey Plover",      metric:"Longest single day",  km:3422   },
-    { species:"Barn Swallow",     metric:"Typical moving day", km:55.7   },
-    { species:"Barn Swallow",     metric:"Longest single day",  km:1277   },
-    { species:"Upland Sandpiper", metric:"Typical moving day", km:377.9  },
-    { species:"Upland Sandpiper", metric:"Longest single day",  km:6514   },
-    { species:"Red Knot",         metric:"Typical moving day", km:2314.9 },
-    { species:"Red Knot",         metric:"Longest single day",  km:6308   }
-  ]},
-  width:400, height:200,
-  layer:[
-    {
-      // connecting line between typical and max per species
-      transform:[
-        { pivot:"metric", value:"km", groupby:["species"] }
-      ],
-      mark:{ type:"rule", strokeWidth:2, opacity:0.4 },
-      encoding:{
-        y:{ field:"species", type:"nominal", sort:SP_ORDER, title:null,
-            axis:{ labelColor:"#0f2a3d", labelFontSize:12 } },
-        x:{ field:"Typical moving day", type:"quantitative" },
-        x2:{ field:"Longest single day" },
-        color:{ field:"species", type:"nominal",
-          scale:{ domain:SP_ORDER, range:SP_COLOURS }, legend:null }
-      }
-    },
-    {
-      // dot = typical day
-      transform:[{ filter:"datum.metric === 'Typical moving day'" }],
-      mark:{ type:"point", filled:true, size:120, shape:"circle" },
-      encoding:{
-        y:{ field:"species", type:"nominal", sort:SP_ORDER },
-        x:{ field:"km", type:"quantitative", title:"Distance (km)",
-            axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b" } },
-        color:{ field:"species", type:"nominal",
-          scale:{ domain:SP_ORDER, range:SP_COLOURS }, legend:null },
-        tooltip:[
-          { field:"species", type:"nominal",     title:"Species" },
-          { field:"metric",  type:"nominal",     title:"Metric" },
-          { field:"km",      type:"quantitative",title:"Distance (km)", format:",.0f" }
-        ]
-      }
-    },
-    {
-      // triangle = max day
-      transform:[{ filter:"datum.metric === 'Longest single day'" }],
-      mark:{ type:"point", filled:true, size:160, shape:"triangle-right" },
-      encoding:{
-        y:{ field:"species", type:"nominal", sort:SP_ORDER },
-        x:{ field:"km", type:"quantitative" },
-        color:{ field:"species", type:"nominal",
-          scale:{ domain:SP_ORDER, range:SP_COLOURS }, legend:null },
-        tooltip:[
-          { field:"species", type:"nominal",     title:"Species" },
-          { field:"metric",  type:"nominal",     title:"Metric" },
-          { field:"km",      type:"quantitative",title:"Distance (km)", format:",.0f" }
-        ]
-      }
-    },
-    {
-      // manual legend — circle label
-      data:{ values:[{ x:4000, y:"Barn Swallow", label:"● Typical day" }] },
-      mark:{ type:"text", fontSize:10, align:"left", color:"#4a7a9b" },
-      encoding:{
-        x:{ field:"x", type:"quantitative" },
-        y:{ field:"y", type:"nominal", sort:SP_ORDER },
-        text:{ field:"label", type:"nominal" }
-      }
-    },
-    {
-      // manual legend — triangle label
-      data:{ values:[{ x:4000, y:"Grey Plover", label:"▶ Longest day" }] },
-      mark:{ type:"text", fontSize:10, align:"left", color:"#4a7a9b" },
-      encoding:{
-        x:{ field:"x", type:"quantitative" },
-        y:{ field:"y", type:"nominal", sort:SP_ORDER },
-        text:{ field:"label", type:"nominal" }
-      }
-    }
-  ],
-  resolve:{ scale:{ color:"shared" } },
-  config:CFG
-}, { renderer:"svg", actions:false }).catch(console.error);
-
-// ══════════════════════════════════════════════════════════════
-// HEATMAP — travel intensity by species x month
-// ══════════════════════════════════════════════════════════════
-vegaEmbed('#chart_heatmap', {
-  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
-  data:{ url:"data/heatmap_activity.csv" },
-  width:760, height:160,
-  mark:{ type:"rect" },
-  encoding:{
-    y:{ field:"species", type:"nominal", sort:SP_ORDER, title:null,
-        axis:{ labelColor:"#0f2a3d", labelFontSize:12 } },
-    x:{ field:"month", type:"ordinal",
-        sort:[1,2,3,4,5,6,7,8,9,10,11,12], title:null,
-        axis:{
-          labelExpr:"['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][datum.value-1]",
-          labelColor:"#4a7a9b", labelFontSize:11, domainColor:"#c2dff0"
-        }
-    },
-    color:{
-      field:"normalised", type:"quantitative",
-      title:"Activity (% of peak)",
-      scale:{ scheme:"blues", domain:[0,100] },
-      legend:{ orient:"right", labelColor:"#4a7a9b", titleColor:"#4a7a9b",
-               labelFontSize:10, gradientLength:120 }
-    },
-    tooltip:[
-      { field:"species",         type:"nominal",     title:"Species" },
-      { field:"month_name",      type:"nominal",     title:"Month" },
-      { field:"median_daily_km", type:"quantitative",title:"Median daily dist (km)", format:".0f" },
-      { field:"normalised",      type:"quantitative",title:"Activity (% of peak)", format:".0f" }
-    ]
-  },
-  config:CFG
-}, { renderer:"svg", actions:false }).catch(console.error);
-
-// ══════════════════════════════════════════════════════════════
-// VIZ 11 — Compass direction (Grey Plover + Barn Swallow)
-// ══════════════════════════════════════════════════════════════
-vegaEmbed('#chart_compass', {
-  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
-  data:{ url:"data/compass_direction.csv" },
-  transform:[{ filter:"datum.species === 'Grey Plover' || datum.species === 'Barn Swallow'" }],
-  width:760, height:180,
-  mark:{ type:"bar", cornerRadiusEnd:0 },
-  encoding:{
-    column:{ field:"species", type:"nominal",
-      header:{ labelColor:"#0f2a3d", labelFontSize:12,
-               labelFont:"'Playfair Display',Georgia,serif",
-               labelFontWeight:"bold", title:null } },
-    x:{ field:"compass", type:"ordinal",
-        sort:["N","NE","E","SE","S","SW","W","NW"],
-        title:"Direction of flight",
-        axis:{ labelColor:"#4a7a9b", titleColor:"#4a7a9b", gridColor:"#c2dff0" } },
-    y:{ field:"pct", type:"quantitative", title:"% of active GPS fixes",
-        axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b" } },
-    color:{ value:"#1a6fa8" },
-    tooltip:[
-      { field:"species", type:"nominal",     title:"Species" },
-      { field:"compass", type:"nominal",     title:"Direction" },
-      { field:"pct",     type:"quantitative",title:"% of fixes", format:".1f" }
-    ]
-  },
-  config:{ ...CFG, facet:{ spacing:30 } }
-}, { renderer:"svg", actions:false }).catch(console.error);
-
-// ══════════════════════════════════════════════════════════════
-// VIZ 9 — Resting vs Flying stacked bar
-// ══════════════════════════════════════════════════════════════
-vegaEmbed('#chart_restfly', {
-  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
-  data:{ url:"data/rest_vs_fly.csv" },
-  width:760, height:180,
-  mark:{ type:"bar" },
-  encoding:{
-    y:{ field:"species", type:"nominal", sort:SP_ORDER, title:null,
-        axis:{ labelColor:"#4a7a9b", labelFontSize:12 } },
-    x:{ field:"pct", type:"quantitative", title:"% of tracked days",
-        axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b" },
-        scale:{ domain:[0,100] } },
-    color:{ field:"state", type:"nominal",
-      scale:{ domain:["Flying (>20 km/day)","Resting (<20 km/day)"],
-              range:["#1a6fa8","#c2dff0"] },
-      title:null,
-      legend:{ orient:"top", labelColor:"#4a7a9b", titleColor:"#4a7a9b", labelFontSize:11 } },
-    order:{ field:"state", sort:"descending" },
-    tooltip:[
-      { field:"species", type:"nominal",     title:"Species" },
-      { field:"state",   type:"nominal",     title:"State" },
-      { field:"days",    type:"quantitative",title:"Days" },
-      { field:"pct",     type:"quantitative",title:"% of days", format:".1f" }
-    ]
-  },
-  config:CFG
-}, { renderer:"svg", actions:false }).catch(console.error);
-
-// ══════════════════════════════════════════════════════════════
-// STREAMGRAPH — weekly abundance stacked area
-// ══════════════════════════════════════════════════════════════
-vegaEmbed('#chart_streamgraph', {
-  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
-  data:{ url:"data/streamgraph.csv" },
-  width:820, height:260,
-  mark:{ type:"area", interpolate:"monotone", opacity:0.82 },
-  encoding:{
-    x:{ field:"week_str", type:"temporal", title:null,
-        axis:{ format:"%b", labelColor:"#4a7a9b", gridColor:"#c2dff0",
-               tickCount:"month", titleColor:"#4a7a9b" } },
-    y:{ field:"abundance_pct", type:"quantitative",
-        title:"Relative abundance (% of each species peak)",
-        stack:"zero",
-        axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b" } },
-    color:{ field:"species", type:"nominal",
-      scale:{ domain:SP_ORDER, range:SP_COLOURS }, title:"Species",
-      legend:{ orient:"top", labelColor:"#4a7a9b", titleColor:"#4a7a9b", labelFontSize:11 } },
-    order:{ field:"species", sort:"descending" },
-    tooltip:[
-      { field:"species",       type:"nominal",     title:"Species" },
-      { field:"week_str",      type:"temporal",    title:"Week", format:"%d %b" },
-      { field:"abundance_pct", type:"quantitative",title:"Relative abundance (%)", format:".1f" }
-    ]
-  },
-  config:CFG
-}, { renderer:"svg", actions:false }).catch(console.error);
-
-// ══════════════════════════════════════════════════════════════
-// SMALL MULTIPLES — seasonal abundance per species (chart_lollipop)
-// ══════════════════════════════════════════════════════════════
-
-// ══════════════════════════════════════════════════════════════
-// SMALL MULTIPLES — seasonal abundance per species (chart_lollipop)
-// ══════════════════════════════════════════════════════════════
-vegaEmbed('#chart_lollipop', {
-  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
-  data:{ url:"data/ebird_radial.csv" },
-  facet:{
-    field:"species", type:"nominal", sort:SP_ORDER,
-    header:{ labelColor:"#0f2a3d", labelFontSize:13,
-      labelFont:"'Playfair Display', Georgia, serif",
-      labelFontWeight:"bold", title:null,
-      labelOrient:"top", labelAnchor:"start" }
-  },
+// the small multiples
+vegaEmbed('#chart_multiples',{
+  $schema:'https://vega.github.io/schema/vega-lite/v5.json',
+  data:{url:'data/ebird_radial.csv'},
+  facet:{field:'species',type:'nominal',sort:SP_ORDER.slice(0,4),
+    header:{labelColor:'#0f2a3d',labelFontSize:13,labelFont:"'Playfair Display',Georgia,serif",
+            labelFontWeight:'bold',title:null,labelOrient:'top',labelAnchor:'start'}},
   columns:2,
-  spec:{
-    width:380, height:160,
+  resolve:{axis:{y:'independent',x:'independent'}},
+  spec:{width:320,height:160,
+    layer:[
+      {mark:{type:'line',interpolate:'linear',strokeWidth:2},
+       encoding:{
+         x:{field:'week_num',type:'quantitative',title:null,scale:{domain:[1,52]},
+            axis:{values:[1,9,18,27,36,44,52],
+                  labelExpr:"['Jan','Mar','May','Jul','Sep','Nov','Dec'][indexof([1,9,18,27,36,44,52],datum.value)]",
+                  labelColor:'#5a7a8e',gridColor:'#ebebeb',tickColor:'#ebebeb',domainColor:'#ebebeb',
+                  labelFontSize:9}},
+            y:{field:'abundance_norm',type:'quantitative',
+            title:'% of peak',
+            scale:{domain:[0,100]},
+            axis:{gridColor:'#ebebeb',labelColor:'#5a7a8e',titleColor:'#5a7a8e',tickCount:3,labelFontSize:9}},
+         color:{field:'species',type:'nominal',scale:{domain:SP_ORDER,range:SP_COLOURS},legend:null},
+         tooltip:[{field:'species',type:'nominal',title:'Species'},
+                  {field:'week_label',type:'nominal',title:'Week'},
+                  {field:'abundance_norm',type:'quantitative',title:'% of species peak',format:'.1f'}]
+       }}
+    ]},config:CFG
+},{renderer:'svg',actions:false}).catch(console.error);
+
+// streamgGRAPH
+vegaEmbed('#chart_stream',{
+  $schema:'https://vega.github.io/schema/vega-lite/v5.json',
+  data:{url:'data/streamgraph.csv'},
+  // title:{text:'Overlapping migration seasons — when is each species most abundant globally?',
+  //        subtitle:'Height = relative abundance that week (% of each species\' own annual peak). Source: eBird 2023.',
+  //        fontSize:13,subtitleFontSize:11,anchor:'start',color:'#0f2a3d',subtitleColor:'#4a7a9b',
+  //        font:"'Playfair Display',Georgia,serif"},
+  width:820,height:220,
+  mark:{type:'area',interpolate:'monotone',opacity:0.70},
+  encoding:{
+    x:{field:'week_str',type:'temporal',title:null,
+       axis:{format:'%b',labelColor:'#5a7a8e',gridColor:'#ebebeb',tickCount:'month',titleColor:'#5a7a8e'}},
+    y:{field:'abundance_pct',type:'quantitative',title:'Relative abundance (% of peak)',stack:'zero',
+       axis:{gridColor:'#c2dff0',labelColor:'#4a7a9b',titleColor:'#4a7a9b'}},
+    color:{field:'species',type:'nominal',scale:{domain:SP_ORDER.slice(0,4),range:SP_COLOURS.slice(0,4)},title:'Species',
+           legend:{orient:'top',labelColor:'#4a7a9b',titleColor:'#4a7a9b',labelFontSize:11}},
+    order:{field:'species',sort:'descending'},
+    tooltip:[{field:'species',type:'nominal',title:'Species'},
+             {field:'week_str',type:'temporal',title:'Week',format:'%d %b'},
+             {field:'abundance_pct',type:'quantitative',title:'Relative abundance (%)',format:'.1f'}]
+  },config:CFG
+},{renderer:'svg',actions:false}).catch(console.error);
+
+// isotype GRAPH
+const distData=[
+  {species:'Grey Plover',       km:14000},
+  {species:'Barn Swallow',      km:10000},
+  {species:'Upland Sandpiper',  km:14000},
+  {species:'Red Knot',          km:24000},
+  {species:'Bar-tailed Godwit', km:28000},
+  {species:'Far Eastern Curlew',km:26000},
+];
+
+vegaEmbed('#chart_isotype',{
+  $schema:'https://vega.github.io/schema/vega-lite/v5.json',
+  data:{values:distData},
+  width:320,height:240,
+  layer:[
+    {
+      mark:{type:'bar',opacity:0.65,cornerRadiusEnd:2},
+      encoding:{
+        y:{field:'species',type:'nominal',sort:{field:'km',order:'descending'},
+           title:null,axis:{labelColor:'#0f2a3d',labelFontSize:12,labelLimit:140}},
+        x:{field:'km',type:'quantitative',title:'Distance (km)',
+           scale:{domain:[0,30000]},
+           axis:{gridColor:'#f0f0f0',labelColor:'#5a7a8e',titleColor:'#5a7a8e',
+                 format:',.0f',tickCount:4}},
+        color:{field:'species',type:'nominal',
+               scale:{domain:SP_ORDER,range:SP_COLOURS},legend:null},
+        tooltip:[
+          {field:'species',type:'nominal',     title:'Species'},
+          {field:'km',     type:'quantitative',title:'Distance (km)',format:',.0f'}
+        ]
+      }
+    },
+    {
+      // end-of-bar distance labels
+      mark:{type:'text',align:'left',dx:4,fontSize:10,fontWeight:500},
+      encoding:{
+        y:{field:'species',type:'nominal',sort:{field:'km',order:'descending'}},
+        x:{field:'km',type:'quantitative'},
+        text:{field:'km',type:'quantitative',format:',.0f'},
+        color:{field:'species',type:'nominal',
+               scale:{domain:SP_ORDER,range:SP_COLOURS},legend:null}
+      }
+    }
+  ],
+  config:{...CFG,view:{stroke:null}}
+},{renderer:'svg',actions:false}).catch(console.error);
+
+// the dot AND RANGE GRAPH
+// Sorted by longest single day descending
+const dotData=[
+  {species:'Bar-tailed Godwit', metric:'Typical moving day', km:890},
+  {species:'Bar-tailed Godwit', metric:'Longest single day',  km:11690},
+  {species:'Upland Sandpiper',  metric:'Typical moving day', km:377.9},
+  {species:'Upland Sandpiper',  metric:'Longest single day',  km:6514},
+  {species:'Red Knot',          metric:'Typical moving day', km:2314.9},
+  {species:'Red Knot',          metric:'Longest single day',  km:6308},
+  {species:'Far Eastern Curlew',metric:'Typical moving day', km:38.2},
+  {species:'Far Eastern Curlew',metric:'Longest single day',  km:4210},
+  {species:'Grey Plover',       metric:'Typical moving day', km:45.4},
+  {species:'Grey Plover',       metric:'Longest single day',  km:3422},
+  {species:'Barn Swallow',      metric:'Typical moving day', km:55.7},
+  {species:'Barn Swallow',      metric:'Longest single day',  km:1277},
+];
+const DOT_SORT=['Bar-tailed Godwit','Upland Sandpiper','Red Knot',
+                'Far Eastern Curlew','Grey Plover','Barn Swallow'];
+
+// ── SPRINT VS CRUISE — lollipop with consistent 0 baseline ──
+// All species start from 0 so comparison is honest.
+// Circle = typical moving day. Large filled dot = longest single day.
+// Line connects 0 → typical → max to show full range.
+
+vegaEmbed('#chart_dotrange',{
+  $schema:'https://vega.github.io/schema/vega-lite/v5.json',
+  data:{values:dotData},
+  width:340,height:280,
+  title:{
+    text:'How far do they fly on a single day?',
+    subtitle:'Sorted by longest day. ● = typical travel day  ◆ = longest single day ever recorded.',
+    fontSize:12,subtitleFontSize:10,anchor:'start',
+    color:'#0f2535',subtitleColor:'#5a7a8e',
+    font:"'Playfair Display',Georgia,serif"
+  },
+  layer:[
+    {
+      // line from 0 → max (full range bar)
+      transform:[{pivot:'metric',value:'km',groupby:['species']}],
+      mark:{type:'rule',strokeWidth:2.5,opacity:0.18,color:'#1a6fa8',strokeCap:'round'},
+      encoding:{
+        y:{field:'species',type:'nominal',sort:DOT_SORT,title:null,
+           axis:{labelColor:'#0f2a3d',labelFontSize:12,labelLimit:140}},
+        x:{field:'Longest single day',type:'quantitative'},
+        x2:{value:0}
+      }
+    },
+    {
+      // line from 0 → typical (darker segment)
+      transform:[{pivot:'metric',value:'km',groupby:['species']}],
+      mark:{type:'rule',strokeWidth:2.5,opacity:0.55,color:'#1a6fa8',strokeCap:'round'},
+      encoding:{
+        y:{field:'species',type:'nominal',sort:DOT_SORT},
+        x:{field:'Typical moving day',type:'quantitative'},
+        x2:{value:0}
+      }
+    },
+    {
+      // circle = typical day
+      transform:[{filter:"datum.metric === 'Typical moving day'"}],
+      mark:{type:'point',filled:true,size:130,shape:'circle',color:'#1a6fa8',opacity:0.9},
+      encoding:{
+        y:{field:'species',type:'nominal',sort:SP_ORDER},
+        x:{field:'km',type:'quantitative',
+           scale:{domain:[0,12500]},
+           title:'Distance (km)',
+           axis:{gridColor:'#e8f4fb',gridOpacity:0.7,
+                 labelColor:'#4a7a9b',titleColor:'#4a7a9b',
+                 tickCount:5,format:',.0f'}},
+        tooltip:[
+          {field:'species',type:'nominal',     title:'Species'},
+          {field:'metric', type:'nominal',     title:'Metric'},
+          {field:'km',     type:'quantitative',title:'Distance (km)',format:',.0f'}
+        ]
+      }
+    },
+    {
+      // diamond = longest single day
+      transform:[{filter:"datum.metric === 'Longest single day'"}],
+      mark:{type:'point',filled:true,size:160,shape:'diamond',color:'#0f2a3d',opacity:0.85},
+      encoding:{
+        y:{field:'species',type:'nominal',sort:SP_ORDER},
+        x:{field:'km',type:'quantitative',scale:{domain:[0,12500]}},
+        tooltip:[
+          {field:'species',type:'nominal',     title:'Species'},
+          {field:'metric', type:'nominal',     title:'Metric'},
+          {field:'km',     type:'quantitative',title:'Distance (km)',format:',.0f'}
+        ]
+      }
+    },
+
+  ],
+  resolve:{scale:{color:'independent'}},
+  config:{...CFG,view:{stroke:null}}
+},{renderer:'svg',actions:false}).catch(console.error);
+
+// monthly latutide GRAPH
+const monthAxis={field:'month',type:'quantitative',title:null,scale:{domain:[1,12],nice:false},
+  axis:{values:[1,2,3,4,5,6,7,8,9,10,11,12],
+        labelExpr:"['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][datum.value-1]",
+        labelColor:'#4a7a9b',titleColor:'#4a7a9b',gridColor:'#e8f4fb',tickCount:12}};
+
+// Softer desaturated colours for latitude chart
+const LAT_COLOURS=['#d4804a','#4a8fc4','#4a9460','#9060c0','#d44a6a','#d4900a'];
+
+// Direct labels for 3 most distinct species only
+const latEndLabels=[
+  {species:'Grey Plover',      month:12, lat:47.56},
+  {species:'Barn Swallow',     month:10, lat:-30.30},
+  {species:'Red Knot',month:10, lat:-43.78},
+];
+
+vegaEmbed('#chart_latitude',{
+  $schema:'https://vega.github.io/schema/vega-lite/v5.json',
+  data:{url:'data/monthly_latitude.csv'},
+  // title:{text:'Where is each species, month by month?',
+  //        subtitle:'Each line shows the median GPS latitude of one species. Higher = further north. 0° = Equator.',
+  //        fontSize:13,subtitleFontSize:11,anchor:'start',color:'#0f2a3d',subtitleColor:'#4a7a9b',
+  //        font:"'Playfair Display',Georgia,serif"},
+  width:820,height:300,
+  layer:[
+    {
+      // key reference lines - equator only always visible, others very faint
+      data:{values:[
+        {lat:66.5,label:'Arctic Circle',opacity:0.18},
+        {lat:23.5,label:'Tropic of Cancer',opacity:0.18},
+        {lat:0,   label:'Equator',opacity:0.45},
+        {lat:-23.5,label:'Tropic of Capricorn',opacity:0.18}
+      ]},
+      mark:{type:'rule',strokeDash:[5,4],strokeWidth:1},
+      encoding:{
+        y:{field:'lat',type:'quantitative'},
+        opacity:{field:'opacity',type:'quantitative',legend:null},
+        color:{value:'#7aacc4'}
+      }
+    },
+    {
+      // reference labels - only equator + arctic circle
+      data:{values:[
+        {lat:66.5,label:'Arctic Circle'},
+        {lat:0,   label:'Equator'}
+      ]},
+      mark:{type:'text',align:'left',dx:4,fontSize:9,fontStyle:'italic',opacity:0.55},
+      encoding:{
+        x:{value:820},
+        y:{field:'lat',type:'quantitative'},
+        text:{field:'label',type:'nominal'},
+        color:{value:'#7aacc4'}
+      }
+    },
+    {
+      // lines  --- straight segments (linear), no smoothing
+      mark:{type:'line',strokeWidth:1.8,interpolate:'linear',opacity:0.72},
+      encoding:{
+        x:monthAxis,
+        y:{field:'median_lat',type:'quantitative',title:'Median Latitude (°)',
+           axis:{gridColor:'#e8f4fb',labelColor:'#4a7a9b',titleColor:'#4a7a9b'}},
+        color:{field:'species',type:'nominal',
+               scale:{domain:SP_ORDER,range:LAT_COLOURS},
+               title:'Species',
+               legend:{orient:'bottom',labelColor:'#5a7a8e',titleColor:'#5a7a8e',
+                       labelFontSize:10,columns:3,symbolSize:60}},
+        tooltip:[
+          {field:'species',   type:'nominal',     title:'Species'},
+          {field:'month_name',type:'nominal',     title:'Month'},
+          {field:'median_lat',type:'quantitative',title:'Median Latitude (°)',format:'.1f'},
+          {field:'n_fixes',   type:'quantitative',title:'GPS fixes'}
+        ]
+      }
+    },
+    {
+      data:{values:latEndLabels},
+      mark:{type:'text',align:'right',dx:-8,dy:-10,fontSize:10,fontWeight:700},
+      encoding:{
+        x:{field:'month',type:'quantitative',scale:{domain:[1,12]}},
+        y:{field:'lat',type:'quantitative'},
+        text:{field:'species',type:'nominal'},
+        color:{field:'species',type:'nominal',
+               scale:{domain:SP_ORDER,range:LAT_COLOURS},legend:null}
+      }
+    }
+  ],
+  resolve:{scale:{color:'shared'}},
+  config:{...CFG,view:{stroke:null}}
+},{renderer:'svg',actions:false}).catch(console.error);
+
+// heatmap
+vegaEmbed('#chart_heatmap',{
+  $schema:'https://vega.github.io/schema/vega-lite/v5.json',
+  data:{url:'data/heatmap_activity.csv'},
+  // title:{text:'Monthly travel intensity',
+  //        subtitle:'Darker blue = more km travelled that month. Each species is normalised to its own most active month = 100%.',
+  //        fontSize:13,subtitleFontSize:11,anchor:'start',color:'#0f2a3d',subtitleColor:'#4a7a9b',
+  //        font:"'Playfair Display',Georgia,serif"},
+  width:680,height:220,
+  padding:{right:90},
+  mark:{type:'rect'},
+  encoding:{
+    y:{field:'species',type:'nominal',sort:SP_ORDER,title:null,axis:{labelColor:'#0f2a3d',labelFontSize:12}},
+    x:{field:'month',type:'ordinal',sort:[1,2,3,4,5,6,7,8,9,10,11,12],title:null,
+       axis:{labelExpr:"['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][datum.value-1]",
+             labelColor:'#4a7a9b',labelFontSize:11,domainColor:'#c2dff0'}},
+    color:{field:'normalised',type:'quantitative',title:'Activity (% of peak)',
+           scale:{scheme:'blues',domain:[0,100],range:['#f0f5f8','#08306b']},
+           legend:{orient:'right',labelColor:'#4a7a9b',titleColor:'#4a7a9b',labelFontSize:10,gradientLength:120}},
+    tooltip:[{field:'species',type:'nominal',title:'Species'},
+             {field:'month_name',type:'nominal',title:'Month'},
+             {field:'median_daily_km',type:'quantitative',title:'Median daily dist (km)',format:'.0f'},
+             {field:'normalised',type:'quantitative',title:'Activity (% of peak)',format:'.0f'}]
+  },config:CFG
+},{renderer:'svg',actions:false}).catch(console.error);
+
+//choropleth 
+let choroData=[], choroView=null;
+
+function buildChoroSpec(species, season){
+  const filtered=choroData.filter(d=>d.species===species && d.season_label===season);
+  const colour=SP_COLOURS[SP_ORDER.indexOf(species)]||'#1a6fa8';
+  const maxPct=filtered.length?Math.max(...filtered.map(d=>d.season_pop_pct)):100;
+
+  return {
+    $schema:'https://vega.github.io/schema/vega-lite/v5.json',
+    width:820,height:420,
+    projection:{type:'equalEarth'},
     layer:[
       {
-        mark:{ type:"area", interpolate:"monotone", opacity:0.18 },
-        encoding:{
-          x:{ field:"week_num", type:"quantitative", title:null,
-              scale:{ domain:[1,52] },
-              axis:{ values:[1,14,27,40,52],
-                labelExpr:"['Jan','Apr','Jul','Oct','Dec'][indexof([1,14,27,40,52],datum.value)]",
-                labelColor:"#4a7a9b", gridColor:"#c2dff0", tickColor:"#c2dff0", domainColor:"#c2dff0" } },
-          y:{ field:"abundance_norm", type:"quantitative", title:"Relative abundance (%)",
-              scale:{ domain:[0,100] },
-              axis:{ gridColor:"#c2dff0", labelColor:"#4a7a9b", titleColor:"#4a7a9b", tickCount:3 } },
-          color:{ field:"species", type:"nominal",
-            scale:{ domain:SP_ORDER, range:SP_COLOURS }, legend:null }
-        }
+        // base layer — all countries always visible
+        data:{url:TOPO,format:{type:'topojson',feature:'ne_110m_admin_0_countries'}},
+        mark:{type:'geoshape',fill:'#ede8e0',stroke:'#ccc5bb',strokeWidth:0.25}
       },
       {
-        mark:{ type:"line", interpolate:"monotone", strokeWidth:2 },
+        // data layer — only countries with data, coloured by population %
+        data:{url:TOPO,format:{type:'topojson',feature:'ne_110m_admin_0_countries'}},
+        transform:[
+          {lookup:'properties.NAME',from:{data:{values:filtered},key:'region_name',
+           fields:['season_pop_pct','range_days_occupation']}}
+        ],
+        mark:{type:'geoshape',stroke:'#c0d0d8',strokeWidth:0.3},
         encoding:{
-          x:{ field:"week_num", type:"quantitative", scale:{ domain:[1,52] } },
-          y:{ field:"abundance_norm", type:"quantitative", scale:{ domain:[0,100] } },
-          color:{ field:"species", type:"nominal",
-            scale:{ domain:SP_ORDER, range:SP_COLOURS }, legend:null },
+          color:{
+            condition:{test:'datum.season_pop_pct != null',
+              field:'season_pop_pct',type:'quantitative',
+              title:'% of global population',
+              scale:{scheme:'blues',domain:[0,maxPct],type:'sqrt',
+                     legend:{orient:'right',labelColor:'#4a7a9b',titleColor:'#4a7a9b',format:'.1f'}}
+            },
+            value:'#ede8e0'
+          },
           tooltip:[
-            { field:"species",        type:"nominal",     title:"Species" },
-            { field:"week_label",     type:"nominal",     title:"Week" },
-            { field:"abundance_norm", type:"quantitative",title:"Relative abundance (%)", format:".1f" }
+            {field:'properties.NAME',type:'nominal',title:'Country'},
+            {field:'season_pop_pct',type:'quantitative',title:'% of global pop.',format:'.2f'},
+            {field:'range_days_occupation',type:'quantitative',title:'Days occupied'}
           ]
         }
       }
-    ]
-  },
+    ],config:CFG
+  };
+}
+
+function renderChoro(){
+  const sp=document.getElementById('choroSpecies').value;
+  const se=document.getElementById('choroSeason').value;
+  vegaEmbed('#map_choropleth',buildChoroSpec(sp,se),{renderer:'svg',actions:false})
+    .then(r=>{choroView=r.view;})
+    .catch(console.error);
+  // Update caption
+  const filtered=choroData.filter(d=>d.species===sp&&d.season_label===se);
+  const aus=filtered.find(d=>d.region_name==='Australia');
+  const sorted=filtered.slice().sort((a,b)=>b.season_pop_pct-a.season_pop_pct);
+  const top=sorted.slice(0,3);
+  const topStr=top.map(d=>`${d.region_name} (${d.season_pop_pct.toFixed(1)}%)`).join(', ');
+  const capEl=document.getElementById('choro_caption');
+  capEl.textContent= aus
+    ? `Australia: ${aus.season_pop_pct.toFixed(1)}%  ·  Top 3: ${topStr}`
+    : `Top 3: ${topStr}`;
+
+  // Dynamic insight sentence
+  const insightEl=document.getElementById('choro_insight');
+  const no1 = sorted[0];
+
+const top3 = sorted
+  .slice(0,3)
+  .reduce((sum,d)=>sum + d.season_pop_pct,0);
+
+const seasonLower = se.toLowerCase();
+
+if(no1){
+  const pct = no1.season_pop_pct;
+  const country = no1.region_name;
+
+  let sentence = '';
+
+  if(pct >= 40){
+    sentence = `<strong>${country}</strong> supports ${pct.toFixed(0)}% of the world's ${sp} population during the ${seasonLower} season — making it the dominant country in this seasonal range.`;
+  } else if(pct >= 25){
+    sentence = `<strong>${country}</strong> supports ${pct.toFixed(0)}% of the world's ${sp} population during the ${seasonLower} season, making it the single most important country shown.`;
+  } else if(pct >= 15){
+    sentence = `The ${sp}'s ${seasonLower} range is spread across several countries, with <strong>${country}</strong> holding the largest share at ${pct.toFixed(0)}%.`;
+  } else {
+    sentence = `The ${sp} is widely distributed during the ${seasonLower} season — no single country holds more than ${pct.toFixed(0)}% of the global population.`;
+  }
+
+  sentence += ` Together, the top three countries account for ${top3.toFixed(0)}% of the global population.`;
+
+  insightEl.innerHTML = sentence;
+} else {
+  insightEl.textContent = '';
+}
+}
+
+
+
+fetch('data/regional_all.csv').then(r=>r.text()).then(text=>{
+  choroData=parseCSV(text);
+  choroData.forEach(d=>{d.season_pop_pct=+d.season_pop_pct;d.range_days_occupation=+d.range_days_occupation;});
+  renderChoro();
+}).catch(console.error);
+
+document.getElementById('choroSpecies').addEventListener('change',renderChoro);
+document.getElementById('choroSeason').addEventListener('change',renderChoro);
+
+// diverging bar chart
+// dim the species tracked in this visualisation (featured elsewhere)
+const TRACKED=['Grey Plover','Red Knot'];
+
+vegaEmbed('#chart_trends',{
+  $schema:'https://vega.github.io/schema/vega-lite/v5.json',
+  data:{url:'data/aus_shorebird_trends.csv'},
+  width:760,height:320,
+  layer:[
+    // bars
+    {mark:{type:'bar',cornerRadiusEnd:0},
+     encoding:{
+       y:{field:'species',type:'nominal',sort:['Black-tailed Godwit', 'Eastern Curlew', 'Common Greenshank', 'Curlew Sandpiper', 'Nunivak Bar-tailed Godwit', 'Grey Plover', 'Great Knot', 'Ruddy Turnstone', 'Terek Sandpiper', "Latham's Snipe", 'Greater Sand Plover', 'N. Siberian Bar-tailed Godwit', 'Red Knot', 'Sharp-tailed Sandpiper'],title:null,
+          axis:{labelColor:'#0f2a3d',labelFontSize:11}},
+       x:{field:'pct_change',type:'quantitative',title:'% population change (over 10–28 years)',
+          axis:{gridColor:'#e6f0f5',labelColor:'#4a7a9b',titleColor:'#4a7a9b'}},
+       color:{field:'pct_change',type:'quantitative',
+              scale:{domain:[-80,-40,0,12,25],
+                     range:['#b22222','#e05a1a','#d4a84b','#5a9e3a','#1a7a35']},
+              legend:null},
+       opacity:{condition:{test:`indexof(${JSON.stringify(TRACKED)}, datum.species) >= 0`,value:0.35},value:1},
+       tooltip:[{field:'species',type:'nominal',title:'Species'},
+                {field:'pct_change',type:'quantitative',title:'% change',format:'.1f'},
+                {field:'trend_category',type:'nominal',title:'Status'},
+                {field:'aus_status',type:'nominal',title:'Australian listing'}]
+     }},
+
+    // zero baseline
+    {data:{values:[{x:0}]},mark:{type:'rule',strokeWidth:1,color:'#888',opacity:0.6},
+     encoding:{x:{field:'x',type:'quantitative'}}},
+
+    // bar value labels
+    {
+      mark:{type:'text',fontSize:9.5,fontWeight:500,
+            align:{expr:"datum.pct_change < 0 ? 'right' : 'left'"},
+            dx:{expr:"datum.pct_change < 0 ? -4 : 4"}},
+      encoding:{
+        y:{field:'species',type:'nominal',sort:['Black-tailed Godwit', 'Eastern Curlew', 'Common Greenshank', 'Curlew Sandpiper', 'Nunivak Bar-tailed Godwit', 'Grey Plover', 'Great Knot', 'Ruddy Turnstone', 'Terek Sandpiper', "Latham's Snipe", 'Greater Sand Plover', 'N. Siberian Bar-tailed Godwit', 'Red Knot', 'Sharp-tailed Sandpiper']},
+        x:{field:'pct_change',type:'quantitative'},
+        text:{field:'pct_change',type:'quantitative',format:'.0f'},
+        color:{value:'#3a4a5a'}
+      }
+    },
+
+    // annotation: Black-tailed Godwit -78%
+    {data:{values:[{species:'Black-tailed Godwit',pct_change:-78}]},
+     mark:{type:'text',fontSize:10,fontWeight:700,fontStyle:'italic',
+           align:'left',dx:6,dy:-14,color:'#5a0d0d'},
+     encoding:{
+       y:{field:'species',type:'nominal',sort:['Black-tailed Godwit', 'Eastern Curlew', 'Common Greenshank', 'Curlew Sandpiper', 'Nunivak Bar-tailed Godwit', 'Grey Plover', 'Great Knot', 'Ruddy Turnstone', 'Terek Sandpiper', "Latham's Snipe", 'Greater Sand Plover', 'N. Siberian Bar-tailed Godwit', 'Red Knot', 'Sharp-tailed Sandpiper']},
+       x:{value:0},
+       text:{value:'Populations have fallen by 78% — most severe decline tracked'}
+     }
+    },
+
+    // annotation: Grey Plover -37%
+    {data:{values:[{species:'Grey Plover',pct_change:-37}]},
+     mark:{type:'text',fontSize:10,fontWeight:700,fontStyle:'italic',
+           align:'left',dx:6,dy:-14,color:'#5a2800'},
+     encoding:{
+       y:{field:'species',type:'nominal',sort:['Black-tailed Godwit', 'Eastern Curlew', 'Common Greenshank', 'Curlew Sandpiper', 'Nunivak Bar-tailed Godwit', 'Grey Plover', 'Great Knot', 'Ruddy Turnstone', 'Terek Sandpiper', "Latham's Snipe", 'Greater Sand Plover', 'N. Siberian Bar-tailed Godwit', 'Red Knot', 'Sharp-tailed Sandpiper']},
+       x:{value:0},
+       text:{value:'Featured species — declined 37% over the study period'}
+     }
+    },
+
+    // annotation: only 2 species increasing
+    {data:{values:[{species:'Sharp-tailed Sandpiper',pct_change:20}]},
+     mark:{type:'text',fontSize:10,fontWeight:700,fontStyle:'italic',
+           align:'left',dx:6,dy:-14,color:'#0d4a20'},
+     encoding:{
+       y:{field:'species',type:'nominal',sort:['Black-tailed Godwit', 'Eastern Curlew', 'Common Greenshank', 'Curlew Sandpiper', 'Nunivak Bar-tailed Godwit', 'Grey Plover', 'Great Knot', 'Ruddy Turnstone', 'Terek Sandpiper', "Latham's Snipe", 'Greater Sand Plover', 'N. Siberian Bar-tailed Godwit', 'Red Knot', 'Sharp-tailed Sandpiper']},
+       x:{value:0},
+       text:{value:'Only 2 of 14 species show any population growth ▶'}
+     }
+    }
+  ],
   config:CFG
-}, { renderer:"svg", actions:false }).catch(console.error);
+},{renderer:'svg',actions:false}).catch(console.error);
+// radial GRAPH
+fetch('data/ebird_radial.csv').then(r=>r.text()).then(text=>{
+  const rows = parseCSV(text);
+  rows.forEach(d=>{ d.week_num_end = (+d.week_num) + 0.85; });
+
+  vegaEmbed('#chart_radial', {
+    $schema:"https://vega.github.io/schema/vega-lite/v5.json",
+    data:{ values: rows },
+    facet:{
+      field:"species", type:"nominal",
+      sort:SP_ORDER.slice(0,4),
+      header:{labelColor:"#0f2a3d",labelFontSize:13,
+              labelFont:"'Playfair Display',Georgia,serif",
+              labelFontWeight:"bold",title:null,
+              labelOrient:"top",labelAnchor:"start"}
+    },
+    columns:2,
+    spec:{
+      width:200, height:200,
+      layer:[
+        {
+          // inner reference circle
+          data:{ values:[{theta:0,theta2:6.283,r:30}] },
+          mark:{type:"arc",innerRadius:28,outerRadius:30,color:"#c2dff0",opacity:0.8},
+          encoding:{theta:{value:0},theta2:{value:6.283}}
+        },
+        {
+          // month label marks at 12 positions
+          data:{ values:[
+            {wk:1,lbl:"Jan"},{wk:5,lbl:"Feb"},{wk:9,lbl:"Mar"},
+            {wk:14,lbl:"Apr"},{wk:18,lbl:"May"},{wk:22,lbl:"Jun"},
+            {wk:27,lbl:"Jul"},{wk:31,lbl:"Aug"},{wk:36,lbl:"Sep"},
+            {wk:40,lbl:"Oct"},{wk:44,lbl:"Nov"},{wk:48,lbl:"Dec"}
+          ]},
+          mark:{type:"text",fontSize:9,color:"#5a7a8e",radius:110,fontWeight:500},
+          encoding:{
+            theta:{field:"wk",type:"quantitative",scale:{domain:[0,53]}},
+            text:{field:"lbl",type:"nominal"}
+          }
+        },
+        {
+          // radial bars
+          mark:{type:"arc",innerRadius:30,opacity:0.58},
+          encoding:{
+            theta:{field:"week_num",type:"quantitative",scale:{domain:[0,53]},stack:false},
+            theta2:{field:"week_num_end",type:"quantitative"},
+            radius:{field:"abundance_norm",type:"quantitative",
+                    scale:{domain:[0,100],range:[30,100]}},
+            color:{field:"species",type:"nominal",
+                   scale:{domain:SP_ORDER,range:SP_COLOURS},legend:null},
+            tooltip:[
+              {field:"species",       type:"nominal",     title:"Species"},
+              {field:"week_label",    type:"nominal",     title:"Week"},
+              {field:"abundance_norm",type:"quantitative",title:"Relative abundance (%)",format:".1f"}
+            ]
+          }
+        }
+      ]
+    },
+    config:CFG
+  },{renderer:"svg",actions:false}).catch(console.error);
+}).catch(console.error);
+
+//indivudali journeys graphs
+vegaEmbed('#chart_journey', {
+  $schema:"https://vega.github.io/schema/vega-lite/v5.json",
+  data:{ url:"data/journey_yanis.csv" },
+  width:820, height:300,
+  layer:[
+    {
+      // reference lines — Arctic Circle prominent, Tropic of Cancer subtle
+      data:{values:[
+        {lat:66.5,label:"Arctic Circle (66.5°N)",  dash:[5,3],opacity:0.85,stroke:"#1a6fa8",width:1.5},
+        {lat:23.5,label:"Tropic of Cancer (23.5°N)",dash:[4,3],opacity:0.8, stroke:"#2a8a5a",width:1.5}
+      ]},
+      mark:{type:"rule"},
+      encoding:{
+        y:{field:"lat",type:"quantitative"},
+        color:{field:"stroke",type:"nominal",scale:null,legend:null},
+        opacity:{field:"opacity",type:"quantitative",scale:null},
+        strokeDash:{field:"dash",type:"nominal",scale:null},
+        strokeWidth:{field:"width",type:"quantitative",scale:null},
+        tooltip:[{field:"label",type:"nominal",title:"Reference line"}]
+      }
+    },
+    {
+      // ref labels — sit just above each reference line
+      data:{values:[
+        {lat:66.5,label:"Arctic Circle",    color:"#1a6fa8",opacity:0.9},
+        {lat:23.5,label:"Tropic of Cancer", color:"#2a8a5a",opacity:0.9}
+      ]},
+      mark:{type:"text",align:"left",dx:4,dy:-6,fontSize:9,fontStyle:"italic"},
+      encoding:{
+        x:{value:0},y:{field:"lat",type:"quantitative"},
+        text:{field:"label",type:"nominal"},
+        color:{field:"color",type:"nominal",scale:null,legend:null},
+        opacity:{field:"opacity",type:"quantitative",scale:null}
+      }
+    },
+    {
+      // main line
+      mark:{type:"line",strokeWidth:2,interpolate:"linear",color:"#b8601e",opacity:0.9},
+      encoding:{
+        x:{field:"day_of_year",type:"quantitative",scale:{domain:[1,365]},
+           axis:{values:[1,32,61,92,122,153,183,214,245,275,306,336],
+                 labelExpr:"['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][indexof([1,32,61,92,122,153,183,214,245,275,306,336],datum.value)]",
+                 labelColor:"#4a7a9b",gridColor:"#daeef7",gridOpacity:0.6,titleColor:"#4a7a9b",title:null}},
+        y:{field:"latitude",type:"quantitative",title:"Latitude (°N)",
+        scale:{domain:[44,80]},axis:{gridColor:"#daeef7",gridOpacity:0.6,labelColor:"#4a7a9b",titleColor:"#4a7a9b"}},
+        tooltip:[
+          {field:"date",          type:"temporal",    title:"Date",format:"%d %b %Y"},
+          {field:"latitude",      type:"quantitative",title:"Latitude (°N)",format:".2f"},
+          {field:"speed_kmh",     type:"quantitative",title:"Speed (km/h)",format:".1f"},
+          {field:"movement_state",type:"nominal",     title:"State"}
+        ]
+      }
+    },
+    {
+      // annotation dots
+      data:{values:[
+        {day:13, lat:47.4,label:"Wintering\n(47°N, W. Europe)"},
+        {day:147,lat:62.0,label:"Departs north\n(26 May)"},
+        {day:164,lat:75.2,label:"Peak breeding\n(75°N Arctic, 12 Jun)"},
+        {day:222,lat:59.0,label:"Heads south\n(9 Aug)"},
+        {day:355,lat:47.5,label:"Returns to\nwinter site"}
+      ]},
+      mark:{type:"point",filled:true,size:130,color:"#c45e1a",strokeWidth:2,stroke:"white"},
+      encoding:{
+        x:{field:"day",type:"quantitative"},
+        y:{field:"lat",type:"quantitative"},
+        tooltip:[{field:"label",type:"nominal",title:"Event"}]
+      }
+    },
+    {
+      // annotation text
+      data:{values:[
+        {day:13, lat:50,label:"Wintering",                                        anchor:"end",   dy:-24,dx:-8},
+        {day:164,lat:78,label:"Arctic breeding grounds reached in June",          anchor:"middle",dy:-26,dx:0},
+        {day:275,lat:62,label:"Rapid southward migration begins after breeding",  anchor:"middle",dy:28, dx:0},
+        {day:355,lat:43,label:"Returns to wintering grounds by December",         anchor:"end",   dy:28, dx:-8}
+      ]},
+      mark:{type:"text",fontSize:10,fontWeight:600,
+            fontFamily:"'Source Sans 3',sans-serif"},
+      encoding:{
+        x:{field:"day",type:"quantitative"},
+        y:{field:"lat",type:"quantitative"},
+        text:{field:"label",type:"nominal"},
+        dy:{field:"dy",type:"quantitative"},
+        dx:{field:"dx",type:"quantitative"},
+        align:{field:"anchor",type:"nominal",
+               scale:{domain:["start","middle","end"],range:["left","center","right"]}},
+        color:{value:"#0f2a3d"}
+      }
+    }
+  ],
+  resolve:{scale:{color:"shared"}},
+  config:CFG
+},{renderer:"svg",actions:false}).catch(console.error);
 
 </script>
 </body>
