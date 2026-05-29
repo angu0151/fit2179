@@ -474,7 +474,7 @@ footer a{color:var(--accent);text-decoration:none}
     <p><strong style="color:var(--text)">Australian Shorebird Population Trends</strong> - Rogers D.I., Fuller R.A. &amp; Amano T. (2023). <em>Australia's migratory shorebirds: Trends and prospects.</em> NESP Marine and Coastal Hub, University of Queensland. (<a href="https://www.nespmarinecoastal.edu.au" style="color:var(--accent)">nespmarinecoastal.edu.au</a>)</p>
      <p style="margin-top:1rem;border-top:1px solid var(--border);padding-top:1rem;">
       Annie Nguyen &middot; FIT2179 DV2 &middot;
-      AI tools used for code assistance.
+      AI tools used for code assistance and writing.
     </p>
   </div>
 </footer>
@@ -486,7 +486,7 @@ const SP_NAMES = {1:'Grey Plover',2:'Barn Swallow',3:'Upland Sandpiper',
                   4:'Red Knot',5:'Bar-tailed Godwit',6:'Far Eastern Curlew'};
 const SP_ORDER  = ['Grey Plover','Barn Swallow','Upland Sandpiper',
                    'Red Knot','Bar-tailed Godwit','Far Eastern Curlew'];
-const SP_COLOURS= ['#d4896a','#6aa0c8','#6aa082','#a078c8','#d46a88','#c8a050'];
+const SP_COLOURS= ['#c96a3e','#2e7fb8','#3a8f58','#7a4abd','#c43c66','#b07c20'];
 
 const TOPO = 'https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/ne_110m_admin_0_countries.topojson';
 
@@ -523,7 +523,7 @@ const map1Spec={
     {
       // lines only — no dots, cleaner with multiple species
       data:{name:'gps_source'},
-      mark:{type:'line',opacity:0.55,strokeWidth:1.4},
+      mark:{type:'line',opacity:0.80,strokeWidth:1.4},
       encoding:{
         longitude:{field:'location-long',type:'quantitative'},
         latitude: {field:'location-lat', type:'quantitative'},
@@ -542,8 +542,59 @@ const map1Spec={
     ,{
       // Far Eastern Curlew annotation callout
       data:{values:[{lon:150,lat:-15,label:"Far Eastern Curlew"}]},
-      mark:{type:'text',fontSize:10,fontWeight:600,color:'#c47a00',
+      mark:{type:'text',fontSize:9,fontWeight:600,fontStyle:'italic',color:'#1e3245',opacity:0.9,
             align:'left',dx:6,dy:-6},
+      encoding:{
+        longitude:{field:'lon',type:'quantitative'},
+        latitude:{field:'lat',type:'quantitative'},
+        text:{field:'label',type:'nominal'}
+      }
+    },
+    {
+      // annotation: longest non-stop flight (Bar-tailed Godwit, Alaska→New Zealand ~11,000 km)
+      data:{values:[{lon:-160,lat:62,label:"Bar-tailed Godwit departs Alaska"}]},
+      mark:{type:'text',fontSize:9,fontWeight:600,fontStyle:'italic',
+            color:'#1e3245',opacity:0.9,align:'left',dx:8,dy:-8},
+      encoding:{
+        longitude:{field:'lon',type:'quantitative'},
+        latitude:{field:'lat',type:'quantitative'},
+        text:{field:'label',type:'nominal'}
+      }
+    },
+    {
+      // dot marker for Alaska departure
+      data:{values:[{lon:-160,lat:62}]},
+      mark:{type:'point',filled:true,size:40,color:'#1e3245',opacity:0.75},
+      encoding:{
+        longitude:{field:'lon',type:'quantitative'},
+        latitude:{field:'lat',type:'quantitative'}
+      }
+    },
+    {
+      // annotation: New Zealand arrival
+      data:{values:[{lon:174,lat:-40,label:"Arrives New Zealand — longest\nnon-stop flight on Earth (~11,000 km)"}]},
+      mark:{type:'text',fontSize:9,fontWeight:600,fontStyle:'italic',
+            color:'#1e3245',opacity:0.9,align:'right',dx:-8,dy:18},
+      encoding:{
+        longitude:{field:'lon',type:'quantitative'},
+        latitude:{field:'lat',type:'quantitative'},
+        text:{field:'label',type:'nominal'}
+      }
+    },
+    {
+      // dot marker for NZ arrival
+      data:{values:[{lon:174,lat:-40}]},
+      mark:{type:'point',filled:true,size:40,color:'#1e3245',opacity:0.75},
+      encoding:{
+        longitude:{field:'lon',type:'quantitative'},
+        latitude:{field:'lat',type:'quantitative'}
+      }
+    },
+    {
+      // annotation: Barn Swallow South America
+      data:{values:[{lon:-55,lat:-15,label:"Barn Swallow breeds\nin South America"}]},
+      mark:{type:'text',fontSize:9,fontWeight:600,fontStyle:'italic',
+            color:'#1e3245',opacity:0.9,align:'left',dx:8,dy:0},
       encoding:{
         longitude:{field:'lon',type:'quantitative'},
         latitude:{field:'lat',type:'quantitative'},
@@ -631,7 +682,7 @@ function initEbird(data){
     width:820,height:420,projection:{type:'equalEarth'},
     layer:[BASE_MAP,{
       name:'ebird_source',data:{name:'ebird_source'},
-      mark:{type:'circle',opacity:0.78,filled:true},
+      mark:{type:'circle',opacity:0.90,filled:true},
       encoding:{
         longitude:{field:'longitude',type:'quantitative'},
         latitude:{field:'latitude',type:'quantitative'},
@@ -690,7 +741,7 @@ vegaEmbed('#chart_multiples',{
   resolve:{axis:{y:'independent',x:'independent'}},
   spec:{width:320,height:160,
     layer:[
-      {mark:{type:'line',interpolate:'linear',strokeWidth:2},
+      {mark:{type:'line',interpolate:'linear',strokeWidth:2.2,opacity:0.9},
        encoding:{
          x:{field:'week_num',type:'quantitative',title:null,scale:{domain:[1,52]},
             axis:{values:[1,9,18,27,36,44,52],
@@ -713,24 +764,68 @@ vegaEmbed('#chart_multiples',{
 vegaEmbed('#chart_stream',{
   $schema:'https://vega.github.io/schema/vega-lite/v5.json',
   data:{url:'data/streamgraph.csv'},
-  // title:{text:'Overlapping migration seasons — when is each species most abundant globally?',
-  //        subtitle:'Height = relative abundance that week (% of each species\' own annual peak). Source: eBird 2023.',
-  //        fontSize:13,subtitleFontSize:11,anchor:'start',color:'#0f2a3d',subtitleColor:'#4a7a9b',
-  //        font:"'Playfair Display',Georgia,serif"},
   width:820,height:220,
-  mark:{type:'area',interpolate:'monotone',opacity:0.70},
-  encoding:{
-    x:{field:'week_str',type:'temporal',title:null,
-       axis:{format:'%b',labelColor:'#5a7a8e',gridColor:'#ebebeb',tickCount:'month',titleColor:'#5a7a8e'}},
-    y:{field:'abundance_pct',type:'quantitative',title:'Relative abundance (% of peak)',stack:'zero',
-       axis:{gridColor:'#c2dff0',labelColor:'#4a7a9b',titleColor:'#4a7a9b'}},
-    color:{field:'species',type:'nominal',scale:{domain:SP_ORDER.slice(0,4),range:SP_COLOURS.slice(0,4)},title:'Species',
-           legend:{orient:'top',labelColor:'#4a7a9b',titleColor:'#4a7a9b',labelFontSize:11}},
-    order:{field:'species',sort:'descending'},
-    tooltip:[{field:'species',type:'nominal',title:'Species'},
-             {field:'week_str',type:'temporal',title:'Week',format:'%d %b'},
-             {field:'abundance_pct',type:'quantitative',title:'Relative abundance (%)',format:'.1f'}]
-  },config:CFG
+  layer:[
+    {
+      mark:{type:'area',interpolate:'monotone',opacity:0.88},
+      encoding:{
+        x:{field:'week_str',type:'temporal',title:null,
+           axis:{format:'%b',labelColor:'#5a7a8e',gridColor:'#ebebeb',tickCount:'month',titleColor:'#5a7a8e'}},
+        y:{field:'abundance_pct',type:'quantitative',title:'Relative abundance (% of peak)',stack:'zero',
+           axis:{gridColor:'#c2dff0',labelColor:'#4a7a9b',titleColor:'#4a7a9b'}},
+        color:{field:'species',type:'nominal',scale:{domain:SP_ORDER.slice(0,4),range:SP_COLOURS.slice(0,4)},title:'Species',
+               legend:{orient:'top',labelColor:'#4a7a9b',titleColor:'#4a7a9b',labelFontSize:11}},
+        order:{field:'species',sort:'descending'},
+        tooltip:[{field:'species',type:'nominal',title:'Species'},
+                 {field:'week_str',type:'temporal',title:'Week',format:'%d %b'},
+                 {field:'abundance_pct',type:'quantitative',title:'Relative abundance (%)',format:'.1f'}]
+      }
+    },
+    // vertical rule: combined spring peak
+    {
+      data:{values:[{x:'2023-04-15'}]},
+      mark:{type:'rule',strokeDash:[4,3],strokeWidth:1.2,color:'#1e3245',opacity:0.6},
+      encoding:{x:{field:'x',type:'temporal'}}
+    },
+    // label: spring peak
+    {
+      data:{values:[{x:'2023-01-22',y:95,label:'Spring peak — Grey Plover\n& Red Knot overlap'}]},
+      mark:{type:'text',align:'left',dx:6,dy:0,fontSize:9,fontWeight:600,fontStyle:'italic',color:'#1e3245',opacity:0.85},
+      encoding:{
+        x:{field:'x',type:'temporal'},
+        y:{field:'y',type:'quantitative'},
+        text:{field:'label',type:'nominal'}
+      }
+    },
+    // vertical rule: barn swallow peak
+    {
+      data:{values:[{x:'2023-08-15'}]},
+      mark:{type:'rule',strokeDash:[4,3],strokeWidth:1.2,color:'#1e3245',opacity:0.6},
+      encoding:{x:{field:'x',type:'temporal'}}
+    },
+    // label: barn swallow
+    {
+      data:{values:[{x:'2023-08-15',y:95,label:'Barn Swallow at peak —\nothers already declining'}]},
+      mark:{type:'text',align:'left',dx:6,dy:0,fontSize:9,fontWeight:600,fontStyle:'italic',color:'#1e3245',opacity:0.85},
+      encoding:{
+        x:{field:'x',type:'temporal'},
+        y:{field:'y',type:'quantitative'},
+        text:{field:'label',type:'nominal'}
+      }
+    },
+    // label: quiet period Jan
+    {
+      data:{values:[{x:'2023-06-21',y:88,label:'Quietest\nperiod'}]},
+      mark:{type:'text',align:'center',dx:0,dy:0,fontSize:9,fontWeight:600,fontStyle:'italic',color:'#1e3245',opacity:0.75},
+      encoding:{
+        x:{field:'x',type:'temporal'},
+        y:{field:'y',type:'quantitative'},
+        text:{field:'label',type:'nominal'}
+      }
+    }
+  ],
+  resolve:{scale:{color:'shared'}},
+  config:CFG
 },{renderer:'svg',actions:false}).catch(console.error);
 
 // isotype GRAPH
@@ -749,7 +844,7 @@ vegaEmbed('#chart_isotype',{
   width:320,height:240,
   layer:[
     {
-      mark:{type:'bar',opacity:0.65,cornerRadiusEnd:2},
+      mark:{type:'bar',opacity:0.88,cornerRadiusEnd:2},
       encoding:{
         y:{field:'species',type:'nominal',sort:{field:'km',order:'descending'},
            title:null,axis:{labelColor:'#0f2a3d',labelFontSize:12,labelLimit:140}},
@@ -757,8 +852,7 @@ vegaEmbed('#chart_isotype',{
            scale:{domain:[0,30000]},
            axis:{gridColor:'#f0f0f0',labelColor:'#5a7a8e',titleColor:'#5a7a8e',
                  format:',.0f',tickCount:4}},
-        color:{field:'species',type:'nominal',
-               scale:{domain:SP_ORDER,range:SP_COLOURS},legend:null},
+        color:{value:'#1a6fa8'},
         tooltip:[
           {field:'species',type:'nominal',     title:'Species'},
           {field:'km',     type:'quantitative',title:'Distance (km)',format:',.0f'}
@@ -772,8 +866,7 @@ vegaEmbed('#chart_isotype',{
         y:{field:'species',type:'nominal',sort:{field:'km',order:'descending'}},
         x:{field:'km',type:'quantitative'},
         text:{field:'km',type:'quantitative',format:',.0f'},
-        color:{field:'species',type:'nominal',
-               scale:{domain:SP_ORDER,range:SP_COLOURS},legend:null}
+        color:{value:'#1a6fa8'}
       }
     }
   ],
@@ -932,7 +1025,7 @@ vegaEmbed('#chart_latitude',{
     },
     {
       // lines  --- straight segments (linear), no smoothing
-      mark:{type:'line',strokeWidth:1.8,interpolate:'linear',opacity:0.72},
+      mark:{type:'line',strokeWidth:1.8,interpolate:'linear',opacity:0.90},
       encoding:{
         x:monthAxis,
         y:{field:'median_lat',type:'quantitative',title:'Median Latitude (°)',
@@ -950,17 +1043,6 @@ vegaEmbed('#chart_latitude',{
         ]
       }
     },
-    {
-      data:{values:latEndLabels},
-      mark:{type:'text',align:'right',dx:-8,dy:-10,fontSize:10,fontWeight:700},
-      encoding:{
-        x:{field:'month',type:'quantitative',scale:{domain:[1,12]}},
-        y:{field:'lat',type:'quantitative'},
-        text:{field:'species',type:'nominal'},
-        color:{field:'species',type:'nominal',
-               scale:{domain:SP_ORDER,range:LAT_COLOURS},legend:null}
-      }
-    }
   ],
   resolve:{scale:{color:'shared'}},
   config:{...CFG,view:{stroke:null}}
@@ -1148,7 +1230,7 @@ vegaEmbed('#chart_trends',{
     // annotation: Black-tailed Godwit -78%
     {data:{values:[{species:'Black-tailed Godwit',pct_change:-78}]},
      mark:{type:'text',fontSize:10,fontWeight:700,fontStyle:'italic',
-           align:'left',dx:6,dy:-14,color:'#5a0d0d'},
+           align:'left',dx:6,dy:-15,color:'#5a0d0d'},
      encoding:{
        y:{field:'species',type:'nominal',sort:['Black-tailed Godwit', 'Eastern Curlew', 'Common Greenshank', 'Curlew Sandpiper', 'Nunivak Bar-tailed Godwit', 'Grey Plover', 'Great Knot', 'Ruddy Turnstone', 'Terek Sandpiper', "Latham's Snipe", 'Greater Sand Plover', 'N. Siberian Bar-tailed Godwit', 'Red Knot', 'Sharp-tailed Sandpiper']},
        x:{value:0},
@@ -1222,14 +1304,13 @@ fetch('data/ebird_radial.csv').then(r=>r.text()).then(text=>{
         },
         {
           // radial bars
-          mark:{type:"arc",innerRadius:30,opacity:0.58},
+          mark:{type:"arc",innerRadius:30,opacity:0.82},
           encoding:{
             theta:{field:"week_num",type:"quantitative",scale:{domain:[0,53]},stack:false},
             theta2:{field:"week_num_end",type:"quantitative"},
             radius:{field:"abundance_norm",type:"quantitative",
                     scale:{domain:[0,100],range:[30,100]}},
-            color:{field:"species",type:"nominal",
-                   scale:{domain:SP_ORDER,range:SP_COLOURS},legend:null},
+            color:{value:"#1a6fa8"},
             tooltip:[
               {field:"species",       type:"nominal",     title:"Species"},
               {field:"week_label",    type:"nominal",     title:"Week"},
