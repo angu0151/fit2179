@@ -1,0 +1,1202 @@
+species,species_id,colour,region_name,region_code,continent_name,season,season_label,season_pop_pct,peak_pop_pct,range_days_occupation,max_week
+Grey Plover,1,#e8a87c,Aruba,ABW,North America,breeding,Breeding,0.013,0.018,35,2023-07-12
+Grey Plover,1,#e8a87c,Aruba,ABW,North America,nonbreeding,Non-breeding,0.017,0.028,98,2023-12-27
+Grey Plover,1,#e8a87c,Anguilla,AIA,North America,breeding,Breeding,0.015,0.032,35,2023-06-14
+Grey Plover,1,#e8a87c,Anguilla,AIA,North America,nonbreeding,Non-breeding,0.02,0.031,98,2023-12-27
+Grey Plover,1,#e8a87c,Albania,ALB,Europe,nonbreeding,Non-breeding,0.347,1.197,98,2023-01-04
+Grey Plover,1,#e8a87c,Albania,ALB,Europe,postbreeding_migration,Post-breeding Migration,0.063,0.316,126,2023-11-29
+Grey Plover,1,#e8a87c,Albania,ALB,Europe,prebreeding_migration,Pre-breeding Migration,0.034,0.082,63,2023-03-15
+Grey Plover,1,#e8a87c,Aland,ALD,Europe,postbreeding_migration,Post-breeding Migration,0.025,0.133,112,2023-07-26
+Grey Plover,1,#e8a87c,Aland,ALD,Europe,prebreeding_migration,Pre-breeding Migration,0.045,0.439,35,2023-05-31
+Grey Plover,1,#e8a87c,United Arab Emirates,ARE,Asia,breeding,Breeding,0.343,0.438,35,2023-07-05
+Grey Plover,1,#e8a87c,United Arab Emirates,ARE,Asia,nonbreeding,Non-breeding,0.612,0.911,98,2023-12-13
+Grey Plover,1,#e8a87c,United Arab Emirates,ARE,Asia,postbreeding_migration,Post-breeding Migration,0.291,0.834,140,2023-11-29
+Grey Plover,1,#e8a87c,United Arab Emirates,ARE,Asia,prebreeding_migration,Pre-breeding Migration,0.192,0.416,91,2023-03-15
+Grey Plover,1,#e8a87c,Argentina,ARG,South America,breeding,Breeding,0.038,0.066,0,2023-06-14
+Grey Plover,1,#e8a87c,Argentina,ARG,South America,nonbreeding,Non-breeding,0.025,0.04,0,2023-02-08
+Grey Plover,1,#e8a87c,Antigua and Barbuda,ATG,North America,nonbreeding,Non-breeding,0.011,0.039,98,2023-03-08
+Grey Plover,1,#e8a87c,Australia,AUS,Oceania,breeding,Breeding,1.128,1.806,21,2023-07-12
+Grey Plover,1,#e8a87c,Australia,AUS,Oceania,nonbreeding,Non-breeding,1.504,2.718,98,2023-12-06
+Grey Plover,1,#e8a87c,Australia,AUS,Oceania,postbreeding_migration,Post-breeding Migration,1.081,2.886,126,2023-11-29
+Grey Plover,1,#e8a87c,Australia,AUS,Oceania,prebreeding_migration,Pre-breeding Migration,0.578,1.745,35,2023-03-15
+Grey Plover,1,#e8a87c,Azerbaijan,AZE,Asia,postbreeding_migration,Post-breeding Migration,0.154,0.273,63,2023-11-01
+Grey Plover,1,#e8a87c,Azerbaijan,AZE,Asia,prebreeding_migration,Pre-breeding Migration,0.066,0.08,35,2023-05-03
+Grey Plover,1,#e8a87c,Belgium,BEL,Europe,nonbreeding,Non-breeding,0.036,0.115,98,2023-03-08
+Grey Plover,1,#e8a87c,Belgium,BEL,Europe,postbreeding_migration,Post-breeding Migration,0.013,0.042,140,2023-11-29
+Grey Plover,1,#e8a87c,Belgium,BEL,Europe,prebreeding_migration,Pre-breeding Migration,0.024,0.094,91,2023-03-15
+Grey Plover,1,#e8a87c,Benin,BEN,Africa,nonbreeding,Non-breeding,0.019,0.023,7,2023-12-06
+Grey Plover,1,#e8a87c,Bangladesh,BGD,Asia,nonbreeding,Non-breeding,0.463,0.926,98,2023-01-04
+Grey Plover,1,#e8a87c,Bangladesh,BGD,Asia,postbreeding_migration,Post-breeding Migration,0.043,0.145,84,2023-11-29
+Grey Plover,1,#e8a87c,Bulgaria,BGR,Europe,nonbreeding,Non-breeding,0.052,0.076,98,2023-01-11
+Grey Plover,1,#e8a87c,Bulgaria,BGR,Europe,postbreeding_migration,Post-breeding Migration,0.012,0.041,133,2023-10-11
+Grey Plover,1,#e8a87c,Bahrain,BHR,Asia,nonbreeding,Non-breeding,0.059,0.111,98,2023-12-20
+Grey Plover,1,#e8a87c,Bahrain,BHR,Asia,postbreeding_migration,Post-breeding Migration,0.039,0.157,140,2023-11-29
+Grey Plover,1,#e8a87c,Bahrain,BHR,Asia,prebreeding_migration,Pre-breeding Migration,0.031,0.066,77,2023-03-15
+Grey Plover,1,#e8a87c,The Bahamas,BHS,North America,breeding,Breeding,0.363,0.683,35,2023-06-14
+Grey Plover,1,#e8a87c,The Bahamas,BHS,North America,nonbreeding,Non-breeding,0.977,1.42,98,2023-02-01
+Grey Plover,1,#e8a87c,The Bahamas,BHS,North America,postbreeding_migration,Post-breeding Migration,0.41,0.902,140,2023-11-29
+Grey Plover,1,#e8a87c,The Bahamas,BHS,North America,prebreeding_migration,Pre-breeding Migration,0.218,0.624,91,2023-03-15
+Grey Plover,1,#e8a87c,Belarus,BLR,Europe,postbreeding_migration,Post-breeding Migration,0.038,0.101,98,2023-10-11
+Grey Plover,1,#e8a87c,Belize,BLZ,North America,breeding,Breeding,0.068,0.122,35,2023-06-14
+Grey Plover,1,#e8a87c,Belize,BLZ,North America,nonbreeding,Non-breeding,0.074,0.118,98,2023-12-06
+Grey Plover,1,#e8a87c,Belize,BLZ,North America,postbreeding_migration,Post-breeding Migration,0.058,0.112,140,2023-11-29
+Grey Plover,1,#e8a87c,Belize,BLZ,North America,prebreeding_migration,Pre-breeding Migration,0.031,0.076,91,2023-03-15
+Grey Plover,1,#e8a87c,Caribbean Netherlands,BON,North America,breeding,Breeding,0.018,0.032,35,2023-06-14
+Grey Plover,1,#e8a87c,Caribbean Netherlands,BON,North America,nonbreeding,Non-breeding,0.016,0.032,98,2023-03-08
+Grey Plover,1,#e8a87c,Brazil,BRA,South America,nonbreeding,Non-breeding,4.613,8.583,98,2023-02-22
+Grey Plover,1,#e8a87c,Brazil,BRA,South America,postbreeding_migration,Post-breeding Migration,3.024,7.912,84,2023-10-04
+Grey Plover,1,#e8a87c,Brazil,BRA,South America,prebreeding_migration,Pre-breeding Migration,0.76,0.903,21,2023-03-15
+Grey Plover,1,#e8a87c,Barbados,BRB,North America,breeding,Breeding,0.058,0.076,35,2023-07-05
+Grey Plover,1,#e8a87c,Barbados,BRB,North America,nonbreeding,Non-breeding,0.024,0.049,98,2023-12-06
+Grey Plover,1,#e8a87c,Barbados,BRB,North America,postbreeding_migration,Post-breeding Migration,0.012,0.045,140,2023-11-29
+Grey Plover,1,#e8a87c,Brunei,BRN,Asia,nonbreeding,Non-breeding,0.052,0.114,98,2023-02-15
+Grey Plover,1,#e8a87c,Brunei,BRN,Asia,prebreeding_migration,Pre-breeding Migration,0.015,0.057,42,2023-03-15
+Grey Plover,1,#e8a87c,Canada,CAN,North America,breeding,Breeding,55.317,58.062,35,2023-06-28
+Grey Plover,1,#e8a87c,Canada,CAN,North America,nonbreeding,Non-breeding,0.256,0.392,0,2023-12-27
+Grey Plover,1,#e8a87c,Canada,CAN,North America,postbreeding_migration,Post-breeding Migration,8.394,27.763,126,2023-07-19
+Grey Plover,1,#e8a87c,Canada,CAN,North America,prebreeding_migration,Pre-breeding Migration,6.569,21.994,42,2023-05-24
+Grey Plover,1,#e8a87c,Chile,CHL,South America,breeding,Breeding,0.142,0.182,35,2023-06-14
+Grey Plover,1,#e8a87c,Chile,CHL,South America,nonbreeding,Non-breeding,0.062,0.122,98,2023-12-27
+Grey Plover,1,#e8a87c,Chile,CHL,South America,postbreeding_migration,Post-breeding Migration,0.034,0.065,105,2023-11-01
+Grey Plover,1,#e8a87c,Chile,CHL,South America,prebreeding_migration,Pre-breeding Migration,0.05,0.131,91,2023-03-15
+Grey Plover,1,#e8a87c,China,CHN,Asia,breeding,Breeding,1.044,1.328,7,2023-07-12
+Grey Plover,1,#e8a87c,China,CHN,Asia,nonbreeding,Non-breeding,19.364,25.225,98,2023-01-18
+Grey Plover,1,#e8a87c,China,CHN,Asia,postbreeding_migration,Post-breeding Migration,32.27,45.588,140,2023-08-23
+Grey Plover,1,#e8a87c,China,CHN,Asia,prebreeding_migration,Pre-breeding Migration,41.961,56.96,91,2023-04-19
+Grey Plover,1,#e8a87c,Ivory Coast,CIV,Africa,nonbreeding,Non-breeding,0.011,0.016,14,2023-02-15
+Grey Plover,1,#e8a87c,Colombia,COL,South America,breeding,Breeding,0.031,0.051,0,2023-07-12
+Grey Plover,1,#e8a87c,Colombia,COL,South America,nonbreeding,Non-breeding,0.267,0.57,98,2023-02-15
+Grey Plover,1,#e8a87c,Colombia,COL,South America,postbreeding_migration,Post-breeding Migration,0.104,0.248,126,2023-09-27
+Grey Plover,1,#e8a87c,Colombia,COL,South America,prebreeding_migration,Pre-breeding Migration,0.055,0.219,77,2023-03-15
+Grey Plover,1,#e8a87c,Comoros,COM,Africa,nonbreeding,Non-breeding,0.079,0.143,28,2023-12-06
+Grey Plover,1,#e8a87c,Comoros,COM,Africa,postbreeding_migration,Post-breeding Migration,0.05,0.131,77,2023-11-29
+Grey Plover,1,#e8a87c,Cape Verde,CPV,Africa,nonbreeding,Non-breeding,0.018,0.038,98,2023-02-08
+Grey Plover,1,#e8a87c,Cape Verde,CPV,Africa,postbreeding_migration,Post-breeding Migration,0.026,0.062,49,2023-11-29
+Grey Plover,1,#e8a87c,Cape Verde,CPV,Africa,prebreeding_migration,Pre-breeding Migration,0.014,0.025,63,2023-03-15
+Grey Plover,1,#e8a87c,Costa Rica,CRI,North America,breeding,Breeding,0.215,0.338,35,2023-06-14
+Grey Plover,1,#e8a87c,Costa Rica,CRI,North America,nonbreeding,Non-breeding,0.145,0.216,98,2023-12-20
+Grey Plover,1,#e8a87c,Costa Rica,CRI,North America,postbreeding_migration,Post-breeding Migration,0.149,0.335,140,2023-09-20
+Grey Plover,1,#e8a87c,Costa Rica,CRI,North America,prebreeding_migration,Pre-breeding Migration,0.098,0.173,91,2023-06-07
+Grey Plover,1,#e8a87c,Cuba,CUB,North America,breeding,Breeding,0.303,0.657,35,2023-07-12
+Grey Plover,1,#e8a87c,Cuba,CUB,North America,nonbreeding,Non-breeding,0.807,1.437,98,2023-02-22
+Grey Plover,1,#e8a87c,Cuba,CUB,North America,postbreeding_migration,Post-breeding Migration,0.806,2.661,140,2023-10-11
+Grey Plover,1,#e8a87c,Cuba,CUB,North America,prebreeding_migration,Pre-breeding Migration,0.341,0.917,91,2023-03-15
+Grey Plover,1,#e8a87c,Curaçao,CUW,North America,nonbreeding,Non-breeding,0.013,0.028,98,2023-01-25
+Grey Plover,1,#e8a87c,Cayman Islands,CYM,North America,breeding,Breeding,0.019,0.029,35,2023-07-12
+Grey Plover,1,#e8a87c,Cayman Islands,CYM,North America,nonbreeding,Non-breeding,0.029,0.05,98,2023-02-15
+Grey Plover,1,#e8a87c,Cayman Islands,CYM,North America,postbreeding_migration,Post-breeding Migration,0.012,0.048,140,2023-11-29
+Grey Plover,1,#e8a87c,Germany,DEU,Europe,breeding,Breeding,0.539,1.18,35,2023-07-12
+Grey Plover,1,#e8a87c,Germany,DEU,Europe,nonbreeding,Non-breeding,0.374,0.956,84,2023-12-27
+Grey Plover,1,#e8a87c,Germany,DEU,Europe,postbreeding_migration,Post-breeding Migration,1.346,3.848,140,2023-08-02
+Grey Plover,1,#e8a87c,Germany,DEU,Europe,prebreeding_migration,Pre-breeding Migration,0.458,1.287,77,2023-05-24
+Grey Plover,1,#e8a87c,Djibouti,DJI,Africa,postbreeding_migration,Post-breeding Migration,0.045,0.063,42,2023-09-13
+Grey Plover,1,#e8a87c,Denmark,DNK,Europe,breeding,Breeding,0.117,0.344,35,2023-06-14
+Grey Plover,1,#e8a87c,Denmark,DNK,Europe,nonbreeding,Non-breeding,0.101,0.358,49,2023-12-20
+Grey Plover,1,#e8a87c,Denmark,DNK,Europe,postbreeding_migration,Post-breeding Migration,0.478,1.335,140,2023-08-02
+Grey Plover,1,#e8a87c,Denmark,DNK,Europe,prebreeding_migration,Pre-breeding Migration,0.163,0.491,70,2023-05-31
+Grey Plover,1,#e8a87c,Dominican Republic,DOM,North America,nonbreeding,Non-breeding,0.103,0.211,98,2023-02-22
+Grey Plover,1,#e8a87c,Dominican Republic,DOM,North America,postbreeding_migration,Post-breeding Migration,0.377,2.82,126,2023-09-06
+Grey Plover,1,#e8a87c,Dominican Republic,DOM,North America,prebreeding_migration,Pre-breeding Migration,0.065,0.18,91,2023-03-15
+Grey Plover,1,#e8a87c,Ecuador,ECU,South America,breeding,Breeding,0.251,0.343,35,2023-06-14
+Grey Plover,1,#e8a87c,Ecuador,ECU,South America,nonbreeding,Non-breeding,0.656,1.619,98,2023-12-27
+Grey Plover,1,#e8a87c,Ecuador,ECU,South America,postbreeding_migration,Post-breeding Migration,0.176,0.501,140,2023-11-29
+Grey Plover,1,#e8a87c,Ecuador,ECU,South America,prebreeding_migration,Pre-breeding Migration,0.097,0.393,91,2023-03-15
+Grey Plover,1,#e8a87c,Egypt,EGY,Africa,breeding,Breeding,0.051,0.069,0,2023-07-12
+Grey Plover,1,#e8a87c,Egypt,EGY,Africa,nonbreeding,Non-breeding,0.152,0.238,98,2023-12-13
+Grey Plover,1,#e8a87c,Egypt,EGY,Africa,postbreeding_migration,Post-breeding Migration,0.151,0.222,140,2023-11-29
+Grey Plover,1,#e8a87c,Egypt,EGY,Africa,prebreeding_migration,Pre-breeding Migration,0.08,0.185,49,2023-03-15
+Grey Plover,1,#e8a87c,England,ENG,Europe,breeding,Breeding,0.49,0.841,35,2023-06-14
+Grey Plover,1,#e8a87c,England,ENG,Europe,nonbreeding,Non-breeding,1.791,2.909,98,2023-03-08
+Grey Plover,1,#e8a87c,England,ENG,Europe,postbreeding_migration,Post-breeding Migration,0.75,1.993,140,2023-11-29
+Grey Plover,1,#e8a87c,England,ENG,Europe,prebreeding_migration,Pre-breeding Migration,0.699,2.382,91,2023-03-15
+Grey Plover,1,#e8a87c,Eritrea,ERI,Africa,nonbreeding,Non-breeding,0.268,0.399,70,2023-02-08
+Grey Plover,1,#e8a87c,Eritrea,ERI,Africa,postbreeding_migration,Post-breeding Migration,0.201,0.19,56,2023-08-23
+Grey Plover,1,#e8a87c,Eritrea,ERI,Africa,prebreeding_migration,Pre-breeding Migration,0.216,0.217,42,2023-03-29
+Grey Plover,1,#e8a87c,Spain,ESP,Europe,breeding,Breeding,0.231,0.507,35,2023-06-14
+Grey Plover,1,#e8a87c,Spain,ESP,Europe,nonbreeding,Non-breeding,0.624,0.913,98,2023-03-08
+Grey Plover,1,#e8a87c,Spain,ESP,Europe,postbreeding_migration,Post-breeding Migration,0.176,0.557,140,2023-11-29
+Grey Plover,1,#e8a87c,Spain,ESP,Europe,prebreeding_migration,Pre-breeding Migration,0.281,0.708,91,2023-03-15
+Grey Plover,1,#e8a87c,Estonia,EST,Europe,breeding,Breeding,0.1,0.757,7,2023-06-14
+Grey Plover,1,#e8a87c,Estonia,EST,Europe,postbreeding_migration,Post-breeding Migration,0.122,0.381,112,2023-07-26
+Grey Plover,1,#e8a87c,Estonia,EST,Europe,prebreeding_migration,Pre-breeding Migration,0.154,1.558,35,2023-05-31
+Grey Plover,1,#e8a87c,Finland,FIN,Europe,breeding,Breeding,0.053,0.395,7,2023-06-14
+Grey Plover,1,#e8a87c,Finland,FIN,Europe,postbreeding_migration,Post-breeding Migration,0.155,0.673,105,2023-07-26
+Grey Plover,1,#e8a87c,Finland,FIN,Europe,prebreeding_migration,Pre-breeding Migration,0.222,2.108,35,2023-05-31
+Grey Plover,1,#e8a87c,France,FRA,Europe,breeding,Breeding,0.04,0.205,7,2023-06-14
+Grey Plover,1,#e8a87c,France,FRA,Europe,nonbreeding,Non-breeding,2.558,5.046,98,2023-02-01
+Grey Plover,1,#e8a87c,France,FRA,Europe,postbreeding_migration,Post-breeding Migration,1.018,1.84,140,2023-10-25
+Grey Plover,1,#e8a87c,France,FRA,Europe,prebreeding_migration,Pre-breeding Migration,0.695,1.318,91,2023-03-15
+Grey Plover,1,#e8a87c,Guernsey,GGY,Europe,nonbreeding,Non-breeding,0.019,0.034,98,2023-02-01
+Grey Plover,1,#e8a87c,Ghana,GHA,Africa,nonbreeding,Non-breeding,0.096,0.148,56,2023-02-15
+Grey Plover,1,#e8a87c,Ghana,GHA,Africa,postbreeding_migration,Post-breeding Migration,0.026,0.045,35,2023-11-29
+Grey Plover,1,#e8a87c,Guinea,GIN,Africa,nonbreeding,Non-breeding,0.369,0.466,98,2023-12-06
+Grey Plover,1,#e8a87c,Guinea,GIN,Africa,postbreeding_migration,Post-breeding Migration,0.168,0.309,49,2023-11-29
+Grey Plover,1,#e8a87c,Guinea,GIN,Africa,prebreeding_migration,Pre-breeding Migration,0.252,0.377,56,2023-04-05
+Grey Plover,1,#e8a87c,Gambia,GMB,Africa,nonbreeding,Non-breeding,0.124,0.188,98,2023-03-08
+Grey Plover,1,#e8a87c,Gambia,GMB,Africa,postbreeding_migration,Post-breeding Migration,0.062,0.107,70,2023-10-25
+Grey Plover,1,#e8a87c,Gambia,GMB,Africa,prebreeding_migration,Pre-breeding Migration,0.079,0.125,63,2023-03-15
+Grey Plover,1,#e8a87c,Guinea Bissau,GNB,Africa,nonbreeding,Non-breeding,0.601,0.794,98,2023-12-20
+Grey Plover,1,#e8a87c,Guinea Bissau,GNB,Africa,postbreeding_migration,Post-breeding Migration,0.261,0.499,70,2023-11-29
+Grey Plover,1,#e8a87c,Guinea Bissau,GNB,Africa,prebreeding_migration,Pre-breeding Migration,0.349,0.515,63,2023-04-12
+Grey Plover,1,#e8a87c,Greece,GRC,Europe,breeding,Breeding,0.055,0.127,35,2023-07-12
+Grey Plover,1,#e8a87c,Greece,GRC,Europe,nonbreeding,Non-breeding,0.813,1.594,98,2023-12-20
+Grey Plover,1,#e8a87c,Greece,GRC,Europe,postbreeding_migration,Post-breeding Migration,0.216,0.662,140,2023-11-29
+Grey Plover,1,#e8a87c,Greece,GRC,Europe,prebreeding_migration,Pre-breeding Migration,0.137,0.372,91,2023-03-15
+Grey Plover,1,#e8a87c,Guatemala,GTM,North America,breeding,Breeding,0.106,0.189,35,2023-06-14
+Grey Plover,1,#e8a87c,Guatemala,GTM,North America,nonbreeding,Non-breeding,0.174,0.36,98,2023-02-15
+Grey Plover,1,#e8a87c,Guatemala,GTM,North America,postbreeding_migration,Post-breeding Migration,0.065,0.125,140,2023-11-29
+Grey Plover,1,#e8a87c,Guatemala,GTM,North America,prebreeding_migration,Pre-breeding Migration,0.114,0.18,91,2023-04-12
+Grey Plover,1,#e8a87c,French Guiana,GUF,South America,breeding,Breeding,0.061,0.066,7,2023-07-05
+Grey Plover,1,#e8a87c,French Guiana,GUF,South America,nonbreeding,Non-breeding,0.081,0.185,98,2023-02-15
+Grey Plover,1,#e8a87c,French Guiana,GUF,South America,postbreeding_migration,Post-breeding Migration,0.068,0.152,105,2023-11-29
+Grey Plover,1,#e8a87c,French Guiana,GUF,South America,prebreeding_migration,Pre-breeding Migration,0.055,0.085,70,2023-04-05
+Grey Plover,1,#e8a87c,Guyana,GUY,South America,nonbreeding,Non-breeding,0.089,0.175,98,2023-12-06
+Grey Plover,1,#e8a87c,Guyana,GUY,South America,postbreeding_migration,Post-breeding Migration,0.074,0.209,98,2023-11-29
+Grey Plover,1,#e8a87c,Guyana,GUY,South America,prebreeding_migration,Pre-breeding Migration,0.039,0.076,70,2023-03-15
+Grey Plover,1,#e8a87c,Hong Kong,HKG,Asia,nonbreeding,Non-breeding,0.093,0.307,98,2023-12-27
+Grey Plover,1,#e8a87c,Hong Kong,HKG,Asia,postbreeding_migration,Post-breeding Migration,0.019,0.147,91,2023-11-29
+Grey Plover,1,#e8a87c,Hong Kong,HKG,Asia,prebreeding_migration,Pre-breeding Migration,0.041,0.294,63,2023-03-15
+Grey Plover,1,#e8a87c,Honduras,HND,North America,breeding,Breeding,1.147,2.699,35,2023-06-14
+Grey Plover,1,#e8a87c,Honduras,HND,North America,nonbreeding,Non-breeding,0.558,1.101,98,2023-02-08
+Grey Plover,1,#e8a87c,Honduras,HND,North America,postbreeding_migration,Post-breeding Migration,0.345,0.769,140,2023-10-25
+Grey Plover,1,#e8a87c,Honduras,HND,North America,prebreeding_migration,Pre-breeding Migration,0.248,1.193,91,2023-06-07
+Grey Plover,1,#e8a87c,Croatia,HRV,Europe,nonbreeding,Non-breeding,0.419,1.475,98,2023-01-04
+Grey Plover,1,#e8a87c,Croatia,HRV,Europe,postbreeding_migration,Post-breeding Migration,0.128,0.568,126,2023-11-22
+Grey Plover,1,#e8a87c,Croatia,HRV,Europe,prebreeding_migration,Pre-breeding Migration,0.037,0.158,77,2023-03-15
+Grey Plover,1,#e8a87c,Haiti,HTI,North America,nonbreeding,Non-breeding,0.117,0.212,98,2023-12-20
+Grey Plover,1,#e8a87c,Haiti,HTI,North America,postbreeding_migration,Post-breeding Migration,0.123,0.984,140,2023-09-06
+Grey Plover,1,#e8a87c,Haiti,HTI,North America,prebreeding_migration,Pre-breeding Migration,0.039,0.112,91,2023-03-15
+Grey Plover,1,#e8a87c,Hungary,HUN,Europe,postbreeding_migration,Post-breeding Migration,0.056,0.178,119,2023-10-11
+Grey Plover,1,#e8a87c,Hungary,HUN,Europe,prebreeding_migration,Pre-breeding Migration,0.011,0.053,28,2023-05-24
+Grey Plover,1,#e8a87c,Indonesia,IDN,Asia,nonbreeding,Non-breeding,1.048,1.419,98,2023-01-18
+Grey Plover,1,#e8a87c,Indonesia,IDN,Asia,postbreeding_migration,Post-breeding Migration,0.692,1.399,98,2023-11-29
+Grey Plover,1,#e8a87c,Indonesia,IDN,Asia,prebreeding_migration,Pre-breeding Migration,0.369,0.957,28,2023-03-15
+Grey Plover,1,#e8a87c,India,IND,Asia,nonbreeding,Non-breeding,1.245,2.097,98,2023-12-27
+Grey Plover,1,#e8a87c,India,IND,Asia,postbreeding_migration,Post-breeding Migration,0.548,1.346,112,2023-11-29
+Grey Plover,1,#e8a87c,India,IND,Asia,prebreeding_migration,Pre-breeding Migration,0.869,1.998,70,2023-03-15
+Grey Plover,1,#e8a87c,Ireland,IRL,Europe,breeding,Breeding,0.015,0.053,21,2023-07-12
+Grey Plover,1,#e8a87c,Ireland,IRL,Europe,nonbreeding,Non-breeding,0.362,0.722,98,2023-03-01
+Grey Plover,1,#e8a87c,Ireland,IRL,Europe,postbreeding_migration,Post-breeding Migration,0.072,0.29,140,2023-11-29
+Grey Plover,1,#e8a87c,Ireland,IRL,Europe,prebreeding_migration,Pre-breeding Migration,0.042,0.379,91,2023-03-15
+Grey Plover,1,#e8a87c,Iran,IRN,Asia,breeding,Breeding,0.457,0.67,35,2023-06-14
+Grey Plover,1,#e8a87c,Iran,IRN,Asia,nonbreeding,Non-breeding,1.042,1.401,98,2023-12-20
+Grey Plover,1,#e8a87c,Iran,IRN,Asia,postbreeding_migration,Post-breeding Migration,0.581,1.291,140,2023-11-29
+Grey Plover,1,#e8a87c,Iran,IRN,Asia,prebreeding_migration,Pre-breeding Migration,0.461,0.818,91,2023-03-15
+Grey Plover,1,#e8a87c,Iraq,IRQ,Asia,breeding,Breeding,0.017,0.045,0,2023-06-14
+Grey Plover,1,#e8a87c,Iraq,IRQ,Asia,nonbreeding,Non-breeding,0.043,0.101,21,2023-03-01
+Grey Plover,1,#e8a87c,Iraq,IRQ,Asia,postbreeding_migration,Post-breeding Migration,0.037,0.122,49,2023-09-27
+Grey Plover,1,#e8a87c,Iraq,IRQ,Asia,prebreeding_migration,Pre-breeding Migration,0.045,0.093,77,2023-04-05
+Grey Plover,1,#e8a87c,Israel,ISR,Asia,breeding,Breeding,0.013,0.029,14,2023-07-12
+Grey Plover,1,#e8a87c,Israel,ISR,Asia,nonbreeding,Non-breeding,0.017,0.034,98,2023-12-13
+Grey Plover,1,#e8a87c,Italy,ITA,Europe,nonbreeding,Non-breeding,1.04,2.534,98,2023-01-04
+Grey Plover,1,#e8a87c,Italy,ITA,Europe,postbreeding_migration,Post-breeding Migration,0.509,1.824,126,2023-11-29
+Grey Plover,1,#e8a87c,Italy,ITA,Europe,prebreeding_migration,Pre-breeding Migration,0.158,0.418,84,2023-03-15
+Grey Plover,1,#e8a87c,Jamaica,JAM,North America,nonbreeding,Non-breeding,0.032,0.075,98,2023-03-08
+Grey Plover,1,#e8a87c,Jamaica,JAM,North America,postbreeding_migration,Post-breeding Migration,0.024,0.073,105,2023-11-29
+Grey Plover,1,#e8a87c,Jamaica,JAM,North America,prebreeding_migration,Pre-breeding Migration,0.011,0.051,70,2023-03-15
+Grey Plover,1,#e8a87c,Japan,JPN,Asia,nonbreeding,Non-breeding,1.036,1.795,98,2023-03-08
+Grey Plover,1,#e8a87c,Japan,JPN,Asia,postbreeding_migration,Post-breeding Migration,1.346,2.715,133,2023-08-30
+Grey Plover,1,#e8a87c,Japan,JPN,Asia,prebreeding_migration,Pre-breeding Migration,0.921,2.747,77,2023-03-29
+Grey Plover,1,#e8a87c,Kazakhstan,KAZ,Asia,prebreeding_migration,Pre-breeding Migration,0.185,0.187,21,2023-05-03
+Grey Plover,1,#e8a87c,Kenya,KEN,Africa,breeding,Breeding,0.754,1.086,35,2023-07-12
+Grey Plover,1,#e8a87c,Kenya,KEN,Africa,nonbreeding,Non-breeding,1.536,3.044,98,2023-03-08
+Grey Plover,1,#e8a87c,Kenya,KEN,Africa,postbreeding_migration,Post-breeding Migration,0.565,1.576,140,2023-11-29
+Grey Plover,1,#e8a87c,Kenya,KEN,Africa,prebreeding_migration,Pre-breeding Migration,0.715,2.371,91,2023-03-15
+Grey Plover,1,#e8a87c,Cambodia,KHM,Asia,nonbreeding,Non-breeding,0.117,0.192,98,2023-02-08
+Grey Plover,1,#e8a87c,Cambodia,KHM,Asia,postbreeding_migration,Post-breeding Migration,0.06,0.154,91,2023-11-29
+Grey Plover,1,#e8a87c,Cambodia,KHM,Asia,prebreeding_migration,Pre-breeding Migration,0.034,0.083,49,2023-03-15
+Grey Plover,1,#e8a87c,South Korea,KOR,Asia,nonbreeding,Non-breeding,4.407,9.034,98,2023-01-18
+Grey Plover,1,#e8a87c,South Korea,KOR,Asia,postbreeding_migration,Post-breeding Migration,6.678,12.851,140,2023-08-30
+Grey Plover,1,#e8a87c,South Korea,KOR,Asia,prebreeding_migration,Pre-breeding Migration,8.171,12.127,91,2023-03-29
+Grey Plover,1,#e8a87c,Kuwait,KWT,Asia,breeding,Breeding,0.097,0.147,21,2023-06-14
+Grey Plover,1,#e8a87c,Kuwait,KWT,Asia,nonbreeding,Non-breeding,0.123,0.193,98,2023-01-04
+Grey Plover,1,#e8a87c,Kuwait,KWT,Asia,postbreeding_migration,Post-breeding Migration,0.046,0.106,140,2023-11-29
+Grey Plover,1,#e8a87c,Kuwait,KWT,Asia,prebreeding_migration,Pre-breeding Migration,0.066,0.106,91,2023-04-05
+Grey Plover,1,#e8a87c,Sri Lanka,LKA,Asia,nonbreeding,Non-breeding,0.24,0.568,98,2023-02-15
+Grey Plover,1,#e8a87c,Sri Lanka,LKA,Asia,postbreeding_migration,Post-breeding Migration,0.046,0.14,91,2023-11-01
+Grey Plover,1,#e8a87c,Sri Lanka,LKA,Asia,prebreeding_migration,Pre-breeding Migration,0.096,0.198,63,2023-03-15
+Grey Plover,1,#e8a87c,Lithuania,LTU,Europe,postbreeding_migration,Post-breeding Migration,0.017,0.057,112,2023-10-11
+Grey Plover,1,#e8a87c,Latvia,LVA,Europe,postbreeding_migration,Post-breeding Migration,0.022,0.052,119,2023-08-02
+Grey Plover,1,#e8a87c,Morocco,MAR,Africa,breeding,Breeding,0.02,0.049,0,2023-06-14
+Grey Plover,1,#e8a87c,Morocco,MAR,Africa,nonbreeding,Non-breeding,0.661,1.429,98,2023-03-08
+Grey Plover,1,#e8a87c,Morocco,MAR,Africa,postbreeding_migration,Post-breeding Migration,0.189,0.486,105,2023-11-29
+Grey Plover,1,#e8a87c,Morocco,MAR,Africa,prebreeding_migration,Pre-breeding Migration,0.336,1.156,77,2023-03-15
+Grey Plover,1,#e8a87c,Madagascar,MDG,Africa,nonbreeding,Non-breeding,1.532,2.286,35,2023-12-06
+Grey Plover,1,#e8a87c,Madagascar,MDG,Africa,postbreeding_migration,Post-breeding Migration,1.119,2.368,70,2023-11-29
+Grey Plover,1,#e8a87c,Mexico,MEX,North America,breeding,Breeding,2.589,5.611,35,2023-07-12
+Grey Plover,1,#e8a87c,Mexico,MEX,North America,nonbreeding,Non-breeding,5.806,8.93,98,2023-03-08
+Grey Plover,1,#e8a87c,Mexico,MEX,North America,postbreeding_migration,Post-breeding Migration,4.593,14.486,140,2023-09-27
+Grey Plover,1,#e8a87c,Mexico,MEX,North America,prebreeding_migration,Pre-breeding Migration,2.564,7.599,91,2023-03-15
+Grey Plover,1,#e8a87c,Myanmar,MMR,Asia,nonbreeding,Non-breeding,0.035,0.052,0,2023-12-20
+Grey Plover,1,#e8a87c,Myanmar,MMR,Asia,postbreeding_migration,Post-breeding Migration,0.016,0.026,35,2023-09-13
+Grey Plover,1,#e8a87c,Myanmar,MMR,Asia,prebreeding_migration,Pre-breeding Migration,0.011,0.028,21,2023-03-15
+Grey Plover,1,#e8a87c,Montenegro,MNE,Europe,nonbreeding,Non-breeding,0.069,0.33,98,2023-01-04
+Grey Plover,1,#e8a87c,Mozambique,MOZ,Africa,nonbreeding,Non-breeding,3.616,5.633,98,2023-12-06
+Grey Plover,1,#e8a87c,Mozambique,MOZ,Africa,postbreeding_migration,Post-breeding Migration,2.794,5.181,98,2023-11-29
+Grey Plover,1,#e8a87c,Mozambique,MOZ,Africa,prebreeding_migration,Pre-breeding Migration,0.393,0.533,28,2023-03-15
+Grey Plover,1,#e8a87c,Mauritania,MRT,Africa,nonbreeding,Non-breeding,1.671,3.289,98,2023-01-25
+Grey Plover,1,#e8a87c,Mauritania,MRT,Africa,postbreeding_migration,Post-breeding Migration,0.135,0.355,77,2023-11-29
+Grey Plover,1,#e8a87c,Mauritania,MRT,Africa,prebreeding_migration,Pre-breeding Migration,0.242,0.84,63,2023-03-15
+Grey Plover,1,#e8a87c,Martinique,MTQ,North America,breeding,Breeding,0.011,0.04,35,2023-07-12
+Grey Plover,1,#e8a87c,Martinique,MTQ,North America,postbreeding_migration,Post-breeding Migration,0.011,0.114,140,2023-07-26
+Grey Plover,1,#e8a87c,Malaysia,MYS,Asia,nonbreeding,Non-breeding,1.526,2.414,98,2023-02-15
+Grey Plover,1,#e8a87c,Malaysia,MYS,Asia,postbreeding_migration,Post-breeding Migration,0.426,1.086,133,2023-11-29
+Grey Plover,1,#e8a87c,Malaysia,MYS,Asia,prebreeding_migration,Pre-breeding Migration,0.386,1.371,77,2023-03-15
+Grey Plover,1,#e8a87c,Mayotte,MYT,Africa,nonbreeding,Non-breeding,0.039,0.059,28,2023-12-06
+Grey Plover,1,#e8a87c,Mayotte,MYT,Africa,postbreeding_migration,Post-breeding Migration,0.027,0.056,77,2023-11-29
+Grey Plover,1,#e8a87c,Namibia,NAM,Africa,nonbreeding,Non-breeding,0.713,1.13,98,2023-02-08
+Grey Plover,1,#e8a87c,Namibia,NAM,Africa,postbreeding_migration,Post-breeding Migration,0.327,0.645,133,2023-10-25
+Grey Plover,1,#e8a87c,Namibia,NAM,Africa,prebreeding_migration,Pre-breeding Migration,0.462,0.656,63,2023-04-05
+Grey Plover,1,#e8a87c,Nicaragua,NIC,North America,breeding,Breeding,1.688,3.675,35,2023-06-14
+Grey Plover,1,#e8a87c,Nicaragua,NIC,North America,nonbreeding,Non-breeding,0.711,1.284,98,2023-02-08
+Grey Plover,1,#e8a87c,Nicaragua,NIC,North America,postbreeding_migration,Post-breeding Migration,0.426,0.818,140,2023-10-25
+Grey Plover,1,#e8a87c,Nicaragua,NIC,North America,prebreeding_migration,Pre-breeding Migration,0.32,1.7,91,2023-06-07
+Grey Plover,1,#e8a87c,Northern Ireland,NIR,Europe,nonbreeding,Non-breeding,0.036,0.062,98,2023-12-27
+Grey Plover,1,#e8a87c,Netherlands,NLD,Europe,breeding,Breeding,0.485,1.299,35,2023-06-14
+Grey Plover,1,#e8a87c,Netherlands,NLD,Europe,nonbreeding,Non-breeding,0.459,1.103,98,2023-12-06
+Grey Plover,1,#e8a87c,Netherlands,NLD,Europe,postbreeding_migration,Post-breeding Migration,0.591,1.608,140,2023-11-29
+Grey Plover,1,#e8a87c,Netherlands,NLD,Europe,prebreeding_migration,Pre-breeding Migration,0.489,1.015,91,2023-06-07
+Grey Plover,1,#e8a87c,Norway,NOR,Europe,postbreeding_migration,Post-breeding Migration,0.11,0.346,98,2023-09-27
+Grey Plover,1,#e8a87c,Oman,OMN,Asia,breeding,Breeding,0.012,0.017,0,2023-06-14
+Grey Plover,1,#e8a87c,Oman,OMN,Asia,nonbreeding,Non-breeding,0.413,0.775,98,2023-12-13
+Grey Plover,1,#e8a87c,Oman,OMN,Asia,postbreeding_migration,Post-breeding Migration,0.288,0.745,126,2023-11-29
+Grey Plover,1,#e8a87c,Oman,OMN,Asia,prebreeding_migration,Pre-breeding Migration,0.2,0.494,70,2023-03-15
+Grey Plover,1,#e8a87c,Pakistan,PAK,Asia,nonbreeding,Non-breeding,0.127,0.212,49,2023-12-06
+Grey Plover,1,#e8a87c,Pakistan,PAK,Asia,postbreeding_migration,Post-breeding Migration,0.303,0.644,105,2023-11-22
+Grey Plover,1,#e8a87c,Pakistan,PAK,Asia,prebreeding_migration,Pre-breeding Migration,0.202,0.236,28,2023-04-12
+Grey Plover,1,#e8a87c,Panama,PAN,North America,breeding,Breeding,0.145,0.278,35,2023-06-14
+Grey Plover,1,#e8a87c,Panama,PAN,North America,nonbreeding,Non-breeding,0.309,0.501,98,2023-02-08
+Grey Plover,1,#e8a87c,Panama,PAN,North America,postbreeding_migration,Post-breeding Migration,0.155,0.372,140,2023-11-29
+Grey Plover,1,#e8a87c,Panama,PAN,North America,prebreeding_migration,Pre-breeding Migration,0.171,0.298,91,2023-03-15
+Grey Plover,1,#e8a87c,Peru,PER,South America,breeding,Breeding,1.171,1.454,35,2023-06-14
+Grey Plover,1,#e8a87c,Peru,PER,South America,nonbreeding,Non-breeding,1.354,2.476,98,2023-12-20
+Grey Plover,1,#e8a87c,Peru,PER,South America,postbreeding_migration,Post-breeding Migration,0.351,0.996,140,2023-11-29
+Grey Plover,1,#e8a87c,Peru,PER,South America,prebreeding_migration,Pre-breeding Migration,0.434,1.454,91,2023-03-15
+Grey Plover,1,#e8a87c,Philippines,PHL,Asia,nonbreeding,Non-breeding,2.212,2.974,98,2023-02-08
+Grey Plover,1,#e8a87c,Philippines,PHL,Asia,postbreeding_migration,Post-breeding Migration,0.764,2.03,105,2023-11-29
+Grey Plover,1,#e8a87c,Philippines,PHL,Asia,prebreeding_migration,Pre-breeding Migration,0.516,1.14,56,2023-03-15
+Grey Plover,1,#e8a87c,Poland,POL,Europe,postbreeding_migration,Post-breeding Migration,0.205,0.579,133,2023-10-11
+Grey Plover,1,#e8a87c,Puerto Rico,PRI,North America,breeding,Breeding,0.087,0.192,35,2023-06-14
+Grey Plover,1,#e8a87c,Puerto Rico,PRI,North America,nonbreeding,Non-breeding,0.184,0.381,98,2023-12-27
+Grey Plover,1,#e8a87c,Puerto Rico,PRI,North America,postbreeding_migration,Post-breeding Migration,0.109,0.264,140,2023-11-29
+Grey Plover,1,#e8a87c,Puerto Rico,PRI,North America,prebreeding_migration,Pre-breeding Migration,0.05,0.17,91,2023-03-15
+Grey Plover,1,#e8a87c,North Korea,PRK,Asia,nonbreeding,Non-breeding,1.87,2.378,70,2023-01-25
+Grey Plover,1,#e8a87c,North Korea,PRK,Asia,postbreeding_migration,Post-breeding Migration,3.666,6.426,140,2023-08-30
+Grey Plover,1,#e8a87c,North Korea,PRK,Asia,prebreeding_migration,Pre-breeding Migration,6.001,7.964,91,2023-05-17
+Grey Plover,1,#e8a87c,Portugal,PRT,Europe,breeding,Breeding,0.214,0.374,35,2023-06-14
+Grey Plover,1,#e8a87c,Portugal,PRT,Europe,nonbreeding,Non-breeding,0.708,1.046,98,2023-03-08
+Grey Plover,1,#e8a87c,Portugal,PRT,Europe,postbreeding_migration,Post-breeding Migration,0.351,0.967,140,2023-11-29
+Grey Plover,1,#e8a87c,Portugal,PRT,Europe,prebreeding_migration,Pre-breeding Migration,0.256,0.798,91,2023-03-15
+Grey Plover,1,#e8a87c,Qatar,QAT,Asia,breeding,Breeding,0.042,0.082,35,2023-06-14
+Grey Plover,1,#e8a87c,Qatar,QAT,Asia,nonbreeding,Non-breeding,0.107,0.186,98,2023-12-20
+Grey Plover,1,#e8a87c,Qatar,QAT,Asia,postbreeding_migration,Post-breeding Migration,0.051,0.178,140,2023-11-29
+Grey Plover,1,#e8a87c,Qatar,QAT,Asia,prebreeding_migration,Pre-breeding Migration,0.044,0.102,91,2023-03-15
+Grey Plover,1,#e8a87c,Romania,ROU,Europe,nonbreeding,Non-breeding,0.053,0.053,49,2023-12-06
+Grey Plover,1,#e8a87c,Romania,ROU,Europe,postbreeding_migration,Post-breeding Migration,0.154,0.413,126,2023-10-11
+Grey Plover,1,#e8a87c,Romania,ROU,Europe,prebreeding_migration,Pre-breeding Migration,0.023,0.047,42,2023-05-03
+Grey Plover,1,#e8a87c,Russia,RUS,Asia,breeding,Breeding,0.402,0.438,0,2023-06-28
+Grey Plover,1,#e8a87c,Russia,RUS,Asia,postbreeding_migration,Post-breeding Migration,0.775,0.973,28,2023-10-04
+Grey Plover,1,#e8a87c,Russia,RUS,Asia,prebreeding_migration,Pre-breeding Migration,0.315,0.405,7,2023-05-31
+Grey Plover,1,#e8a87c,Western Sahara,SAH,Africa,nonbreeding,Non-breeding,0.014,0.07,84,2023-03-08
+Grey Plover,1,#e8a87c,Saudi Arabia,SAU,Asia,breeding,Breeding,0.156,0.274,0,2023-06-14
+Grey Plover,1,#e8a87c,Saudi Arabia,SAU,Asia,nonbreeding,Non-breeding,0.873,1.201,98,2023-02-15
+Grey Plover,1,#e8a87c,Saudi Arabia,SAU,Asia,postbreeding_migration,Post-breeding Migration,0.502,0.859,133,2023-11-29
+Grey Plover,1,#e8a87c,Saudi Arabia,SAU,Asia,prebreeding_migration,Pre-breeding Migration,0.563,0.989,77,2023-03-15
+Grey Plover,1,#e8a87c,Scotland,SCT,Europe,nonbreeding,Non-breeding,0.069,0.107,98,2023-12-27
+Grey Plover,1,#e8a87c,Scotland,SCT,Europe,postbreeding_migration,Post-breeding Migration,0.04,0.107,126,2023-10-04
+Grey Plover,1,#e8a87c,Sudan,SDN,Africa,nonbreeding,Non-breeding,0.161,0.246,70,2023-02-08
+Grey Plover,1,#e8a87c,Sudan,SDN,Africa,postbreeding_migration,Post-breeding Migration,0.07,0.076,0,2023-10-18
+Grey Plover,1,#e8a87c,Sudan,SDN,Africa,prebreeding_migration,Pre-breeding Migration,0.127,0.189,28,2023-03-15
+Grey Plover,1,#e8a87c,Senegal,SEN,Africa,nonbreeding,Non-breeding,0.925,1.548,98,2023-01-25
+Grey Plover,1,#e8a87c,Senegal,SEN,Africa,postbreeding_migration,Post-breeding Migration,0.27,0.515,77,2023-11-29
+Grey Plover,1,#e8a87c,Senegal,SEN,Africa,prebreeding_migration,Pre-breeding Migration,0.462,0.579,63,2023-05-03
+Grey Plover,1,#e8a87c,Sierra Leone,SLE,Africa,nonbreeding,Non-breeding,0.043,0.037,7,2023-01-25
+Grey Plover,1,#e8a87c,El Salvador,SLV,North America,breeding,Breeding,0.751,1.527,35,2023-06-14
+Grey Plover,1,#e8a87c,El Salvador,SLV,North America,nonbreeding,Non-breeding,0.344,0.708,98,2023-02-08
+Grey Plover,1,#e8a87c,El Salvador,SLV,North America,postbreeding_migration,Post-breeding Migration,0.167,0.465,140,2023-07-19
+Grey Plover,1,#e8a87c,El Salvador,SLV,North America,prebreeding_migration,Pre-breeding Migration,0.187,0.676,91,2023-06-07
+Grey Plover,1,#e8a87c,Somaliland,SOL,Africa,postbreeding_migration,Post-breeding Migration,0.108,0.107,35,2023-09-13
+Grey Plover,1,#e8a87c,Somalia,SOM,Africa,nonbreeding,Non-breeding,0.384,0.559,63,2023-02-08
+Grey Plover,1,#e8a87c,Somalia,SOM,Africa,postbreeding_migration,Post-breeding Migration,0.165,0.224,98,2023-11-01
+Grey Plover,1,#e8a87c,Somalia,SOM,Africa,prebreeding_migration,Pre-breeding Migration,0.058,0.096,0,2023-03-22
+Grey Plover,1,#e8a87c,Saint Pierre and Miquelon,SPM,North America,postbreeding_migration,Post-breeding Migration,0.045,0.132,140,2023-08-23
+Grey Plover,1,#e8a87c,Suriname,SUR,South America,breeding,Breeding,0.094,0.112,14,2023-07-05
+Grey Plover,1,#e8a87c,Suriname,SUR,South America,nonbreeding,Non-breeding,0.098,0.236,98,2023-12-06
+Grey Plover,1,#e8a87c,Suriname,SUR,South America,postbreeding_migration,Post-breeding Migration,0.073,0.207,105,2023-11-29
+Grey Plover,1,#e8a87c,Suriname,SUR,South America,prebreeding_migration,Pre-breeding Migration,0.066,0.107,70,2023-04-05
+Grey Plover,1,#e8a87c,Sweden,SWE,Europe,breeding,Breeding,0.068,0.221,35,2023-06-14
+Grey Plover,1,#e8a87c,Sweden,SWE,Europe,postbreeding_migration,Post-breeding Migration,0.284,1.532,140,2023-07-26
+Grey Plover,1,#e8a87c,Sweden,SWE,Europe,prebreeding_migration,Pre-breeding Migration,0.031,0.357,42,2023-05-31
+Grey Plover,1,#e8a87c,Seychelles,SYC,Africa,nonbreeding,Non-breeding,0.048,0.082,77,2023-12-06
+Grey Plover,1,#e8a87c,Seychelles,SYC,Africa,postbreeding_migration,Post-breeding Migration,0.033,0.088,84,2023-11-29
+Grey Plover,1,#e8a87c,Syria,SYR,Asia,nonbreeding,Non-breeding,0.012,0.023,70,2023-01-11
+Grey Plover,1,#e8a87c,Turks and Caicos Islands,TCA,North America,breeding,Breeding,0.053,0.13,35,2023-06-14
+Grey Plover,1,#e8a87c,Turks and Caicos Islands,TCA,North America,nonbreeding,Non-breeding,0.339,0.562,98,2023-02-01
+Grey Plover,1,#e8a87c,Turks and Caicos Islands,TCA,North America,postbreeding_migration,Post-breeding Migration,0.08,0.138,140,2023-11-29
+Grey Plover,1,#e8a87c,Turks and Caicos Islands,TCA,North America,prebreeding_migration,Pre-breeding Migration,0.028,0.088,91,2023-06-07
+Grey Plover,1,#e8a87c,Togo,TGO,Africa,nonbreeding,Non-breeding,0.011,0.014,42,2023-12-13
+Grey Plover,1,#e8a87c,Thailand,THA,Asia,nonbreeding,Non-breeding,0.501,0.982,98,2023-03-01
+Grey Plover,1,#e8a87c,Thailand,THA,Asia,postbreeding_migration,Post-breeding Migration,0.203,0.462,119,2023-11-29
+Grey Plover,1,#e8a87c,Thailand,THA,Asia,prebreeding_migration,Pre-breeding Migration,0.165,0.664,70,2023-03-15
+Grey Plover,1,#e8a87c,Turkmenistan,TKM,Asia,postbreeding_migration,Post-breeding Migration,0.039,0.046,14,2023-11-22
+Grey Plover,1,#e8a87c,Turkmenistan,TKM,Asia,prebreeding_migration,Pre-breeding Migration,0.046,0.048,21,2023-05-03
+Grey Plover,1,#e8a87c,East Timor,TLS,Asia,nonbreeding,Non-breeding,0.018,0.03,98,2023-12-06
+Grey Plover,1,#e8a87c,East Timor,TLS,Asia,postbreeding_migration,Post-breeding Migration,0.018,0.045,126,2023-11-22
+Grey Plover,1,#e8a87c,Trinidad and Tobago,TTO,North America,breeding,Breeding,0.016,0.031,35,2023-07-12
+Grey Plover,1,#e8a87c,Trinidad and Tobago,TTO,North America,nonbreeding,Non-breeding,0.023,0.04,98,2023-12-06
+Grey Plover,1,#e8a87c,Trinidad and Tobago,TTO,North America,postbreeding_migration,Post-breeding Migration,0.015,0.039,140,2023-09-27
+Grey Plover,1,#e8a87c,Tunisia,TUN,Africa,nonbreeding,Non-breeding,0.039,0.054,21,2023-02-22
+Grey Plover,1,#e8a87c,Tunisia,TUN,Africa,postbreeding_migration,Post-breeding Migration,0.041,0.054,56,2023-11-22
+Grey Plover,1,#e8a87c,Tunisia,TUN,Africa,prebreeding_migration,Pre-breeding Migration,0.013,0.013,42,2023-04-26
+Grey Plover,1,#e8a87c,Turkey,TUR,Asia,nonbreeding,Non-breeding,0.395,0.613,98,2023-01-11
+Grey Plover,1,#e8a87c,Turkey,TUR,Asia,postbreeding_migration,Post-breeding Migration,0.13,0.257,140,2023-11-29
+Grey Plover,1,#e8a87c,Turkey,TUR,Asia,prebreeding_migration,Pre-breeding Migration,0.084,0.265,91,2023-03-15
+Grey Plover,1,#e8a87c,Taiwan,TWN,Asia,breeding,Breeding,0.077,0.165,35,2023-06-14
+Grey Plover,1,#e8a87c,Taiwan,TWN,Asia,nonbreeding,Non-breeding,0.309,0.481,98,2023-02-22
+Grey Plover,1,#e8a87c,Taiwan,TWN,Asia,postbreeding_migration,Post-breeding Migration,0.094,0.316,140,2023-11-29
+Grey Plover,1,#e8a87c,Taiwan,TWN,Asia,prebreeding_migration,Pre-breeding Migration,0.06,0.273,91,2023-03-15
+Grey Plover,1,#e8a87c,United Republic of Tanzania,TZA,Africa,breeding,Breeding,0.451,0.669,28,2023-07-12
+Grey Plover,1,#e8a87c,United Republic of Tanzania,TZA,Africa,nonbreeding,Non-breeding,2.836,4.517,98,2023-03-08
+Grey Plover,1,#e8a87c,United Republic of Tanzania,TZA,Africa,postbreeding_migration,Post-breeding Migration,1.199,2.647,140,2023-11-29
+Grey Plover,1,#e8a87c,United Republic of Tanzania,TZA,Africa,prebreeding_migration,Pre-breeding Migration,1.574,3.62,91,2023-03-15
+Grey Plover,1,#e8a87c,Ukraine,UKR,Europe,postbreeding_migration,Post-breeding Migration,0.381,0.537,112,2023-10-04
+Grey Plover,1,#e8a87c,Ukraine,UKR,Europe,prebreeding_migration,Pre-breeding Migration,0.091,0.107,35,2023-05-10
+Grey Plover,1,#e8a87c,United States,USA,North America,breeding,Breeding,27.296,37.711,35,2023-06-14
+Grey Plover,1,#e8a87c,United States,USA,North America,nonbreeding,Non-breeding,13.167,18.464,98,2023-12-27
+Grey Plover,1,#e8a87c,United States,USA,North America,postbreeding_migration,Post-breeding Migration,12.236,23.331,140,2023-07-19
+Grey Plover,1,#e8a87c,United States,USA,North America,prebreeding_migration,Pre-breeding Migration,14.156,22.49,91,2023-06-07
+Grey Plover,1,#e8a87c,Venezuela,VEN,South America,breeding,Breeding,0.213,0.393,35,2023-06-14
+Grey Plover,1,#e8a87c,Venezuela,VEN,South America,nonbreeding,Non-breeding,0.695,1.894,98,2023-03-01
+Grey Plover,1,#e8a87c,Venezuela,VEN,South America,postbreeding_migration,Post-breeding Migration,0.179,0.429,140,2023-11-29
+Grey Plover,1,#e8a87c,Venezuela,VEN,South America,prebreeding_migration,Pre-breeding Migration,0.221,0.888,91,2023-03-15
+Grey Plover,1,#e8a87c,United States Virgin Islands,VIR,North America,breeding,Breeding,0.016,0.03,35,2023-06-14
+Grey Plover,1,#e8a87c,United States Virgin Islands,VIR,North America,nonbreeding,Non-breeding,0.023,0.037,98,2023-12-27
+Grey Plover,1,#e8a87c,Vietnam,VNM,Asia,nonbreeding,Non-breeding,1.028,0.994,98,2023-02-01
+Grey Plover,1,#e8a87c,Vietnam,VNM,Asia,postbreeding_migration,Post-breeding Migration,0.095,0.151,56,2023-11-29
+Grey Plover,1,#e8a87c,Vietnam,VNM,Asia,prebreeding_migration,Pre-breeding Migration,0.226,0.432,21,2023-03-15
+Grey Plover,1,#e8a87c,Wales,WLS,Europe,nonbreeding,Non-breeding,0.137,0.22,98,2023-12-27
+Grey Plover,1,#e8a87c,Wales,WLS,Europe,postbreeding_migration,Post-breeding Migration,0.039,0.137,140,2023-11-29
+Grey Plover,1,#e8a87c,Wales,WLS,Europe,prebreeding_migration,Pre-breeding Migration,0.022,0.091,91,2023-03-15
+Grey Plover,1,#e8a87c,Yemen,YEM,Asia,nonbreeding,Non-breeding,0.382,0.43,84,2023-01-04
+Grey Plover,1,#e8a87c,Yemen,YEM,Asia,postbreeding_migration,Post-breeding Migration,0.223,0.262,77,2023-09-13
+Grey Plover,1,#e8a87c,Yemen,YEM,Asia,prebreeding_migration,Pre-breeding Migration,0.209,0.205,49,2023-03-29
+Grey Plover,1,#e8a87c,South Africa,ZAF,Africa,breeding,Breeding,0.143,0.197,21,2023-07-12
+Grey Plover,1,#e8a87c,South Africa,ZAF,Africa,nonbreeding,Non-breeding,0.362,0.742,98,2023-03-08
+Grey Plover,1,#e8a87c,South Africa,ZAF,Africa,postbreeding_migration,Post-breeding Migration,0.143,0.302,140,2023-11-29
+Grey Plover,1,#e8a87c,South Africa,ZAF,Africa,prebreeding_migration,Pre-breeding Migration,0.275,0.651,77,2023-03-15
+Barn Swallow,2,#5ba4cf,Afghanistan,AFG,Asia,breeding,Breeding,0.306,0.348,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Afghanistan,AFG,Asia,postbreeding_migration,Post-breeding Migration,0.08,0.233,112,2023-07-12
+Barn Swallow,2,#5ba4cf,Afghanistan,AFG,Asia,prebreeding_migration,Pre-breeding Migration,0.111,0.231,91,2023-05-03
+Barn Swallow,2,#5ba4cf,Angola,AGO,Africa,nonbreeding,Non-breeding,0.95,1.395,42,2023-12-13
+Barn Swallow,2,#5ba4cf,Angola,AGO,Africa,postbreeding_migration,Post-breeding Migration,0.911,3.991,70,2023-11-01
+Barn Swallow,2,#5ba4cf,Angola,AGO,Africa,prebreeding_migration,Pre-breeding Migration,0.734,1.084,84,2023-03-01
+Barn Swallow,2,#5ba4cf,Albania,ALB,Europe,breeding,Breeding,0.147,0.185,42,2023-06-28
+Barn Swallow,2,#5ba4cf,Albania,ALB,Europe,postbreeding_migration,Post-breeding Migration,0.072,0.21,119,2023-09-13
+Barn Swallow,2,#5ba4cf,Albania,ALB,Europe,prebreeding_migration,Pre-breeding Migration,0.071,0.235,84,2023-04-19
+Barn Swallow,2,#5ba4cf,United Arab Emirates,ARE,Asia,nonbreeding,Non-breeding,0.029,0.063,42,2023-01-11
+Barn Swallow,2,#5ba4cf,United Arab Emirates,ARE,Asia,postbreeding_migration,Post-breeding Migration,0.073,0.263,154,2023-09-27
+Barn Swallow,2,#5ba4cf,United Arab Emirates,ARE,Asia,prebreeding_migration,Pre-breeding Migration,0.056,0.306,126,2023-04-26
+Barn Swallow,2,#5ba4cf,Argentina,ARG,South America,nonbreeding,Non-breeding,2.95,4.012,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Argentina,ARG,South America,postbreeding_migration,Post-breeding Migration,0.728,2.738,91,2023-12-06
+Barn Swallow,2,#5ba4cf,Argentina,ARG,South America,prebreeding_migration,Pre-breeding Migration,1.253,3.175,77,2023-01-25
+Barn Swallow,2,#5ba4cf,Armenia,ARM,Asia,breeding,Breeding,0.056,0.08,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Armenia,ARM,Asia,postbreeding_migration,Post-breeding Migration,0.064,0.22,105,2023-08-30
+Barn Swallow,2,#5ba4cf,Armenia,ARM,Asia,prebreeding_migration,Pre-breeding Migration,0.051,0.298,91,2023-05-03
+Barn Swallow,2,#5ba4cf,Austria,AUT,Europe,breeding,Breeding,0.235,0.317,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Austria,AUT,Europe,postbreeding_migration,Post-breeding Migration,0.124,0.544,105,2023-07-19
+Barn Swallow,2,#5ba4cf,Austria,AUT,Europe,prebreeding_migration,Pre-breeding Migration,0.057,0.3,63,2023-05-17
+Barn Swallow,2,#5ba4cf,Azerbaijan,AZE,Asia,breeding,Breeding,0.588,0.671,42,2023-06-28
+Barn Swallow,2,#5ba4cf,Azerbaijan,AZE,Asia,postbreeding_migration,Post-breeding Migration,0.507,2.455,133,2023-10-11
+Barn Swallow,2,#5ba4cf,Azerbaijan,AZE,Asia,prebreeding_migration,Pre-breeding Migration,0.32,1.248,91,2023-05-03
+Barn Swallow,2,#5ba4cf,Burundi,BDI,Africa,nonbreeding,Non-breeding,0.028,0.044,42,2023-01-04
+Barn Swallow,2,#5ba4cf,Burundi,BDI,Africa,postbreeding_migration,Post-breeding Migration,0.023,0.11,126,2023-10-25
+Barn Swallow,2,#5ba4cf,Burundi,BDI,Africa,prebreeding_migration,Pre-breeding Migration,0.033,0.123,126,2023-02-15
+Barn Swallow,2,#5ba4cf,Belgium,BEL,Europe,breeding,Breeding,0.102,0.14,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Belgium,BEL,Europe,postbreeding_migration,Post-breeding Migration,0.055,0.188,98,2023-09-06
+Barn Swallow,2,#5ba4cf,Belgium,BEL,Europe,prebreeding_migration,Pre-breeding Migration,0.025,0.111,63,2023-05-10
+Barn Swallow,2,#5ba4cf,Bangladesh,BGD,Asia,breeding,Breeding,0.011,0.027,14,2023-07-05
+Barn Swallow,2,#5ba4cf,Bangladesh,BGD,Asia,nonbreeding,Non-breeding,1.567,2.248,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Bangladesh,BGD,Asia,postbreeding_migration,Post-breeding Migration,0.345,0.933,154,2023-10-25
+Barn Swallow,2,#5ba4cf,Bangladesh,BGD,Asia,prebreeding_migration,Pre-breeding Migration,0.463,1.484,126,2023-01-25
+Barn Swallow,2,#5ba4cf,Bulgaria,BGR,Europe,breeding,Breeding,0.811,0.946,42,2023-05-31
+Barn Swallow,2,#5ba4cf,Bulgaria,BGR,Europe,postbreeding_migration,Post-breeding Migration,0.507,1.68,105,2023-09-13
+Barn Swallow,2,#5ba4cf,Bulgaria,BGR,Europe,prebreeding_migration,Pre-breeding Migration,0.401,1.139,63,2023-04-19
+Barn Swallow,2,#5ba4cf,Bosnia and Herzegovina,BIH,Europe,breeding,Breeding,0.154,0.214,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Bosnia and Herzegovina,BIH,Europe,postbreeding_migration,Post-breeding Migration,0.053,0.175,98,2023-07-12
+Barn Swallow,2,#5ba4cf,Bosnia and Herzegovina,BIH,Europe,prebreeding_migration,Pre-breeding Migration,0.032,0.149,63,2023-04-19
+Barn Swallow,2,#5ba4cf,Belarus,BLR,Europe,breeding,Breeding,0.617,0.775,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Belarus,BLR,Europe,postbreeding_migration,Post-breeding Migration,0.612,1.14,91,2023-09-06
+Barn Swallow,2,#5ba4cf,Belarus,BLR,Europe,prebreeding_migration,Pre-breeding Migration,0.276,0.757,49,2023-05-17
+Barn Swallow,2,#5ba4cf,Belize,BLZ,North America,postbreeding_migration,Post-breeding Migration,0.018,0.065,147,2023-09-20
+Barn Swallow,2,#5ba4cf,Belize,BLZ,North America,prebreeding_migration,Pre-breeding Migration,0.013,0.064,119,2023-04-19
+Barn Swallow,2,#5ba4cf,Bolivia,BOL,South America,nonbreeding,Non-breeding,0.295,0.42,42,2023-01-18
+Barn Swallow,2,#5ba4cf,Bolivia,BOL,South America,postbreeding_migration,Post-breeding Migration,0.1,0.311,84,2023-12-06
+Barn Swallow,2,#5ba4cf,Bolivia,BOL,South America,prebreeding_migration,Pre-breeding Migration,0.329,0.711,70,2023-01-25
+Barn Swallow,2,#5ba4cf,Brazil,BRA,South America,nonbreeding,Non-breeding,0.53,0.665,42,2023-12-13
+Barn Swallow,2,#5ba4cf,Brazil,BRA,South America,postbreeding_migration,Post-breeding Migration,0.67,1.305,105,2023-11-08
+Barn Swallow,2,#5ba4cf,Brazil,BRA,South America,prebreeding_migration,Pre-breeding Migration,0.545,0.445,77,2023-03-08
+Barn Swallow,2,#5ba4cf,Brunei,BRN,Asia,nonbreeding,Non-breeding,0.1,0.562,42,2023-01-18
+Barn Swallow,2,#5ba4cf,Botswana,BWA,Africa,nonbreeding,Non-breeding,5.62,18.034,42,2023-12-13
+Barn Swallow,2,#5ba4cf,Botswana,BWA,Africa,postbreeding_migration,Post-breeding Migration,1.937,19.986,77,2023-12-06
+Barn Swallow,2,#5ba4cf,Botswana,BWA,Africa,prebreeding_migration,Pre-breeding Migration,3.183,9.25,105,2023-03-29
+Barn Swallow,2,#5ba4cf,Canada,CAN,North America,breeding,Breeding,2.086,2.681,42,2023-05-31
+Barn Swallow,2,#5ba4cf,Canada,CAN,North America,postbreeding_migration,Post-breeding Migration,0.703,2.047,77,2023-08-09
+Barn Swallow,2,#5ba4cf,Canada,CAN,North America,prebreeding_migration,Pre-breeding Migration,0.211,2.244,42,2023-05-24
+Barn Swallow,2,#5ba4cf,Switzerland,CHE,Europe,breeding,Breeding,0.086,0.101,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Switzerland,CHE,Europe,postbreeding_migration,Post-breeding Migration,0.044,0.143,126,2023-08-09
+Barn Swallow,2,#5ba4cf,Switzerland,CHE,Europe,prebreeding_migration,Pre-breeding Migration,0.03,0.147,63,2023-05-10
+Barn Swallow,2,#5ba4cf,Chile,CHL,South America,nonbreeding,Non-breeding,0.016,0.032,42,2023-01-04
+Barn Swallow,2,#5ba4cf,Chile,CHL,South America,postbreeding_migration,Post-breeding Migration,0.025,0.108,84,2023-11-01
+Barn Swallow,2,#5ba4cf,China,CHN,Asia,breeding,Breeding,17.624,18.459,42,2023-06-14
+Barn Swallow,2,#5ba4cf,China,CHN,Asia,nonbreeding,Non-breeding,0.508,0.753,42,2023-12-13
+Barn Swallow,2,#5ba4cf,China,CHN,Asia,postbreeding_migration,Post-breeding Migration,7.708,16.941,154,2023-07-12
+Barn Swallow,2,#5ba4cf,China,CHN,Asia,prebreeding_migration,Pre-breeding Migration,6.376,14.174,126,2023-05-24
+Barn Swallow,2,#5ba4cf,Ivory Coast,CIV,Africa,nonbreeding,Non-breeding,0.093,0.209,42,2023-01-04
+Barn Swallow,2,#5ba4cf,Ivory Coast,CIV,Africa,postbreeding_migration,Post-breeding Migration,0.05,0.214,77,2023-10-25
+Barn Swallow,2,#5ba4cf,Ivory Coast,CIV,Africa,prebreeding_migration,Pre-breeding Migration,0.029,0.14,84,2023-02-08
+Barn Swallow,2,#5ba4cf,Cameroon,CMR,Africa,nonbreeding,Non-breeding,0.051,0.1,35,2023-01-11
+Barn Swallow,2,#5ba4cf,Cameroon,CMR,Africa,prebreeding_migration,Pre-breeding Migration,0.189,0.206,70,2023-03-08
+Barn Swallow,2,#5ba4cf,Democratic Republic of the Congo,COD,Africa,nonbreeding,Non-breeding,3.679,3.745,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Democratic Republic of the Congo,COD,Africa,postbreeding_migration,Post-breeding Migration,2.555,9.025,147,2023-11-01
+Barn Swallow,2,#5ba4cf,Democratic Republic of the Congo,COD,Africa,prebreeding_migration,Pre-breeding Migration,1.846,3.038,98,2023-03-01
+Barn Swallow,2,#5ba4cf,Colombia,COL,South America,nonbreeding,Non-breeding,0.182,0.22,42,2023-01-11
+Barn Swallow,2,#5ba4cf,Colombia,COL,South America,postbreeding_migration,Post-breeding Migration,0.059,0.232,140,2023-10-25
+Barn Swallow,2,#5ba4cf,Colombia,COL,South America,prebreeding_migration,Pre-breeding Migration,0.433,1.096,126,2023-03-22
+Barn Swallow,2,#5ba4cf,Costa Rica,CRI,North America,nonbreeding,Non-breeding,0.057,0.08,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Costa Rica,CRI,North America,postbreeding_migration,Post-breeding Migration,0.049,0.18,147,2023-09-27
+Barn Swallow,2,#5ba4cf,Costa Rica,CRI,North America,prebreeding_migration,Pre-breeding Migration,0.06,0.178,119,2023-04-19
+Barn Swallow,2,#5ba4cf,Cuba,CUB,North America,postbreeding_migration,Post-breeding Migration,0.013,0.12,133,2023-09-06
+Barn Swallow,2,#5ba4cf,Cyprus,CYP,Asia,breeding,Breeding,0.134,0.173,42,2023-06-21
+Barn Swallow,2,#5ba4cf,Cyprus,CYP,Asia,postbreeding_migration,Post-breeding Migration,0.028,0.077,112,2023-07-12
+Barn Swallow,2,#5ba4cf,Cyprus,CYP,Asia,prebreeding_migration,Pre-breeding Migration,0.053,0.18,119,2023-04-19
+Barn Swallow,2,#5ba4cf,Czech Republic,CZE,Europe,breeding,Breeding,0.643,0.789,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Czech Republic,CZE,Europe,postbreeding_migration,Post-breeding Migration,0.546,2.141,105,2023-08-23
+Barn Swallow,2,#5ba4cf,Czech Republic,CZE,Europe,prebreeding_migration,Pre-breeding Migration,0.166,1.01,63,2023-05-17
+Barn Swallow,2,#5ba4cf,Germany,DEU,Europe,breeding,Breeding,1.75,2.169,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Germany,DEU,Europe,postbreeding_migration,Post-breeding Migration,1.053,3.586,126,2023-08-30
+Barn Swallow,2,#5ba4cf,Germany,DEU,Europe,prebreeding_migration,Pre-breeding Migration,0.428,2.198,63,2023-05-03
+Barn Swallow,2,#5ba4cf,Djibouti,DJI,Africa,nonbreeding,Non-breeding,0.011,0.012,28,2023-12-13
+Barn Swallow,2,#5ba4cf,Djibouti,DJI,Africa,postbreeding_migration,Post-breeding Migration,0.025,0.088,119,2023-11-01
+Barn Swallow,2,#5ba4cf,Djibouti,DJI,Africa,prebreeding_migration,Pre-breeding Migration,0.022,0.075,105,2023-04-05
+Barn Swallow,2,#5ba4cf,Denmark,DNK,Europe,breeding,Breeding,0.339,0.386,42,2023-05-31
+Barn Swallow,2,#5ba4cf,Denmark,DNK,Europe,postbreeding_migration,Post-breeding Migration,0.152,0.546,126,2023-09-06
+Barn Swallow,2,#5ba4cf,Denmark,DNK,Europe,prebreeding_migration,Pre-breeding Migration,0.089,0.607,49,2023-05-17
+Barn Swallow,2,#5ba4cf,Algeria,DZA,Africa,breeding,Breeding,0.019,0.03,42,2023-06-14
+Barn Swallow,2,#5ba4cf,Algeria,DZA,Africa,postbreeding_migration,Post-breeding Migration,0.076,0.122,112,2023-09-13
+Barn Swallow,2,#5ba4cf,Algeria,DZA,Africa,prebreeding_migration,Pre-breeding Migration,0.171,0.228,105,2023-03-15
+Barn Swallow,2,#5ba4cf,Ecuador,ECU,South America,nonbreeding,Non-breeding,0.074,0.242,42,2023-12-27
+Barn Swallow,2,#5ba4cf,Ecuador,ECU,South America,prebreeding_migration,Pre-breeding Migration,0.015,0.045,105,2023-03-08
+Barn Swallow,2,#5ba4cf,Egypt,EGY,Africa,breeding,Breeding,0.982,1.109,42,2023-06-07
+Barn Swallow,2,#5ba4cf,Egypt,EGY,Africa,nonbreeding,Non-breeding,1.507,2.132,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Egypt,EGY,Africa,postbreeding_migration,Post-breeding Migration,1.591,3.258,154,2023-10-25
+Barn Swallow,2,#5ba4cf,Egypt,EGY,Africa,prebreeding_migration,Pre-breeding Migration,2.272,6.272,126,2023-04-26
+Barn Swallow,2,#5ba4cf,England,ENG,Europe,breeding,Breeding,0.451,0.481,42,2023-07-05
+Barn Swallow,2,#5ba4cf,England,ENG,Europe,postbreeding_migration,Post-breeding Migration,0.258,0.716,147,2023-09-06
+Barn Swallow,2,#5ba4cf,England,ENG,Europe,prebreeding_migration,Pre-breeding Migration,0.094,0.498,63,2023-05-03
+Barn Swallow,2,#5ba4cf,Eritrea,ERI,Africa,nonbreeding,Non-breeding,0.033,0.047,7,2023-12-13
+Barn Swallow,2,#5ba4cf,Eritrea,ERI,Africa,postbreeding_migration,Post-breeding Migration,0.144,0.467,126,2023-11-01
+Barn Swallow,2,#5ba4cf,Eritrea,ERI,Africa,prebreeding_migration,Pre-breeding Migration,0.073,0.272,98,2023-03-29
+Barn Swallow,2,#5ba4cf,Spain,ESP,Europe,breeding,Breeding,2.32,2.561,42,2023-06-21
+Barn Swallow,2,#5ba4cf,Spain,ESP,Europe,postbreeding_migration,Post-breeding Migration,1.323,7.095,154,2023-09-20
+Barn Swallow,2,#5ba4cf,Spain,ESP,Europe,prebreeding_migration,Pre-breeding Migration,0.695,2.039,126,2023-04-26
+Barn Swallow,2,#5ba4cf,Estonia,EST,Europe,breeding,Breeding,0.095,0.117,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Estonia,EST,Europe,postbreeding_migration,Post-breeding Migration,0.109,0.27,105,2023-08-09
+Barn Swallow,2,#5ba4cf,Estonia,EST,Europe,prebreeding_migration,Pre-breeding Migration,0.021,0.131,35,2023-05-17
+Barn Swallow,2,#5ba4cf,Ethiopia,ETH,Africa,nonbreeding,Non-breeding,1.72,2.221,42,2023-01-04
+Barn Swallow,2,#5ba4cf,Ethiopia,ETH,Africa,postbreeding_migration,Post-breeding Migration,1.139,4.35,140,2023-11-01
+Barn Swallow,2,#5ba4cf,Ethiopia,ETH,Africa,prebreeding_migration,Pre-breeding Migration,1.16,2.611,119,2023-03-08
+Barn Swallow,2,#5ba4cf,Finland,FIN,Europe,breeding,Breeding,0.383,0.592,42,2023-05-31
+Barn Swallow,2,#5ba4cf,Finland,FIN,Europe,postbreeding_migration,Post-breeding Migration,0.385,1.205,105,2023-08-09
+Barn Swallow,2,#5ba4cf,Finland,FIN,Europe,prebreeding_migration,Pre-breeding Migration,0.134,0.55,28,2023-05-24
+Barn Swallow,2,#5ba4cf,France,FRA,Europe,breeding,Breeding,1.951,2.159,42,2023-07-05
+Barn Swallow,2,#5ba4cf,France,FRA,Europe,postbreeding_migration,Post-breeding Migration,0.96,2.786,147,2023-09-27
+Barn Swallow,2,#5ba4cf,France,FRA,Europe,prebreeding_migration,Pre-breeding Migration,0.623,2.399,77,2023-05-03
+Barn Swallow,2,#5ba4cf,Gabon,GAB,Africa,nonbreeding,Non-breeding,0.042,0.066,35,2023-01-18
+Barn Swallow,2,#5ba4cf,Gabon,GAB,Africa,prebreeding_migration,Pre-breeding Migration,0.136,0.152,28,2023-02-01
+Barn Swallow,2,#5ba4cf,Georgia,GEO,Asia,breeding,Breeding,0.18,0.213,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Georgia,GEO,Asia,postbreeding_migration,Post-breeding Migration,0.167,0.528,105,2023-09-20
+Barn Swallow,2,#5ba4cf,Georgia,GEO,Asia,prebreeding_migration,Pre-breeding Migration,0.146,0.667,84,2023-05-03
+Barn Swallow,2,#5ba4cf,Ghana,GHA,Africa,nonbreeding,Non-breeding,0.094,0.213,42,2023-01-04
+Barn Swallow,2,#5ba4cf,Ghana,GHA,Africa,postbreeding_migration,Post-breeding Migration,0.062,0.269,84,2023-10-25
+Barn Swallow,2,#5ba4cf,Ghana,GHA,Africa,prebreeding_migration,Pre-breeding Migration,0.055,0.247,91,2023-02-08
+Barn Swallow,2,#5ba4cf,Guinea,GIN,Africa,nonbreeding,Non-breeding,0.055,0.103,42,2023-01-04
+Barn Swallow,2,#5ba4cf,Guinea,GIN,Africa,postbreeding_migration,Post-breeding Migration,0.025,0.128,70,2023-10-25
+Barn Swallow,2,#5ba4cf,Equatorial Guinea,GNQ,Africa,nonbreeding,Non-breeding,0.013,0.031,35,2023-01-11
+Barn Swallow,2,#5ba4cf,Equatorial Guinea,GNQ,Africa,prebreeding_migration,Pre-breeding Migration,0.057,0.088,63,2023-02-08
+Barn Swallow,2,#5ba4cf,Greece,GRC,Europe,breeding,Breeding,0.895,1.04,42,2023-06-28
+Barn Swallow,2,#5ba4cf,Greece,GRC,Europe,postbreeding_migration,Post-breeding Migration,0.327,0.784,147,2023-07-12
+Barn Swallow,2,#5ba4cf,Greece,GRC,Europe,prebreeding_migration,Pre-breeding Migration,0.42,1.244,91,2023-04-19
+Barn Swallow,2,#5ba4cf,Guatemala,GTM,North America,nonbreeding,Non-breeding,0.039,0.067,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Guatemala,GTM,North America,postbreeding_migration,Post-breeding Migration,0.014,0.069,140,2023-11-01
+Barn Swallow,2,#5ba4cf,Guatemala,GTM,North America,prebreeding_migration,Pre-breeding Migration,0.044,0.157,119,2023-04-12
+Barn Swallow,2,#5ba4cf,Guyana,GUY,South America,prebreeding_migration,Pre-breeding Migration,0.028,0.113,91,2023-03-22
+Barn Swallow,2,#5ba4cf,Honduras,HND,North America,nonbreeding,Non-breeding,0.041,0.071,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Honduras,HND,North America,postbreeding_migration,Post-breeding Migration,0.031,0.119,140,2023-10-25
+Barn Swallow,2,#5ba4cf,Honduras,HND,North America,prebreeding_migration,Pre-breeding Migration,0.045,0.154,126,2023-04-12
+Barn Swallow,2,#5ba4cf,Croatia,HRV,Europe,breeding,Breeding,0.385,0.487,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Croatia,HRV,Europe,postbreeding_migration,Post-breeding Migration,0.135,0.428,119,2023-08-30
+Barn Swallow,2,#5ba4cf,Croatia,HRV,Europe,prebreeding_migration,Pre-breeding Migration,0.105,0.439,77,2023-04-19
+Barn Swallow,2,#5ba4cf,Hungary,HUN,Europe,breeding,Breeding,1.068,1.341,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Hungary,HUN,Europe,postbreeding_migration,Post-breeding Migration,0.471,1.321,112,2023-07-19
+Barn Swallow,2,#5ba4cf,Hungary,HUN,Europe,prebreeding_migration,Pre-breeding Migration,0.249,1.274,63,2023-05-17
+Barn Swallow,2,#5ba4cf,Indonesia,IDN,Asia,nonbreeding,Non-breeding,1.802,3.018,42,2023-01-18
+Barn Swallow,2,#5ba4cf,Indonesia,IDN,Asia,postbreeding_migration,Post-breeding Migration,1.265,4.66,154,2023-10-11
+Barn Swallow,2,#5ba4cf,Indonesia,IDN,Asia,prebreeding_migration,Pre-breeding Migration,1.728,3.265,112,2023-03-08
+Barn Swallow,2,#5ba4cf,India,IND,Asia,breeding,Breeding,0.117,0.132,42,2023-05-31
+Barn Swallow,2,#5ba4cf,India,IND,Asia,nonbreeding,Non-breeding,9.28,12.145,42,2023-12-20
+Barn Swallow,2,#5ba4cf,India,IND,Asia,postbreeding_migration,Post-breeding Migration,1.7,6.9,154,2023-10-25
+Barn Swallow,2,#5ba4cf,India,IND,Asia,prebreeding_migration,Pre-breeding Migration,2.879,9.504,126,2023-01-25
+Barn Swallow,2,#5ba4cf,Ireland,IRL,Europe,breeding,Breeding,0.444,0.488,42,2023-06-28
+Barn Swallow,2,#5ba4cf,Ireland,IRL,Europe,postbreeding_migration,Post-breeding Migration,0.158,0.456,112,2023-09-06
+Barn Swallow,2,#5ba4cf,Ireland,IRL,Europe,prebreeding_migration,Pre-breeding Migration,0.06,0.378,56,2023-05-24
+Barn Swallow,2,#5ba4cf,Iran,IRN,Asia,breeding,Breeding,2.494,3.576,42,2023-06-28
+Barn Swallow,2,#5ba4cf,Iran,IRN,Asia,nonbreeding,Non-breeding,0.032,0.055,42,2023-01-11
+Barn Swallow,2,#5ba4cf,Iran,IRN,Asia,postbreeding_migration,Post-breeding Migration,0.675,2.125,154,2023-07-12
+Barn Swallow,2,#5ba4cf,Iran,IRN,Asia,prebreeding_migration,Pre-breeding Migration,1.254,3.601,126,2023-04-26
+Barn Swallow,2,#5ba4cf,Iraq,IRQ,Asia,breeding,Breeding,1.815,2.099,42,2023-06-21
+Barn Swallow,2,#5ba4cf,Iraq,IRQ,Asia,postbreeding_migration,Post-breeding Migration,0.592,1.019,140,2023-07-12
+Barn Swallow,2,#5ba4cf,Iraq,IRQ,Asia,prebreeding_migration,Pre-breeding Migration,1.882,3.547,126,2023-03-22
+Barn Swallow,2,#5ba4cf,Israel,ISR,Asia,breeding,Breeding,0.211,0.299,42,2023-06-21
+Barn Swallow,2,#5ba4cf,Israel,ISR,Asia,nonbreeding,Non-breeding,0.152,0.265,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Israel,ISR,Asia,postbreeding_migration,Post-breeding Migration,0.15,0.649,154,2023-10-04
+Barn Swallow,2,#5ba4cf,Israel,ISR,Asia,prebreeding_migration,Pre-breeding Migration,0.29,1.343,126,2023-04-19
+Barn Swallow,2,#5ba4cf,Italy,ITA,Europe,breeding,Breeding,1.2,1.319,42,2023-06-14
+Barn Swallow,2,#5ba4cf,Italy,ITA,Europe,postbreeding_migration,Post-breeding Migration,0.534,1.611,133,2023-09-06
+Barn Swallow,2,#5ba4cf,Italy,ITA,Europe,prebreeding_migration,Pre-breeding Migration,0.547,1.873,98,2023-04-19
+Barn Swallow,2,#5ba4cf,Jordan,JOR,Asia,breeding,Breeding,0.05,0.08,42,2023-06-21
+Barn Swallow,2,#5ba4cf,Jordan,JOR,Asia,nonbreeding,Non-breeding,0.024,0.049,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Jordan,JOR,Asia,postbreeding_migration,Post-breeding Migration,0.193,1.121,154,2023-10-04
+Barn Swallow,2,#5ba4cf,Jordan,JOR,Asia,prebreeding_migration,Pre-breeding Migration,0.313,1.492,126,2023-04-19
+Barn Swallow,2,#5ba4cf,Japan,JPN,Asia,breeding,Breeding,2.406,6.031,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Japan,JPN,Asia,postbreeding_migration,Post-breeding Migration,5.505,29.14,154,2023-08-16
+Barn Swallow,2,#5ba4cf,Japan,JPN,Asia,prebreeding_migration,Pre-breeding Migration,0.154,0.749,126,2023-05-24
+Barn Swallow,2,#5ba4cf,Kazakhstan,KAZ,Asia,breeding,Breeding,10.768,12.731,42,2023-06-07
+Barn Swallow,2,#5ba4cf,Kazakhstan,KAZ,Asia,postbreeding_migration,Post-breeding Migration,4.792,5.665,105,2023-07-12
+Barn Swallow,2,#5ba4cf,Kazakhstan,KAZ,Asia,prebreeding_migration,Pre-breeding Migration,5.663,12.088,63,2023-05-24
+Barn Swallow,2,#5ba4cf,Kenya,KEN,Africa,nonbreeding,Non-breeding,5.974,9.232,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Kenya,KEN,Africa,postbreeding_migration,Post-breeding Migration,1.039,3.867,154,2023-11-29
+Barn Swallow,2,#5ba4cf,Kenya,KEN,Africa,prebreeding_migration,Pre-breeding Migration,3.606,13.773,126,2023-02-01
+Barn Swallow,2,#5ba4cf,Kyrgyzstan,KGZ,Asia,breeding,Breeding,0.108,0.148,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Kyrgyzstan,KGZ,Asia,postbreeding_migration,Post-breeding Migration,0.052,0.172,98,2023-07-12
+Barn Swallow,2,#5ba4cf,Kyrgyzstan,KGZ,Asia,prebreeding_migration,Pre-breeding Migration,0.047,0.12,56,2023-05-17
+Barn Swallow,2,#5ba4cf,Cambodia,KHM,Asia,breeding,Breeding,0.042,0.108,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Cambodia,KHM,Asia,nonbreeding,Non-breeding,1.213,1.958,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Cambodia,KHM,Asia,postbreeding_migration,Post-breeding Migration,0.352,1.91,154,2023-11-29
+Barn Swallow,2,#5ba4cf,Cambodia,KHM,Asia,prebreeding_migration,Pre-breeding Migration,0.75,1.696,126,2023-02-22
+Barn Swallow,2,#5ba4cf,South Korea,KOR,Asia,breeding,Breeding,0.221,0.259,42,2023-06-28
+Barn Swallow,2,#5ba4cf,South Korea,KOR,Asia,postbreeding_migration,Post-breeding Migration,0.311,0.983,154,2023-09-20
+Barn Swallow,2,#5ba4cf,South Korea,KOR,Asia,prebreeding_migration,Pre-breeding Migration,0.044,0.181,91,2023-05-24
+Barn Swallow,2,#5ba4cf,Kosovo,KOS,Europe,breeding,Breeding,0.054,0.062,42,2023-06-28
+Barn Swallow,2,#5ba4cf,Kosovo,KOS,Europe,postbreeding_migration,Post-breeding Migration,0.028,0.07,98,2023-09-13
+Barn Swallow,2,#5ba4cf,Kosovo,KOS,Europe,prebreeding_migration,Pre-breeding Migration,0.021,0.057,63,2023-04-26
+Barn Swallow,2,#5ba4cf,Kuwait,KWT,Asia,postbreeding_migration,Post-breeding Migration,0.019,0.118,140,2023-10-25
+Barn Swallow,2,#5ba4cf,Kuwait,KWT,Asia,prebreeding_migration,Pre-breeding Migration,0.068,0.248,126,2023-04-19
+Barn Swallow,2,#5ba4cf,Laos,LAO,Asia,nonbreeding,Non-breeding,0.327,0.624,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Laos,LAO,Asia,postbreeding_migration,Post-breeding Migration,0.086,0.478,154,2023-11-01
+Barn Swallow,2,#5ba4cf,Laos,LAO,Asia,prebreeding_migration,Pre-breeding Migration,0.17,0.406,126,2023-03-08
+Barn Swallow,2,#5ba4cf,Lebanon,LBN,Asia,breeding,Breeding,0.061,0.101,42,2023-06-21
+Barn Swallow,2,#5ba4cf,Lebanon,LBN,Asia,nonbreeding,Non-breeding,0.014,0.027,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Lebanon,LBN,Asia,postbreeding_migration,Post-breeding Migration,0.032,0.132,154,2023-09-27
+Barn Swallow,2,#5ba4cf,Lebanon,LBN,Asia,prebreeding_migration,Pre-breeding Migration,0.043,0.201,126,2023-04-19
+Barn Swallow,2,#5ba4cf,Liberia,LBR,Africa,nonbreeding,Non-breeding,0.166,0.301,42,2023-01-04
+Barn Swallow,2,#5ba4cf,Liberia,LBR,Africa,postbreeding_migration,Post-breeding Migration,0.045,0.132,63,2023-11-01
+Barn Swallow,2,#5ba4cf,Liberia,LBR,Africa,prebreeding_migration,Pre-breeding Migration,0.036,0.085,84,2023-02-08
+Barn Swallow,2,#5ba4cf,Sri Lanka,LKA,Asia,nonbreeding,Non-breeding,8.156,19.339,42,2023-12-13
+Barn Swallow,2,#5ba4cf,Sri Lanka,LKA,Asia,postbreeding_migration,Post-breeding Migration,0.739,6.171,126,2023-12-06
+Barn Swallow,2,#5ba4cf,Sri Lanka,LKA,Asia,prebreeding_migration,Pre-breeding Migration,2.664,14.43,98,2023-02-01
+Barn Swallow,2,#5ba4cf,Lesotho,LSO,Africa,nonbreeding,Non-breeding,0.052,0.087,42,2023-01-11
+Barn Swallow,2,#5ba4cf,Lesotho,LSO,Africa,prebreeding_migration,Pre-breeding Migration,0.027,0.08,84,2023-03-15
+Barn Swallow,2,#5ba4cf,Lithuania,LTU,Europe,breeding,Breeding,0.189,0.221,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Lithuania,LTU,Europe,postbreeding_migration,Post-breeding Migration,0.291,0.995,105,2023-09-20
+Barn Swallow,2,#5ba4cf,Lithuania,LTU,Europe,prebreeding_migration,Pre-breeding Migration,0.064,0.236,49,2023-05-17
+Barn Swallow,2,#5ba4cf,Latvia,LVA,Europe,breeding,Breeding,0.106,0.134,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Latvia,LVA,Europe,postbreeding_migration,Post-breeding Migration,0.147,0.396,84,2023-09-06
+Barn Swallow,2,#5ba4cf,Latvia,LVA,Europe,prebreeding_migration,Pre-breeding Migration,0.038,0.147,35,2023-05-17
+Barn Swallow,2,#5ba4cf,Morocco,MAR,Africa,breeding,Breeding,0.202,0.24,42,2023-05-31
+Barn Swallow,2,#5ba4cf,Morocco,MAR,Africa,nonbreeding,Non-breeding,0.208,0.308,42,2023-01-11
+Barn Swallow,2,#5ba4cf,Morocco,MAR,Africa,postbreeding_migration,Post-breeding Migration,0.201,0.723,154,2023-09-27
+Barn Swallow,2,#5ba4cf,Morocco,MAR,Africa,prebreeding_migration,Pre-breeding Migration,0.879,1.97,126,2023-04-19
+Barn Swallow,2,#5ba4cf,Moldova,MDA,Europe,breeding,Breeding,0.305,0.381,42,2023-05-31
+Barn Swallow,2,#5ba4cf,Moldova,MDA,Europe,postbreeding_migration,Post-breeding Migration,0.189,0.417,98,2023-09-06
+Barn Swallow,2,#5ba4cf,Moldova,MDA,Europe,prebreeding_migration,Pre-breeding Migration,0.18,0.416,56,2023-04-26
+Barn Swallow,2,#5ba4cf,Mexico,MEX,North America,breeding,Breeding,1.861,2.186,42,2023-06-07
+Barn Swallow,2,#5ba4cf,Mexico,MEX,North America,nonbreeding,Non-breeding,0.266,0.418,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Mexico,MEX,North America,postbreeding_migration,Post-breeding Migration,1.977,7.932,154,2023-09-06
+Barn Swallow,2,#5ba4cf,Mexico,MEX,North America,prebreeding_migration,Pre-breeding Migration,0.901,2.533,126,2023-04-26
+Barn Swallow,2,#5ba4cf,Macedonia,MKD,Europe,breeding,Breeding,0.115,0.144,42,2023-06-28
+Barn Swallow,2,#5ba4cf,Macedonia,MKD,Europe,postbreeding_migration,Post-breeding Migration,0.061,0.166,98,2023-09-06
+Barn Swallow,2,#5ba4cf,Macedonia,MKD,Europe,prebreeding_migration,Pre-breeding Migration,0.044,0.139,63,2023-04-19
+Barn Swallow,2,#5ba4cf,Myanmar,MMR,Asia,breeding,Breeding,0.12,0.294,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Myanmar,MMR,Asia,nonbreeding,Non-breeding,1.836,2.958,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Myanmar,MMR,Asia,postbreeding_migration,Post-breeding Migration,0.57,2.333,154,2023-11-01
+Barn Swallow,2,#5ba4cf,Myanmar,MMR,Asia,prebreeding_migration,Pre-breeding Migration,1.202,2.673,126,2023-02-15
+Barn Swallow,2,#5ba4cf,Montenegro,MNE,Europe,breeding,Breeding,0.033,0.042,42,2023-06-28
+Barn Swallow,2,#5ba4cf,Montenegro,MNE,Europe,postbreeding_migration,Post-breeding Migration,0.012,0.037,98,2023-08-30
+Barn Swallow,2,#5ba4cf,Montenegro,MNE,Europe,prebreeding_migration,Pre-breeding Migration,0.017,0.063,77,2023-04-19
+Barn Swallow,2,#5ba4cf,Mongolia,MNG,Asia,breeding,Breeding,0.478,1.445,42,2023-05-31
+Barn Swallow,2,#5ba4cf,Mongolia,MNG,Asia,postbreeding_migration,Post-breeding Migration,0.442,1.134,77,2023-07-19
+Barn Swallow,2,#5ba4cf,Mongolia,MNG,Asia,prebreeding_migration,Pre-breeding Migration,0.198,0.662,28,2023-05-24
+Barn Swallow,2,#5ba4cf,Mozambique,MOZ,Africa,nonbreeding,Non-breeding,6.108,10.364,42,2023-01-11
+Barn Swallow,2,#5ba4cf,Mozambique,MOZ,Africa,postbreeding_migration,Post-breeding Migration,0.996,3.207,84,2023-11-01
+Barn Swallow,2,#5ba4cf,Mozambique,MOZ,Africa,prebreeding_migration,Pre-breeding Migration,4.905,11.079,98,2023-01-25
+Barn Swallow,2,#5ba4cf,Mauritania,MRT,Africa,nonbreeding,Non-breeding,0.14,0.185,42,2023-01-04
+Barn Swallow,2,#5ba4cf,Mauritania,MRT,Africa,postbreeding_migration,Post-breeding Migration,0.012,0.112,70,2023-11-01
+Barn Swallow,2,#5ba4cf,Mauritania,MRT,Africa,prebreeding_migration,Pre-breeding Migration,0.739,1.187,112,2023-04-12
+Barn Swallow,2,#5ba4cf,Malawi,MWI,Africa,nonbreeding,Non-breeding,0.314,0.538,42,2023-01-04
+Barn Swallow,2,#5ba4cf,Malawi,MWI,Africa,postbreeding_migration,Post-breeding Migration,0.098,0.4,84,2023-10-25
+Barn Swallow,2,#5ba4cf,Malawi,MWI,Africa,prebreeding_migration,Pre-breeding Migration,0.364,0.696,84,2023-03-08
+Barn Swallow,2,#5ba4cf,Malaysia,MYS,Asia,nonbreeding,Non-breeding,2.079,6.353,42,2023-01-18
+Barn Swallow,2,#5ba4cf,Malaysia,MYS,Asia,postbreeding_migration,Post-breeding Migration,0.193,0.834,154,2023-10-25
+Barn Swallow,2,#5ba4cf,Malaysia,MYS,Asia,prebreeding_migration,Pre-breeding Migration,0.299,1.529,126,2023-01-25
+Barn Swallow,2,#5ba4cf,Namibia,NAM,Africa,nonbreeding,Non-breeding,0.97,1.714,42,2023-12-13
+Barn Swallow,2,#5ba4cf,Namibia,NAM,Africa,postbreeding_migration,Post-breeding Migration,0.271,1.318,70,2023-12-06
+Barn Swallow,2,#5ba4cf,Namibia,NAM,Africa,prebreeding_migration,Pre-breeding Migration,0.644,1.444,84,2023-02-22
+Barn Swallow,2,#5ba4cf,Nigeria,NGA,Africa,nonbreeding,Non-breeding,0.021,0.035,35,2023-01-04
+Barn Swallow,2,#5ba4cf,Nigeria,NGA,Africa,postbreeding_migration,Post-breeding Migration,0.023,0.095,56,2023-10-25
+Barn Swallow,2,#5ba4cf,Nigeria,NGA,Africa,prebreeding_migration,Pre-breeding Migration,0.066,0.179,70,2023-03-08
+Barn Swallow,2,#5ba4cf,Nicaragua,NIC,North America,nonbreeding,Non-breeding,0.131,0.196,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Nicaragua,NIC,North America,postbreeding_migration,Post-breeding Migration,0.118,0.461,140,2023-09-27
+Barn Swallow,2,#5ba4cf,Nicaragua,NIC,North America,prebreeding_migration,Pre-breeding Migration,0.141,0.447,126,2023-04-19
+Barn Swallow,2,#5ba4cf,Northern Ireland,NIR,Europe,breeding,Breeding,0.08,0.09,42,2023-06-28
+Barn Swallow,2,#5ba4cf,Northern Ireland,NIR,Europe,postbreeding_migration,Post-breeding Migration,0.03,0.084,119,2023-08-30
+Barn Swallow,2,#5ba4cf,Northern Ireland,NIR,Europe,prebreeding_migration,Pre-breeding Migration,0.012,0.076,49,2023-05-24
+Barn Swallow,2,#5ba4cf,Netherlands,NLD,Europe,breeding,Breeding,0.224,0.296,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Netherlands,NLD,Europe,postbreeding_migration,Post-breeding Migration,0.101,0.345,112,2023-07-12
+Barn Swallow,2,#5ba4cf,Netherlands,NLD,Europe,prebreeding_migration,Pre-breeding Migration,0.055,0.285,63,2023-05-03
+Barn Swallow,2,#5ba4cf,Norway,NOR,Europe,breeding,Breeding,0.146,0.192,42,2023-05-31
+Barn Swallow,2,#5ba4cf,Norway,NOR,Europe,postbreeding_migration,Post-breeding Migration,0.063,0.173,105,2023-08-30
+Barn Swallow,2,#5ba4cf,Norway,NOR,Europe,prebreeding_migration,Pre-breeding Migration,0.021,0.163,35,2023-05-24
+Barn Swallow,2,#5ba4cf,Nepal,NPL,Asia,breeding,Breeding,0.098,0.138,42,2023-06-07
+Barn Swallow,2,#5ba4cf,Nepal,NPL,Asia,nonbreeding,Non-breeding,0.072,0.13,42,2023-12-13
+Barn Swallow,2,#5ba4cf,Nepal,NPL,Asia,postbreeding_migration,Post-breeding Migration,0.046,0.164,154,2023-09-27
+Barn Swallow,2,#5ba4cf,Nepal,NPL,Asia,prebreeding_migration,Pre-breeding Migration,0.042,0.106,126,2023-05-24
+Barn Swallow,2,#5ba4cf,Oman,OMN,Asia,nonbreeding,Non-breeding,0.014,0.035,42,2023-01-11
+Barn Swallow,2,#5ba4cf,Oman,OMN,Asia,postbreeding_migration,Post-breeding Migration,0.264,0.854,147,2023-09-27
+Barn Swallow,2,#5ba4cf,Oman,OMN,Asia,prebreeding_migration,Pre-breeding Migration,0.145,0.835,126,2023-04-26
+Barn Swallow,2,#5ba4cf,Pakistan,PAK,Asia,breeding,Breeding,0.11,0.152,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Pakistan,PAK,Asia,nonbreeding,Non-breeding,0.526,0.741,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Pakistan,PAK,Asia,postbreeding_migration,Post-breeding Migration,0.295,1.045,154,2023-10-25
+Barn Swallow,2,#5ba4cf,Pakistan,PAK,Asia,prebreeding_migration,Pre-breeding Migration,0.258,0.508,126,2023-03-01
+Barn Swallow,2,#5ba4cf,Panama,PAN,North America,nonbreeding,Non-breeding,0.024,0.045,42,2023-12-13
+Barn Swallow,2,#5ba4cf,Panama,PAN,North America,postbreeding_migration,Post-breeding Migration,0.082,0.433,140,2023-09-27
+Barn Swallow,2,#5ba4cf,Panama,PAN,North America,prebreeding_migration,Pre-breeding Migration,0.082,0.414,119,2023-04-19
+Barn Swallow,2,#5ba4cf,Peru,PER,South America,nonbreeding,Non-breeding,0.132,0.181,42,2023-12-13
+Barn Swallow,2,#5ba4cf,Peru,PER,South America,postbreeding_migration,Post-breeding Migration,0.034,0.167,98,2023-11-22
+Barn Swallow,2,#5ba4cf,Peru,PER,South America,prebreeding_migration,Pre-breeding Migration,0.113,0.269,112,2023-02-08
+Barn Swallow,2,#5ba4cf,Philippines,PHL,Asia,breeding,Breeding,0.298,0.243,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Philippines,PHL,Asia,nonbreeding,Non-breeding,7.424,27.969,42,2023-01-18
+Barn Swallow,2,#5ba4cf,Philippines,PHL,Asia,postbreeding_migration,Post-breeding Migration,13.191,59.302,154,2023-11-15
+Barn Swallow,2,#5ba4cf,Philippines,PHL,Asia,prebreeding_migration,Pre-breeding Migration,1.004,6.572,126,2023-01-25
+Barn Swallow,2,#5ba4cf,Poland,POL,Europe,breeding,Breeding,1.528,1.843,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Poland,POL,Europe,postbreeding_migration,Post-breeding Migration,1.251,3.707,105,2023-09-06
+Barn Swallow,2,#5ba4cf,Poland,POL,Europe,prebreeding_migration,Pre-breeding Migration,0.369,1.743,56,2023-05-03
+Barn Swallow,2,#5ba4cf,North Korea,PRK,Asia,breeding,Breeding,0.161,0.211,42,2023-07-05
+Barn Swallow,2,#5ba4cf,North Korea,PRK,Asia,postbreeding_migration,Post-breeding Migration,0.252,0.821,140,2023-09-20
+Barn Swallow,2,#5ba4cf,North Korea,PRK,Asia,prebreeding_migration,Pre-breeding Migration,0.046,0.167,70,2023-05-24
+Barn Swallow,2,#5ba4cf,Portugal,PRT,Europe,breeding,Breeding,0.482,0.535,42,2023-06-28
+Barn Swallow,2,#5ba4cf,Portugal,PRT,Europe,postbreeding_migration,Post-breeding Migration,0.075,0.437,154,2023-07-12
+Barn Swallow,2,#5ba4cf,Portugal,PRT,Europe,prebreeding_migration,Pre-breeding Migration,0.131,0.358,126,2023-05-24
+Barn Swallow,2,#5ba4cf,Paraguay,PRY,South America,nonbreeding,Non-breeding,0.212,0.312,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Paraguay,PRY,South America,postbreeding_migration,Post-breeding Migration,0.058,0.365,91,2023-12-06
+Barn Swallow,2,#5ba4cf,Paraguay,PRY,South America,prebreeding_migration,Pre-breeding Migration,0.266,0.433,70,2023-03-01
+Barn Swallow,2,#5ba4cf,Palestinian Territory,PSX,Asia,breeding,Breeding,0.036,0.062,42,2023-06-21
+Barn Swallow,2,#5ba4cf,Palestinian Territory,PSX,Asia,nonbreeding,Non-breeding,0.029,0.064,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Palestinian Territory,PSX,Asia,postbreeding_migration,Post-breeding Migration,0.041,0.213,154,2023-09-27
+Barn Swallow,2,#5ba4cf,Palestinian Territory,PSX,Asia,prebreeding_migration,Pre-breeding Migration,0.057,0.321,126,2023-04-19
+Barn Swallow,2,#5ba4cf,Qatar,QAT,Asia,postbreeding_migration,Post-breeding Migration,0.012,0.05,154,2023-10-25
+Barn Swallow,2,#5ba4cf,Qatar,QAT,Asia,prebreeding_migration,Pre-breeding Migration,0.022,0.088,126,2023-04-19
+Barn Swallow,2,#5ba4cf,Romania,ROU,Europe,breeding,Breeding,1.523,1.713,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Romania,ROU,Europe,postbreeding_migration,Post-breeding Migration,0.932,2.25,98,2023-09-06
+Barn Swallow,2,#5ba4cf,Romania,ROU,Europe,prebreeding_migration,Pre-breeding Migration,0.836,1.911,63,2023-04-26
+Barn Swallow,2,#5ba4cf,Russia,RUS,Asia,breeding,Breeding,10.34,11.593,42,2023-05-31
+Barn Swallow,2,#5ba4cf,Russia,RUS,Asia,postbreeding_migration,Post-breeding Migration,5.602,8.417,98,2023-07-19
+Barn Swallow,2,#5ba4cf,Russia,RUS,Asia,prebreeding_migration,Pre-breeding Migration,5.778,11.879,63,2023-05-24
+Barn Swallow,2,#5ba4cf,Rwanda,RWA,Africa,nonbreeding,Non-breeding,0.033,0.053,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Rwanda,RWA,Africa,postbreeding_migration,Post-breeding Migration,0.013,0.076,154,2023-10-25
+Barn Swallow,2,#5ba4cf,Rwanda,RWA,Africa,prebreeding_migration,Pre-breeding Migration,0.026,0.105,126,2023-02-15
+Barn Swallow,2,#5ba4cf,Western Sahara,SAH,Africa,nonbreeding,Non-breeding,0.045,0.068,42,2023-01-11
+Barn Swallow,2,#5ba4cf,Western Sahara,SAH,Africa,prebreeding_migration,Pre-breeding Migration,0.203,0.366,98,2023-03-22
+Barn Swallow,2,#5ba4cf,Saudi Arabia,SAU,Asia,breeding,Breeding,0.032,0.082,35,2023-06-21
+Barn Swallow,2,#5ba4cf,Saudi Arabia,SAU,Asia,nonbreeding,Non-breeding,0.025,0.059,35,2023-01-11
+Barn Swallow,2,#5ba4cf,Saudi Arabia,SAU,Asia,postbreeding_migration,Post-breeding Migration,1.755,7.303,147,2023-10-25
+Barn Swallow,2,#5ba4cf,Saudi Arabia,SAU,Asia,prebreeding_migration,Pre-breeding Migration,2.396,8.028,126,2023-04-19
+Barn Swallow,2,#5ba4cf,Scotland,SCT,Europe,breeding,Breeding,0.249,0.275,42,2023-05-31
+Barn Swallow,2,#5ba4cf,Scotland,SCT,Europe,postbreeding_migration,Post-breeding Migration,0.082,0.243,133,2023-07-12
+Barn Swallow,2,#5ba4cf,Scotland,SCT,Europe,prebreeding_migration,Pre-breeding Migration,0.032,0.247,49,2023-05-24
+Barn Swallow,2,#5ba4cf,Sudan,SDN,Africa,nonbreeding,Non-breeding,0.398,0.415,14,2023-12-13
+Barn Swallow,2,#5ba4cf,Sudan,SDN,Africa,postbreeding_migration,Post-breeding Migration,1.819,3.487,112,2023-11-01
+Barn Swallow,2,#5ba4cf,Sudan,SDN,Africa,prebreeding_migration,Pre-breeding Migration,0.079,0.275,77,2023-03-15
+Barn Swallow,2,#5ba4cf,South Sudan,SDS,Africa,nonbreeding,Non-breeding,1.585,1.741,42,2023-12-20
+Barn Swallow,2,#5ba4cf,South Sudan,SDS,Africa,postbreeding_migration,Post-breeding Migration,1.141,2.671,140,2023-11-22
+Barn Swallow,2,#5ba4cf,South Sudan,SDS,Africa,prebreeding_migration,Pre-breeding Migration,0.625,1.62,112,2023-03-01
+Barn Swallow,2,#5ba4cf,Senegal,SEN,Africa,nonbreeding,Non-breeding,0.011,0.031,42,2023-01-04
+Barn Swallow,2,#5ba4cf,Senegal,SEN,Africa,prebreeding_migration,Pre-breeding Migration,0.05,0.258,112,2023-04-12
+Barn Swallow,2,#5ba4cf,Sierra Leone,SLE,Africa,nonbreeding,Non-breeding,0.091,0.165,42,2023-01-04
+Barn Swallow,2,#5ba4cf,Sierra Leone,SLE,Africa,postbreeding_migration,Post-breeding Migration,0.02,0.091,63,2023-10-25
+Barn Swallow,2,#5ba4cf,Sierra Leone,SLE,Africa,prebreeding_migration,Pre-breeding Migration,0.012,0.03,56,2023-01-25
+Barn Swallow,2,#5ba4cf,El Salvador,SLV,North America,nonbreeding,Non-breeding,0.085,0.116,42,2023-12-20
+Barn Swallow,2,#5ba4cf,El Salvador,SLV,North America,postbreeding_migration,Post-breeding Migration,0.016,0.09,147,2023-11-22
+Barn Swallow,2,#5ba4cf,El Salvador,SLV,North America,prebreeding_migration,Pre-breeding Migration,0.067,0.166,126,2023-03-22
+Barn Swallow,2,#5ba4cf,Somaliland,SOL,Africa,postbreeding_migration,Post-breeding Migration,0.102,0.243,105,2023-11-01
+Barn Swallow,2,#5ba4cf,Somaliland,SOL,Africa,prebreeding_migration,Pre-breeding Migration,0.018,0.043,84,2023-04-05
+Barn Swallow,2,#5ba4cf,Somalia,SOM,Africa,nonbreeding,Non-breeding,1.341,1.607,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Somalia,SOM,Africa,postbreeding_migration,Post-breeding Migration,0.37,0.678,63,2023-11-22
+Barn Swallow,2,#5ba4cf,Somalia,SOM,Africa,prebreeding_migration,Pre-breeding Migration,0.78,1.041,49,2023-02-01
+Barn Swallow,2,#5ba4cf,Serbia,SRB,Europe,breeding,Breeding,0.513,0.638,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Serbia,SRB,Europe,postbreeding_migration,Post-breeding Migration,0.243,0.662,105,2023-09-06
+Barn Swallow,2,#5ba4cf,Serbia,SRB,Europe,prebreeding_migration,Pre-breeding Migration,0.127,0.512,63,2023-05-03
+Barn Swallow,2,#5ba4cf,Suriname,SUR,South America,prebreeding_migration,Pre-breeding Migration,0.015,0.063,84,2023-03-22
+Barn Swallow,2,#5ba4cf,Slovakia,SVK,Europe,breeding,Breeding,0.218,0.297,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Slovakia,SVK,Europe,postbreeding_migration,Post-breeding Migration,0.109,0.421,105,2023-07-19
+Barn Swallow,2,#5ba4cf,Slovakia,SVK,Europe,prebreeding_migration,Pre-breeding Migration,0.052,0.269,63,2023-05-17
+Barn Swallow,2,#5ba4cf,Slovenia,SVN,Europe,breeding,Breeding,0.064,0.093,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Slovenia,SVN,Europe,postbreeding_migration,Post-breeding Migration,0.023,0.083,105,2023-07-12
+Barn Swallow,2,#5ba4cf,Slovenia,SVN,Europe,prebreeding_migration,Pre-breeding Migration,0.018,0.092,77,2023-04-26
+Barn Swallow,2,#5ba4cf,Sweden,SWE,Europe,breeding,Breeding,0.576,0.804,42,2023-05-31
+Barn Swallow,2,#5ba4cf,Sweden,SWE,Europe,postbreeding_migration,Post-breeding Migration,0.287,0.887,105,2023-08-30
+Barn Swallow,2,#5ba4cf,Sweden,SWE,Europe,prebreeding_migration,Pre-breeding Migration,0.12,0.806,35,2023-05-24
+Barn Swallow,2,#5ba4cf,Swaziland,SWZ,Africa,nonbreeding,Non-breeding,0.226,0.49,42,2023-01-11
+Barn Swallow,2,#5ba4cf,Swaziland,SWZ,Africa,postbreeding_migration,Post-breeding Migration,0.014,0.062,77,2023-11-08
+Barn Swallow,2,#5ba4cf,Swaziland,SWZ,Africa,prebreeding_migration,Pre-breeding Migration,0.083,0.288,98,2023-02-01
+Barn Swallow,2,#5ba4cf,Syria,SYR,Asia,breeding,Breeding,1.018,1.282,42,2023-06-21
+Barn Swallow,2,#5ba4cf,Syria,SYR,Asia,nonbreeding,Non-breeding,0.04,0.061,42,2023-12-13
+Barn Swallow,2,#5ba4cf,Syria,SYR,Asia,postbreeding_migration,Post-breeding Migration,0.547,1.733,154,2023-09-20
+Barn Swallow,2,#5ba4cf,Syria,SYR,Asia,prebreeding_migration,Pre-breeding Migration,0.836,1.939,126,2023-04-26
+Barn Swallow,2,#5ba4cf,Thailand,THA,Asia,breeding,Breeding,0.153,0.378,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Thailand,THA,Asia,nonbreeding,Non-breeding,4.392,7.443,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Thailand,THA,Asia,postbreeding_migration,Post-breeding Migration,1.197,5.448,154,2023-11-01
+Barn Swallow,2,#5ba4cf,Thailand,THA,Asia,prebreeding_migration,Pre-breeding Migration,2.365,6.009,126,2023-03-08
+Barn Swallow,2,#5ba4cf,Tajikistan,TJK,Asia,breeding,Breeding,0.13,0.216,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Tajikistan,TJK,Asia,postbreeding_migration,Post-breeding Migration,0.035,0.178,112,2023-07-12
+Barn Swallow,2,#5ba4cf,Tajikistan,TJK,Asia,prebreeding_migration,Pre-breeding Migration,0.036,0.09,84,2023-05-24
+Barn Swallow,2,#5ba4cf,Turkmenistan,TKM,Asia,breeding,Breeding,2.651,3.505,42,2023-06-28
+Barn Swallow,2,#5ba4cf,Turkmenistan,TKM,Asia,postbreeding_migration,Post-breeding Migration,0.748,1.999,112,2023-07-12
+Barn Swallow,2,#5ba4cf,Turkmenistan,TKM,Asia,prebreeding_migration,Pre-breeding Migration,0.654,2.105,84,2023-05-24
+Barn Swallow,2,#5ba4cf,Tunisia,TUN,Africa,breeding,Breeding,0.082,0.114,42,2023-06-14
+Barn Swallow,2,#5ba4cf,Tunisia,TUN,Africa,postbreeding_migration,Post-breeding Migration,0.1,0.215,112,2023-09-20
+Barn Swallow,2,#5ba4cf,Tunisia,TUN,Africa,prebreeding_migration,Pre-breeding Migration,0.183,0.522,98,2023-04-19
+Barn Swallow,2,#5ba4cf,Turkey,TUR,Asia,breeding,Breeding,3.044,3.854,42,2023-05-31
+Barn Swallow,2,#5ba4cf,Turkey,TUR,Asia,postbreeding_migration,Post-breeding Migration,1.831,6.476,147,2023-09-20
+Barn Swallow,2,#5ba4cf,Turkey,TUR,Asia,prebreeding_migration,Pre-breeding Migration,1.907,5.279,91,2023-05-10
+Barn Swallow,2,#5ba4cf,Taiwan,TWN,Asia,breeding,Breeding,0.103,0.193,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Taiwan,TWN,Asia,nonbreeding,Non-breeding,0.167,0.263,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Taiwan,TWN,Asia,postbreeding_migration,Post-breeding Migration,0.328,1.055,154,2023-08-30
+Barn Swallow,2,#5ba4cf,Taiwan,TWN,Asia,prebreeding_migration,Pre-breeding Migration,0.071,0.145,126,2023-04-19
+Barn Swallow,2,#5ba4cf,United Republic of Tanzania,TZA,Africa,nonbreeding,Non-breeding,3.232,4.311,42,2023-01-04
+Barn Swallow,2,#5ba4cf,United Republic of Tanzania,TZA,Africa,postbreeding_migration,Post-breeding Migration,1.228,4.492,154,2023-11-01
+Barn Swallow,2,#5ba4cf,United Republic of Tanzania,TZA,Africa,prebreeding_migration,Pre-breeding Migration,3.041,8.464,119,2023-02-01
+Barn Swallow,2,#5ba4cf,Uganda,UGA,Africa,nonbreeding,Non-breeding,1.222,1.733,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Uganda,UGA,Africa,postbreeding_migration,Post-breeding Migration,0.379,1.726,154,2023-11-01
+Barn Swallow,2,#5ba4cf,Uganda,UGA,Africa,prebreeding_migration,Pre-breeding Migration,0.848,3.433,126,2023-02-22
+Barn Swallow,2,#5ba4cf,Ukraine,UKR,Europe,breeding,Breeding,3.606,4.106,42,2023-05-31
+Barn Swallow,2,#5ba4cf,Ukraine,UKR,Europe,postbreeding_migration,Post-breeding Migration,2.676,4.32,98,2023-09-06
+Barn Swallow,2,#5ba4cf,Ukraine,UKR,Europe,prebreeding_migration,Pre-breeding Migration,2.091,4.328,56,2023-05-17
+Barn Swallow,2,#5ba4cf,Uruguay,URY,South America,nonbreeding,Non-breeding,0.026,0.038,42,2023-12-20
+Barn Swallow,2,#5ba4cf,United States,USA,North America,breeding,Breeding,12.299,13.457,42,2023-06-07
+Barn Swallow,2,#5ba4cf,United States,USA,North America,postbreeding_migration,Post-breeding Migration,4.193,11.487,154,2023-07-12
+Barn Swallow,2,#5ba4cf,United States,USA,North America,prebreeding_migration,Pre-breeding Migration,2.327,12.62,119,2023-05-24
+Barn Swallow,2,#5ba4cf,Uzbekistan,UZB,Asia,breeding,Breeding,2.187,2.474,42,2023-06-21
+Barn Swallow,2,#5ba4cf,Uzbekistan,UZB,Asia,postbreeding_migration,Post-breeding Migration,0.788,2.212,112,2023-09-27
+Barn Swallow,2,#5ba4cf,Uzbekistan,UZB,Asia,prebreeding_migration,Pre-breeding Migration,0.742,2.199,84,2023-05-24
+Barn Swallow,2,#5ba4cf,Venezuela,VEN,South America,nonbreeding,Non-breeding,0.204,0.199,42,2023-12-13
+Barn Swallow,2,#5ba4cf,Venezuela,VEN,South America,postbreeding_migration,Post-breeding Migration,0.033,0.085,147,2023-09-20
+Barn Swallow,2,#5ba4cf,Venezuela,VEN,South America,prebreeding_migration,Pre-breeding Migration,0.451,1.473,126,2023-03-22
+Barn Swallow,2,#5ba4cf,Vietnam,VNM,Asia,breeding,Breeding,0.093,0.186,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Vietnam,VNM,Asia,nonbreeding,Non-breeding,0.975,1.302,42,2023-12-20
+Barn Swallow,2,#5ba4cf,Vietnam,VNM,Asia,postbreeding_migration,Post-breeding Migration,0.324,1.307,154,2023-11-29
+Barn Swallow,2,#5ba4cf,Vietnam,VNM,Asia,prebreeding_migration,Pre-breeding Migration,0.635,1.301,126,2023-03-08
+Barn Swallow,2,#5ba4cf,Wales,WLS,Europe,breeding,Breeding,0.07,0.084,42,2023-07-05
+Barn Swallow,2,#5ba4cf,Wales,WLS,Europe,postbreeding_migration,Post-breeding Migration,0.039,0.122,147,2023-09-06
+Barn Swallow,2,#5ba4cf,Wales,WLS,Europe,prebreeding_migration,Pre-breeding Migration,0.014,0.084,63,2023-05-10
+Barn Swallow,2,#5ba4cf,Yemen,YEM,Asia,postbreeding_migration,Post-breeding Migration,0.288,1.006,126,2023-10-25
+Barn Swallow,2,#5ba4cf,Yemen,YEM,Asia,prebreeding_migration,Pre-breeding Migration,0.158,0.765,98,2023-04-05
+Barn Swallow,2,#5ba4cf,South Africa,ZAF,Africa,nonbreeding,Non-breeding,12.862,23.124,42,2023-01-11
+Barn Swallow,2,#5ba4cf,South Africa,ZAF,Africa,postbreeding_migration,Post-breeding Migration,4.293,33.9,98,2023-11-29
+Barn Swallow,2,#5ba4cf,South Africa,ZAF,Africa,prebreeding_migration,Pre-breeding Migration,5.644,13.4,112,2023-02-08
+Barn Swallow,2,#5ba4cf,Zambia,ZMB,Africa,nonbreeding,Non-breeding,2.875,4.566,42,2023-01-04
+Barn Swallow,2,#5ba4cf,Zambia,ZMB,Africa,postbreeding_migration,Post-breeding Migration,1.192,5.457,84,2023-11-01
+Barn Swallow,2,#5ba4cf,Zambia,ZMB,Africa,prebreeding_migration,Pre-breeding Migration,4.609,13.692,91,2023-03-29
+Barn Swallow,2,#5ba4cf,Zimbabwe,ZWE,Africa,nonbreeding,Non-breeding,2.124,3.725,42,2023-01-11
+Barn Swallow,2,#5ba4cf,Zimbabwe,ZWE,Africa,postbreeding_migration,Post-breeding Migration,0.385,1.559,84,2023-11-01
+Barn Swallow,2,#5ba4cf,Zimbabwe,ZWE,Africa,prebreeding_migration,Pre-breeding Migration,2.015,6.632,98,2023-03-29
+Upland Sandpiper,3,#57a773,Argentina,ARG,South America,nonbreeding,Non-breeding,85.042,93.605,126,2023-01-11
+Upland Sandpiper,3,#57a773,Argentina,ARG,South America,postbreeding_migration,Post-breeding Migration,5.146,52.529,42,2023-10-25
+Upland Sandpiper,3,#57a773,Argentina,ARG,South America,prebreeding_migration,Pre-breeding Migration,63.623,91.828,42,2023-03-15
+Upland Sandpiper,3,#57a773,Belize,BLZ,North America,prebreeding_migration,Pre-breeding Migration,0.015,0.156,42,2023-04-19
+Upland Sandpiper,3,#57a773,Bolivia,BOL,South America,postbreeding_migration,Post-breeding Migration,11.061,70.233,56,2023-09-27
+Upland Sandpiper,3,#57a773,Bolivia,BOL,South America,prebreeding_migration,Pre-breeding Migration,0.064,0.156,14,2023-03-22
+Upland Sandpiper,3,#57a773,Brazil,BRA,South America,nonbreeding,Non-breeding,2.637,10.046,119,2023-11-08
+Upland Sandpiper,3,#57a773,Brazil,BRA,South America,postbreeding_migration,Post-breeding Migration,3.773,16.271,49,2023-10-04
+Upland Sandpiper,3,#57a773,Brazil,BRA,South America,prebreeding_migration,Pre-breeding Migration,3.025,3.064,14,2023-03-08
+Upland Sandpiper,3,#57a773,Canada,CAN,North America,breeding,Breeding,18.195,20.37,42,2023-06-28
+Upland Sandpiper,3,#57a773,Canada,CAN,North America,postbreeding_migration,Post-breeding Migration,4.726,20.994,56,2023-07-05
+Upland Sandpiper,3,#57a773,Canada,CAN,North America,prebreeding_migration,Pre-breeding Migration,1.722,20.548,28,2023-05-17
+Upland Sandpiper,3,#57a773,Chile,CHL,South America,prebreeding_migration,Pre-breeding Migration,1.231,3.408,35,2023-04-05
+Upland Sandpiper,3,#57a773,Colombia,COL,South America,prebreeding_migration,Pre-breeding Migration,0.443,1.864,35,2023-04-05
+Upland Sandpiper,3,#57a773,Ecuador,ECU,South America,postbreeding_migration,Post-breeding Migration,0.013,0.426,28,2023-09-20
+Upland Sandpiper,3,#57a773,Guatemala,GTM,North America,prebreeding_migration,Pre-breeding Migration,0.016,0.201,28,2023-04-12
+Upland Sandpiper,3,#57a773,Mexico,MEX,North America,postbreeding_migration,Post-breeding Migration,7.848,14.488,63,2023-09-06
+Upland Sandpiper,3,#57a773,Mexico,MEX,North America,prebreeding_migration,Pre-breeding Migration,0.266,2.522,42,2023-04-12
+Upland Sandpiper,3,#57a773,Peru,PER,South America,postbreeding_migration,Post-breeding Migration,0.25,1.663,56,2023-09-27
+Upland Sandpiper,3,#57a773,Peru,PER,South America,prebreeding_migration,Pre-breeding Migration,0.043,0.083,21,2023-03-22
+Upland Sandpiper,3,#57a773,Paraguay,PRY,South America,nonbreeding,Non-breeding,0.963,4.164,126,2023-11-01
+Upland Sandpiper,3,#57a773,Paraguay,PRY,South America,postbreeding_migration,Post-breeding Migration,2.984,21.05,49,2023-10-11
+Upland Sandpiper,3,#57a773,Paraguay,PRY,South America,prebreeding_migration,Pre-breeding Migration,0.633,1.024,28,2023-03-22
+Upland Sandpiper,3,#57a773,El Salvador,SLV,North America,postbreeding_migration,Post-breeding Migration,0.015,0.49,42,2023-09-20
+Upland Sandpiper,3,#57a773,Uruguay,URY,South America,nonbreeding,Non-breeding,11.358,41.474,126,2023-11-22
+Upland Sandpiper,3,#57a773,Uruguay,URY,South America,postbreeding_migration,Post-breeding Migration,1.851,23.889,28,2023-10-25
+Upland Sandpiper,3,#57a773,Uruguay,URY,South America,prebreeding_migration,Pre-breeding Migration,5.862,14.667,28,2023-03-08
+Upland Sandpiper,3,#57a773,United States,USA,North America,breeding,Breeding,81.805,84.131,42,2023-06-14
+Upland Sandpiper,3,#57a773,United States,USA,North America,postbreeding_migration,Post-breeding Migration,62.309,95.978,98,2023-08-09
+Upland Sandpiper,3,#57a773,United States,USA,North America,prebreeding_migration,Pre-breeding Migration,23.048,99.298,63,2023-05-03
+Red Knot,4,#b07fd4,Aland,ALD,Europe,postbreeding_migration,Post-breeding Migration,0.046,0.269,84,2023-07-19
+Red Knot,4,#b07fd4,Aland,ALD,Europe,prebreeding_migration,Pre-breeding Migration,0.021,0.131,21,2023-05-31
+Red Knot,4,#b07fd4,Argentina,ARG,South America,nonbreeding,Non-breeding,3.498,4.678,63,2023-02-08
+Red Knot,4,#b07fd4,Argentina,ARG,South America,postbreeding_migration,Post-breeding Migration,0.953,4.03,35,2023-12-20
+Red Knot,4,#b07fd4,Argentina,ARG,South America,prebreeding_migration,Pre-breeding Migration,1.522,14.684,63,2023-03-22
+Red Knot,4,#b07fd4,Australia,AUS,Oceania,breeding,Breeding,11.002,21.728,28,2023-07-05
+Red Knot,4,#b07fd4,Australia,AUS,Oceania,nonbreeding,Non-breeding,4.68,7.262,63,2023-02-22
+Red Knot,4,#b07fd4,Australia,AUS,Oceania,postbreeding_migration,Post-breeding Migration,6.59,23.302,154,2023-11-08
+Red Knot,4,#b07fd4,Australia,AUS,Oceania,prebreeding_migration,Pre-breeding Migration,2.473,20.22,84,2023-04-05
+Red Knot,4,#b07fd4,Belgium,BEL,Europe,nonbreeding,Non-breeding,0.071,0.112,63,2023-01-18
+Red Knot,4,#b07fd4,Belgium,BEL,Europe,postbreeding_migration,Post-breeding Migration,0.02,0.066,161,2023-11-29
+Red Knot,4,#b07fd4,Brazil,BRA,South America,postbreeding_migration,Post-breeding Migration,0.337,1.636,49,2023-09-20
+Red Knot,4,#b07fd4,Brazil,BRA,South America,prebreeding_migration,Pre-breeding Migration,0.34,6.822,42,2023-04-05
+Red Knot,4,#b07fd4,Canada,CAN,North America,breeding,Breeding,20.813,23.201,28,2023-06-28
+Red Knot,4,#b07fd4,Canada,CAN,North America,postbreeding_migration,Post-breeding Migration,10.433,20.268,112,2023-07-26
+Red Knot,4,#b07fd4,Canada,CAN,North America,prebreeding_migration,Pre-breeding Migration,0.044,0.357,14,2023-06-07
+Red Knot,4,#b07fd4,Chile,CHL,South America,nonbreeding,Non-breeding,2.83,4.94,63,2023-02-08
+Red Knot,4,#b07fd4,Chile,CHL,South America,postbreeding_migration,Post-breeding Migration,0.737,3.448,35,2023-12-20
+Red Knot,4,#b07fd4,Chile,CHL,South America,prebreeding_migration,Pre-breeding Migration,0.038,0.406,35,2023-03-01
+Red Knot,4,#b07fd4,China,CHN,Asia,postbreeding_migration,Post-breeding Migration,13.375,44.713,70,2023-08-09
+Red Knot,4,#b07fd4,China,CHN,Asia,prebreeding_migration,Pre-breeding Migration,79.317,89.772,70,2023-05-31
+Red Knot,4,#b07fd4,Cuba,CUB,North America,nonbreeding,Non-breeding,0.036,0.224,42,2023-02-22
+Red Knot,4,#b07fd4,Cuba,CUB,North America,prebreeding_migration,Pre-breeding Migration,0.011,0.438,42,2023-03-01
+Red Knot,4,#b07fd4,Germany,DEU,Europe,breeding,Breeding,8.99,18.122,28,2023-06-14
+Red Knot,4,#b07fd4,Germany,DEU,Europe,nonbreeding,Non-breeding,0.27,0.55,63,2023-12-27
+Red Knot,4,#b07fd4,Germany,DEU,Europe,postbreeding_migration,Post-breeding Migration,4.862,17.944,147,2023-10-18
+Red Knot,4,#b07fd4,Germany,DEU,Europe,prebreeding_migration,Pre-breeding Migration,1.117,14.363,70,2023-06-07
+Red Knot,4,#b07fd4,Denmark,DNK,Europe,breeding,Breeding,3.709,14.55,28,2023-06-14
+Red Knot,4,#b07fd4,Denmark,DNK,Europe,postbreeding_migration,Post-breeding Migration,0.825,6.408,147,2023-07-19
+Red Knot,4,#b07fd4,Denmark,DNK,Europe,prebreeding_migration,Pre-breeding Migration,0.742,14.241,63,2023-06-07
+Red Knot,4,#b07fd4,England,ENG,Europe,breeding,Breeding,24.701,31.85,28,2023-07-05
+Red Knot,4,#b07fd4,England,ENG,Europe,nonbreeding,Non-breeding,42.746,52.604,63,2023-01-04
+Red Knot,4,#b07fd4,England,ENG,Europe,postbreeding_migration,Post-breeding Migration,36.213,71.434,168,2023-09-20
+Red Knot,4,#b07fd4,England,ENG,Europe,prebreeding_migration,Pre-breeding Migration,3.709,45.254,105,2023-03-01
+Red Knot,4,#b07fd4,Spain,ESP,Europe,breeding,Breeding,0.094,0.136,28,2023-06-14
+Red Knot,4,#b07fd4,Spain,ESP,Europe,nonbreeding,Non-breeding,0.112,0.17,63,2023-12-27
+Red Knot,4,#b07fd4,Spain,ESP,Europe,postbreeding_migration,Post-breeding Migration,0.071,0.174,168,2023-12-06
+Red Knot,4,#b07fd4,Spain,ESP,Europe,prebreeding_migration,Pre-breeding Migration,0.044,0.211,105,2023-04-05
+Red Knot,4,#b07fd4,Estonia,EST,Europe,postbreeding_migration,Post-breeding Migration,0.171,0.749,77,2023-07-19
+Red Knot,4,#b07fd4,Estonia,EST,Europe,prebreeding_migration,Pre-breeding Migration,0.119,6.592,28,2023-06-07
+Red Knot,4,#b07fd4,Finland,FIN,Europe,postbreeding_migration,Post-breeding Migration,0.343,0.965,84,2023-08-23
+Red Knot,4,#b07fd4,Finland,FIN,Europe,prebreeding_migration,Pre-breeding Migration,0.159,4.992,35,2023-06-07
+Red Knot,4,#b07fd4,France,FRA,Europe,breeding,Breeding,0.019,0.059,0,2023-06-14
+Red Knot,4,#b07fd4,France,FRA,Europe,nonbreeding,Non-breeding,2.095,3.154,63,2023-02-01
+Red Knot,4,#b07fd4,France,FRA,Europe,postbreeding_migration,Post-breeding Migration,0.498,1.931,161,2023-08-16
+Red Knot,4,#b07fd4,France,FRA,Europe,prebreeding_migration,Pre-breeding Migration,0.068,0.818,98,2023-03-01
+Red Knot,4,#b07fd4,Faroe Islands,FRO,Europe,postbreeding_migration,Post-breeding Migration,0.02,0.151,105,2023-08-30
+Red Knot,4,#b07fd4,Guernsey,GGY,Europe,nonbreeding,Non-breeding,0.026,0.051,63,2023-01-11
+Red Knot,4,#b07fd4,Gambia,GMB,Africa,postbreeding_migration,Post-breeding Migration,0.082,0.111,7,2023-12-13
+Red Knot,4,#b07fd4,Greece,GRC,Europe,nonbreeding,Non-breeding,0.02,0.066,35,2023-01-18
+Red Knot,4,#b07fd4,Greece,GRC,Europe,postbreeding_migration,Post-breeding Migration,0.037,0.106,56,2023-08-23
+Red Knot,4,#b07fd4,French Guiana,GUF,South America,postbreeding_migration,Post-breeding Migration,0.087,0.195,63,2023-09-13
+Red Knot,4,#b07fd4,Guyana,GUY,South America,postbreeding_migration,Post-breeding Migration,0.066,0.144,63,2023-09-20
+Red Knot,4,#b07fd4,Isle of Man,IMN,Europe,nonbreeding,Non-breeding,0.068,0.127,63,2023-02-08
+Red Knot,4,#b07fd4,Ireland,IRL,Europe,breeding,Breeding,1.054,1.419,28,2023-06-21
+Red Knot,4,#b07fd4,Ireland,IRL,Europe,nonbreeding,Non-breeding,2.045,3.022,63,2023-02-01
+Red Knot,4,#b07fd4,Ireland,IRL,Europe,postbreeding_migration,Post-breeding Migration,0.692,2.128,168,2023-12-20
+Red Knot,4,#b07fd4,Ireland,IRL,Europe,prebreeding_migration,Pre-breeding Migration,0.058,1.184,105,2023-03-01
+Red Knot,4,#b07fd4,Iceland,ISL,Europe,breeding,Breeding,0.324,0.54,28,2023-06-14
+Red Knot,4,#b07fd4,Iceland,ISL,Europe,postbreeding_migration,Post-breeding Migration,0.939,7.718,98,2023-07-19
+Red Knot,4,#b07fd4,Iceland,ISL,Europe,prebreeding_migration,Pre-breeding Migration,1.814,4.347,56,2023-05-17
+Red Knot,4,#b07fd4,Italy,ITA,Europe,postbreeding_migration,Post-breeding Migration,0.015,0.098,35,2023-09-13
+Red Knot,4,#b07fd4,Japan,JPN,Asia,postbreeding_migration,Post-breeding Migration,0.052,0.343,35,2023-08-30
+Red Knot,4,#b07fd4,Cambodia,KHM,Asia,postbreeding_migration,Post-breeding Migration,0.021,0.038,21,2023-09-06
+Red Knot,4,#b07fd4,South Korea,KOR,Asia,postbreeding_migration,Post-breeding Migration,0.668,2.71,63,2023-08-16
+Red Knot,4,#b07fd4,South Korea,KOR,Asia,prebreeding_migration,Pre-breeding Migration,0.345,0.889,49,2023-04-12
+Red Knot,4,#b07fd4,Lithuania,LTU,Europe,postbreeding_migration,Post-breeding Migration,0.014,0.073,84,2023-07-19
+Red Knot,4,#b07fd4,Latvia,LVA,Europe,postbreeding_migration,Post-breeding Migration,0.038,0.13,77,2023-08-23
+Red Knot,4,#b07fd4,Morocco,MAR,Africa,postbreeding_migration,Post-breeding Migration,0.046,0.086,35,2023-09-27
+Red Knot,4,#b07fd4,Mexico,MEX,North America,nonbreeding,Non-breeding,0.83,2.807,35,2023-01-25
+Red Knot,4,#b07fd4,Mexico,MEX,North America,postbreeding_migration,Post-breeding Migration,4.341,10.601,98,2023-11-29
+Red Knot,4,#b07fd4,Mexico,MEX,North America,prebreeding_migration,Pre-breeding Migration,0.398,5.508,35,2023-03-29
+Red Knot,4,#b07fd4,Mauritania,MRT,Africa,nonbreeding,Non-breeding,1.362,1.504,21,2023-01-25
+Red Knot,4,#b07fd4,Malaysia,MYS,Asia,nonbreeding,Non-breeding,0.045,0.061,21,2023-01-11
+Red Knot,4,#b07fd4,Malaysia,MYS,Asia,postbreeding_migration,Post-breeding Migration,0.044,0.066,56,2023-08-30
+Red Knot,4,#b07fd4,Malaysia,MYS,Asia,prebreeding_migration,Pre-breeding Migration,0.019,0.119,42,2023-04-05
+Red Knot,4,#b07fd4,Northern Ireland,NIR,Europe,breeding,Breeding,0.109,0.185,28,2023-06-21
+Red Knot,4,#b07fd4,Northern Ireland,NIR,Europe,nonbreeding,Non-breeding,1.043,1.285,63,2023-01-04
+Red Knot,4,#b07fd4,Northern Ireland,NIR,Europe,postbreeding_migration,Post-breeding Migration,0.241,0.943,168,2023-12-20
+Red Knot,4,#b07fd4,Northern Ireland,NIR,Europe,prebreeding_migration,Pre-breeding Migration,0.015,0.299,105,2023-03-01
+Red Knot,4,#b07fd4,Netherlands,NLD,Europe,breeding,Breeding,9.711,15.767,28,2023-06-21
+Red Knot,4,#b07fd4,Netherlands,NLD,Europe,nonbreeding,Non-breeding,0.777,1.209,63,2023-02-08
+Red Knot,4,#b07fd4,Netherlands,NLD,Europe,postbreeding_migration,Post-breeding Migration,2.277,10.173,168,2023-10-18
+Red Knot,4,#b07fd4,Netherlands,NLD,Europe,prebreeding_migration,Pre-breeding Migration,0.14,3.813,105,2023-06-07
+Red Knot,4,#b07fd4,Norway,NOR,Europe,breeding,Breeding,0.582,0.673,28,2023-06-14
+Red Knot,4,#b07fd4,Norway,NOR,Europe,postbreeding_migration,Post-breeding Migration,0.711,1.772,98,2023-08-23
+Red Knot,4,#b07fd4,Norway,NOR,Europe,prebreeding_migration,Pre-breeding Migration,0.225,1.298,35,2023-06-07
+Red Knot,4,#b07fd4,New Zealand,NZL,Oceania,breeding,Breeding,6.029,7.861,28,2023-07-05
+Red Knot,4,#b07fd4,New Zealand,NZL,Oceania,nonbreeding,Non-breeding,22.662,27.691,63,2023-02-15
+Red Knot,4,#b07fd4,New Zealand,NZL,Oceania,postbreeding_migration,Post-breeding Migration,5.622,20.132,168,2023-12-20
+Red Knot,4,#b07fd4,New Zealand,NZL,Oceania,prebreeding_migration,Pre-breeding Migration,1.575,29.454,105,2023-03-01
+Red Knot,4,#b07fd4,Panama,PAN,North America,nonbreeding,Non-breeding,0.015,0.025,63,2023-02-08
+Red Knot,4,#b07fd4,Poland,POL,Europe,postbreeding_migration,Post-breeding Migration,0.088,0.548,105,2023-08-30
+Red Knot,4,#b07fd4,North Korea,PRK,Asia,postbreeding_migration,Post-breeding Migration,0.613,1.767,56,2023-08-16
+Red Knot,4,#b07fd4,North Korea,PRK,Asia,prebreeding_migration,Pre-breeding Migration,1.764,3.106,49,2023-05-24
+Red Knot,4,#b07fd4,Portugal,PRT,Europe,breeding,Breeding,0.016,0.035,21,2023-06-14
+Red Knot,4,#b07fd4,Portugal,PRT,Europe,nonbreeding,Non-breeding,0.149,0.211,63,2023-12-27
+Red Knot,4,#b07fd4,Portugal,PRT,Europe,postbreeding_migration,Post-breeding Migration,0.057,0.177,168,2023-12-20
+Red Knot,4,#b07fd4,Portugal,PRT,Europe,prebreeding_migration,Pre-breeding Migration,0.043,0.194,105,2023-04-05
+Red Knot,4,#b07fd4,Romania,ROU,Europe,postbreeding_migration,Post-breeding Migration,0.032,0.044,14,2023-09-13
+Red Knot,4,#b07fd4,Russia,RUS,Asia,breeding,Breeding,0.231,0.263,0,2023-06-14
+Red Knot,4,#b07fd4,Russia,RUS,Asia,postbreeding_migration,Post-breeding Migration,0.062,0.204,0,2023-08-30
+Red Knot,4,#b07fd4,Russia,RUS,Asia,prebreeding_migration,Pre-breeding Migration,0.122,0.666,7,2023-06-07
+Red Knot,4,#b07fd4,Scotland,SCT,Europe,breeding,Breeding,0.09,0.146,28,2023-06-21
+Red Knot,4,#b07fd4,Scotland,SCT,Europe,nonbreeding,Non-breeding,4.855,6.54,63,2023-01-18
+Red Knot,4,#b07fd4,Scotland,SCT,Europe,postbreeding_migration,Post-breeding Migration,2.014,9.654,168,2023-11-29
+Red Knot,4,#b07fd4,Scotland,SCT,Europe,prebreeding_migration,Pre-breeding Migration,0.134,3.183,105,2023-03-01
+Red Knot,4,#b07fd4,Senegal,SEN,Africa,nonbreeding,Non-breeding,0.281,0.439,21,2023-02-01
+Red Knot,4,#b07fd4,Senegal,SEN,Africa,postbreeding_migration,Post-breeding Migration,0.222,0.297,7,2023-12-13
+Red Knot,4,#b07fd4,Saint Pierre and Miquelon,SPM,North America,postbreeding_migration,Post-breeding Migration,0.019,0.071,98,2023-09-06
+Red Knot,4,#b07fd4,Suriname,SUR,South America,postbreeding_migration,Post-breeding Migration,0.077,0.191,63,2023-09-13
+Red Knot,4,#b07fd4,Sweden,SWE,Europe,postbreeding_migration,Post-breeding Migration,0.572,3.9,112,2023-07-19
+Red Knot,4,#b07fd4,Sweden,SWE,Europe,prebreeding_migration,Pre-breeding Migration,0.016,0.321,35,2023-06-07
+Red Knot,4,#b07fd4,Thailand,THA,Asia,nonbreeding,Non-breeding,0.297,0.527,63,2023-02-15
+Red Knot,4,#b07fd4,Thailand,THA,Asia,postbreeding_migration,Post-breeding Migration,0.222,0.813,112,2023-09-06
+Red Knot,4,#b07fd4,Thailand,THA,Asia,prebreeding_migration,Pre-breeding Migration,0.13,1.178,63,2023-04-05
+Red Knot,4,#b07fd4,Trinidad and Tobago,TTO,North America,postbreeding_migration,Post-breeding Migration,0.018,0.08,119,2023-09-20
+Red Knot,4,#b07fd4,Turkey,TUR,Asia,nonbreeding,Non-breeding,0.055,0.129,42,2023-01-18
+Red Knot,4,#b07fd4,Taiwan,TWN,Asia,nonbreeding,Non-breeding,0.02,0.042,63,2023-12-27
+Red Knot,4,#b07fd4,Taiwan,TWN,Asia,postbreeding_migration,Post-breeding Migration,0.016,0.042,154,2023-08-30
+Red Knot,4,#b07fd4,Taiwan,TWN,Asia,prebreeding_migration,Pre-breeding Migration,0.033,0.387,105,2023-04-05
+Red Knot,4,#b07fd4,Ukraine,UKR,Europe,postbreeding_migration,Post-breeding Migration,0.014,0.019,14,2023-09-13
+Red Knot,4,#b07fd4,Uruguay,URY,South America,nonbreeding,Non-breeding,0.021,0.039,49,2023-02-22
+Red Knot,4,#b07fd4,Uruguay,URY,South America,postbreeding_migration,Post-breeding Migration,0.027,0.08,112,2023-10-25
+Red Knot,4,#b07fd4,Uruguay,URY,South America,prebreeding_migration,Pre-breeding Migration,0.017,0.191,84,2023-04-05
+Red Knot,4,#b07fd4,United States,USA,North America,breeding,Breeding,11.386,15.969,28,2023-06-14
+Red Knot,4,#b07fd4,United States,USA,North America,nonbreeding,Non-breeding,6.672,11.262,63,2023-02-01
+Red Knot,4,#b07fd4,United States,USA,North America,postbreeding_migration,Post-breeding Migration,3.582,10.81,168,2023-07-12
+Red Knot,4,#b07fd4,United States,USA,North America,prebreeding_migration,Pre-breeding Migration,3.31,24.064,105,2023-06-07
+Red Knot,4,#b07fd4,Venezuela,VEN,South America,postbreeding_migration,Post-breeding Migration,0.051,0.189,70,2023-09-20
+Red Knot,4,#b07fd4,Venezuela,VEN,South America,prebreeding_migration,Pre-breeding Migration,0.011,0.034,21,2023-05-03
+Red Knot,4,#b07fd4,Wales,WLS,Europe,breeding,Breeding,0.837,1.273,28,2023-06-14
+Red Knot,4,#b07fd4,Wales,WLS,Europe,nonbreeding,Non-breeding,2.255,3.352,63,2023-01-04
+Red Knot,4,#b07fd4,Wales,WLS,Europe,postbreeding_migration,Post-breeding Migration,0.749,3.028,168,2023-12-20
+Red Knot,4,#b07fd4,Wales,WLS,Europe,prebreeding_migration,Pre-breeding Migration,0.064,1.294,105,2023-06-07
+Red Knot,4,#b07fd4,South Africa,ZAF,Africa,nonbreeding,Non-breeding,0.056,0.097,7,2023-02-22
+Bar-tailed Godwit,5,#e8527a,Aland,ALD,Europe,postbreeding_migration,Post-breeding Migration,0.017,0.076,112,2023-07-19
+Bar-tailed Godwit,5,#e8527a,Aland,ALD,Europe,prebreeding_migration,Pre-breeding Migration,0.032,0.253,56,2023-05-24
+Bar-tailed Godwit,5,#e8527a,United Arab Emirates,ARE,Asia,breeding,Breeding,1.52,1.736,21,2023-06-14
+Bar-tailed Godwit,5,#e8527a,United Arab Emirates,ARE,Asia,nonbreeding,Non-breeding,1.62,2.497,98,2023-01-25
+Bar-tailed Godwit,5,#e8527a,United Arab Emirates,ARE,Asia,postbreeding_migration,Post-breeding Migration,1.48,2.67,147,2023-10-25
+Bar-tailed Godwit,5,#e8527a,United Arab Emirates,ARE,Asia,prebreeding_migration,Pre-breeding Migration,0.425,2.196,98,2023-03-15
+Bar-tailed Godwit,5,#e8527a,Australia,AUS,Oceania,breeding,Breeding,26.371,35.463,21,2023-06-28
+Bar-tailed Godwit,5,#e8527a,Australia,AUS,Oceania,nonbreeding,Non-breeding,37.307,63.225,98,2023-12-06
+Bar-tailed Godwit,5,#e8527a,Australia,AUS,Oceania,postbreeding_migration,Post-breeding Migration,19.502,53.106,147,2023-11-22
+Bar-tailed Godwit,5,#e8527a,Australia,AUS,Oceania,prebreeding_migration,Pre-breeding Migration,3.982,33.039,98,2023-03-08
+Bar-tailed Godwit,5,#e8527a,Azerbaijan,AZE,Asia,prebreeding_migration,Pre-breeding Migration,0.082,0.048,14,2023-04-26
+Bar-tailed Godwit,5,#e8527a,Belgium,BEL,Europe,nonbreeding,Non-breeding,0.017,0.035,98,2023-01-18
+Bar-tailed Godwit,5,#e8527a,Belgium,BEL,Europe,postbreeding_migration,Post-breeding Migration,0.012,0.056,147,2023-09-06
+Bar-tailed Godwit,5,#e8527a,Bahrain,BHR,Asia,breeding,Breeding,0.165,0.219,21,2023-06-14
+Bar-tailed Godwit,5,#e8527a,Bahrain,BHR,Asia,nonbreeding,Non-breeding,0.108,0.188,98,2023-01-25
+Bar-tailed Godwit,5,#e8527a,Bahrain,BHR,Asia,postbreeding_migration,Post-breeding Migration,0.11,0.294,147,2023-10-11
+Bar-tailed Godwit,5,#e8527a,Bahrain,BHR,Asia,prebreeding_migration,Pre-breeding Migration,0.041,0.152,98,2023-03-15
+Bar-tailed Godwit,5,#e8527a,Brunei,BRN,Asia,nonbreeding,Non-breeding,0.017,0.023,14,2023-01-18
+Bar-tailed Godwit,5,#e8527a,Brunei,BRN,Asia,postbreeding_migration,Post-breeding Migration,0.015,0.032,63,2023-10-25
+Bar-tailed Godwit,5,#e8527a,China,CHN,Asia,nonbreeding,Non-breeding,0.052,0.072,0,2023-01-18
+Bar-tailed Godwit,5,#e8527a,China,CHN,Asia,postbreeding_migration,Post-breeding Migration,28.283,69.405,112,2023-08-09
+Bar-tailed Godwit,5,#e8527a,China,CHN,Asia,prebreeding_migration,Pre-breeding Migration,48.66,61.047,84,2023-04-19
+Bar-tailed Godwit,5,#e8527a,Germany,DEU,Europe,breeding,Breeding,2.146,2.979,21,2023-06-14
+Bar-tailed Godwit,5,#e8527a,Germany,DEU,Europe,nonbreeding,Non-breeding,0.154,0.254,98,2023-02-01
+Bar-tailed Godwit,5,#e8527a,Germany,DEU,Europe,postbreeding_migration,Post-breeding Migration,1.537,9.337,147,2023-07-19
+Bar-tailed Godwit,5,#e8527a,Germany,DEU,Europe,prebreeding_migration,Pre-breeding Migration,1.029,5.148,70,2023-05-24
+Bar-tailed Godwit,5,#e8527a,Denmark,DNK,Europe,breeding,Breeding,2.211,3.58,21,2023-06-14
+Bar-tailed Godwit,5,#e8527a,Denmark,DNK,Europe,nonbreeding,Non-breeding,0.041,0.126,91,2023-01-25
+Bar-tailed Godwit,5,#e8527a,Denmark,DNK,Europe,postbreeding_migration,Post-breeding Migration,0.508,4.056,147,2023-07-19
+Bar-tailed Godwit,5,#e8527a,Denmark,DNK,Europe,prebreeding_migration,Pre-breeding Migration,0.529,4.03,77,2023-05-24
+Bar-tailed Godwit,5,#e8527a,Egypt,EGY,Africa,nonbreeding,Non-breeding,0.013,0.014,0,2023-03-01
+Bar-tailed Godwit,5,#e8527a,Egypt,EGY,Africa,prebreeding_migration,Pre-breeding Migration,0.011,0.032,0,2023-03-15
+Bar-tailed Godwit,5,#e8527a,England,ENG,Europe,breeding,Breeding,4.07,4.582,21,2023-06-21
+Bar-tailed Godwit,5,#e8527a,England,ENG,Europe,nonbreeding,Non-breeding,3.182,5.503,98,2023-01-04
+Bar-tailed Godwit,5,#e8527a,England,ENG,Europe,postbreeding_migration,Post-breeding Migration,1.518,5.083,147,2023-09-13
+Bar-tailed Godwit,5,#e8527a,England,ENG,Europe,prebreeding_migration,Pre-breeding Migration,0.273,3.694,98,2023-06-07
+Bar-tailed Godwit,5,#e8527a,Eritrea,ERI,Africa,nonbreeding,Non-breeding,0.174,0.152,28,2023-02-22
+Bar-tailed Godwit,5,#e8527a,Eritrea,ERI,Africa,prebreeding_migration,Pre-breeding Migration,0.016,0.02,7,2023-03-29
+Bar-tailed Godwit,5,#e8527a,Spain,ESP,Europe,breeding,Breeding,0.341,0.396,21,2023-06-21
+Bar-tailed Godwit,5,#e8527a,Spain,ESP,Europe,nonbreeding,Non-breeding,0.362,1.238,98,2023-01-04
+Bar-tailed Godwit,5,#e8527a,Spain,ESP,Europe,postbreeding_migration,Post-breeding Migration,0.208,0.626,147,2023-09-13
+Bar-tailed Godwit,5,#e8527a,Spain,ESP,Europe,prebreeding_migration,Pre-breeding Migration,0.058,0.312,98,2023-06-07
+Bar-tailed Godwit,5,#e8527a,Estonia,EST,Europe,postbreeding_migration,Post-breeding Migration,0.083,0.634,105,2023-07-19
+Bar-tailed Godwit,5,#e8527a,Estonia,EST,Europe,prebreeding_migration,Pre-breeding Migration,0.124,1.209,49,2023-05-31
+Bar-tailed Godwit,5,#e8527a,Finland,FIN,Europe,breeding,Breeding,0.305,0.429,21,2023-06-28
+Bar-tailed Godwit,5,#e8527a,Finland,FIN,Europe,postbreeding_migration,Post-breeding Migration,0.241,1.482,112,2023-07-19
+Bar-tailed Godwit,5,#e8527a,Finland,FIN,Europe,prebreeding_migration,Pre-breeding Migration,0.35,2.6,63,2023-05-24
+Bar-tailed Godwit,5,#e8527a,Fiji,FJI,Oceania,nonbreeding,Non-breeding,0.018,0.061,35,2023-01-11
+Bar-tailed Godwit,5,#e8527a,France,FRA,Europe,breeding,Breeding,0.022,0.037,0,2023-06-14
+Bar-tailed Godwit,5,#e8527a,France,FRA,Europe,nonbreeding,Non-breeding,0.832,4.292,98,2023-01-11
+Bar-tailed Godwit,5,#e8527a,France,FRA,Europe,postbreeding_migration,Post-breeding Migration,0.3,0.907,140,2023-09-27
+Bar-tailed Godwit,5,#e8527a,France,FRA,Europe,prebreeding_migration,Pre-breeding Migration,0.092,0.276,98,2023-05-10
+Bar-tailed Godwit,5,#e8527a,Guinea,GIN,Africa,nonbreeding,Non-breeding,0.098,0.076,28,2023-11-29
+Bar-tailed Godwit,5,#e8527a,Guinea,GIN,Africa,postbreeding_migration,Post-breeding Migration,0.065,0.043,14,2023-11-15
+Bar-tailed Godwit,5,#e8527a,Guinea,GIN,Africa,prebreeding_migration,Pre-breeding Migration,0.252,0.375,42,2023-03-29
+Bar-tailed Godwit,5,#e8527a,Gambia,GMB,Africa,nonbreeding,Non-breeding,0.11,0.324,98,2023-01-25
+Bar-tailed Godwit,5,#e8527a,Gambia,GMB,Africa,postbreeding_migration,Post-breeding Migration,0.138,0.379,70,2023-10-18
+Bar-tailed Godwit,5,#e8527a,Gambia,GMB,Africa,prebreeding_migration,Pre-breeding Migration,0.063,0.128,56,2023-03-15
+Bar-tailed Godwit,5,#e8527a,Guinea Bissau,GNB,Africa,nonbreeding,Non-breeding,1.022,2.532,98,2023-01-18
+Bar-tailed Godwit,5,#e8527a,Guinea Bissau,GNB,Africa,postbreeding_migration,Post-breeding Migration,0.547,0.829,56,2023-10-18
+Bar-tailed Godwit,5,#e8527a,Guinea Bissau,GNB,Africa,prebreeding_migration,Pre-breeding Migration,0.7,1.595,56,2023-03-15
+Bar-tailed Godwit,5,#e8527a,Greece,GRC,Europe,postbreeding_migration,Post-breeding Migration,0.012,0.091,56,2023-10-04
+Bar-tailed Godwit,5,#e8527a,Indonesia,IDN,Asia,nonbreeding,Non-breeding,1.704,2.682,21,2023-11-29
+Bar-tailed Godwit,5,#e8527a,Indonesia,IDN,Asia,postbreeding_migration,Post-breeding Migration,4.1,7.332,84,2023-11-15
+Bar-tailed Godwit,5,#e8527a,Indonesia,IDN,Asia,prebreeding_migration,Pre-breeding Migration,0.247,1.706,28,2023-03-15
+Bar-tailed Godwit,5,#e8527a,Isle of Man,IMN,Europe,breeding,Breeding,0.011,0.014,21,2023-06-14
+Bar-tailed Godwit,5,#e8527a,India,IND,Asia,nonbreeding,Non-breeding,1.529,4.665,98,2023-01-04
+Bar-tailed Godwit,5,#e8527a,India,IND,Asia,postbreeding_migration,Post-breeding Migration,0.533,1.096,98,2023-10-04
+Bar-tailed Godwit,5,#e8527a,India,IND,Asia,prebreeding_migration,Pre-breeding Migration,0.21,0.967,56,2023-03-15
+Bar-tailed Godwit,5,#e8527a,Ireland,IRL,Europe,breeding,Breeding,0.711,0.766,21,2023-06-14
+Bar-tailed Godwit,5,#e8527a,Ireland,IRL,Europe,nonbreeding,Non-breeding,1.466,2.37,98,2023-03-01
+Bar-tailed Godwit,5,#e8527a,Ireland,IRL,Europe,postbreeding_migration,Post-breeding Migration,0.607,1.732,147,2023-09-13
+Bar-tailed Godwit,5,#e8527a,Ireland,IRL,Europe,prebreeding_migration,Pre-breeding Migration,0.144,1.884,98,2023-03-08
+Bar-tailed Godwit,5,#e8527a,Iran,IRN,Asia,breeding,Breeding,2.939,3.283,21,2023-06-14
+Bar-tailed Godwit,5,#e8527a,Iran,IRN,Asia,nonbreeding,Non-breeding,2.279,3.886,98,2023-03-01
+Bar-tailed Godwit,5,#e8527a,Iran,IRN,Asia,postbreeding_migration,Post-breeding Migration,2.454,6.91,147,2023-11-01
+Bar-tailed Godwit,5,#e8527a,Iran,IRN,Asia,prebreeding_migration,Pre-breeding Migration,0.92,5.048,98,2023-03-15
+Bar-tailed Godwit,5,#e8527a,Iraq,IRQ,Asia,breeding,Breeding,0.079,0.137,0,2023-06-14
+Bar-tailed Godwit,5,#e8527a,Iraq,IRQ,Asia,nonbreeding,Non-breeding,0.05,0.12,21,2023-03-01
+Bar-tailed Godwit,5,#e8527a,Iraq,IRQ,Asia,postbreeding_migration,Post-breeding Migration,0.161,0.906,63,2023-10-04
+Bar-tailed Godwit,5,#e8527a,Iraq,IRQ,Asia,prebreeding_migration,Pre-breeding Migration,0.046,0.191,84,2023-04-05
+Bar-tailed Godwit,5,#e8527a,Japan,JPN,Asia,postbreeding_migration,Post-breeding Migration,0.394,1.658,91,2023-09-06
+Bar-tailed Godwit,5,#e8527a,Japan,JPN,Asia,prebreeding_migration,Pre-breeding Migration,0.211,1.139,63,2023-04-05
+Bar-tailed Godwit,5,#e8527a,Kenya,KEN,Africa,postbreeding_migration,Post-breeding Migration,0.069,0.132,63,2023-09-20
+Bar-tailed Godwit,5,#e8527a,Cambodia,KHM,Asia,postbreeding_migration,Post-breeding Migration,0.067,0.083,91,2023-11-15
+Bar-tailed Godwit,5,#e8527a,Cambodia,KHM,Asia,prebreeding_migration,Pre-breeding Migration,0.025,0.089,28,2023-03-15
+Bar-tailed Godwit,5,#e8527a,South Korea,KOR,Asia,postbreeding_migration,Post-breeding Migration,2.98,8.109,112,2023-08-23
+Bar-tailed Godwit,5,#e8527a,South Korea,KOR,Asia,prebreeding_migration,Pre-breeding Migration,9.598,14.074,77,2023-05-17
+Bar-tailed Godwit,5,#e8527a,Kuwait,KWT,Asia,breeding,Breeding,0.391,0.488,21,2023-06-14
+Bar-tailed Godwit,5,#e8527a,Kuwait,KWT,Asia,nonbreeding,Non-breeding,0.067,0.147,98,2023-01-04
+Bar-tailed Godwit,5,#e8527a,Kuwait,KWT,Asia,postbreeding_migration,Post-breeding Migration,0.08,0.263,147,2023-07-05
+Bar-tailed Godwit,5,#e8527a,Kuwait,KWT,Asia,prebreeding_migration,Pre-breeding Migration,0.06,0.376,98,2023-06-07
+Bar-tailed Godwit,5,#e8527a,Sri Lanka,LKA,Asia,nonbreeding,Non-breeding,0.123,0.41,91,2023-12-27
+Bar-tailed Godwit,5,#e8527a,Latvia,LVA,Europe,postbreeding_migration,Post-breeding Migration,0.018,0.097,98,2023-07-19
+Bar-tailed Godwit,5,#e8527a,Morocco,MAR,Africa,nonbreeding,Non-breeding,0.641,1.605,98,2023-02-22
+Bar-tailed Godwit,5,#e8527a,Morocco,MAR,Africa,postbreeding_migration,Post-breeding Migration,0.209,0.516,91,2023-09-20
+Bar-tailed Godwit,5,#e8527a,Morocco,MAR,Africa,prebreeding_migration,Pre-breeding Migration,0.175,1.221,70,2023-03-08
+Bar-tailed Godwit,5,#e8527a,Myanmar,MMR,Asia,nonbreeding,Non-breeding,0.05,0.1,14,2023-03-01
+Bar-tailed Godwit,5,#e8527a,Myanmar,MMR,Asia,postbreeding_migration,Post-breeding Migration,0.049,0.084,70,2023-11-22
+Bar-tailed Godwit,5,#e8527a,Myanmar,MMR,Asia,prebreeding_migration,Pre-breeding Migration,0.02,0.159,49,2023-03-08
+Bar-tailed Godwit,5,#e8527a,Mozambique,MOZ,Africa,nonbreeding,Non-breeding,0.277,0.195,7,2023-11-29
+Bar-tailed Godwit,5,#e8527a,Mozambique,MOZ,Africa,postbreeding_migration,Post-breeding Migration,0.179,0.093,35,2023-11-22
+Bar-tailed Godwit,5,#e8527a,Mauritania,MRT,Africa,nonbreeding,Non-breeding,3.903,9.118,98,2023-02-01
+Bar-tailed Godwit,5,#e8527a,Mauritania,MRT,Africa,postbreeding_migration,Post-breeding Migration,0.156,0.374,70,2023-10-18
+Bar-tailed Godwit,5,#e8527a,Mauritania,MRT,Africa,prebreeding_migration,Pre-breeding Migration,0.306,1.35,63,2023-03-08
+Bar-tailed Godwit,5,#e8527a,Malaysia,MYS,Asia,nonbreeding,Non-breeding,2.722,3.737,98,2023-01-18
+Bar-tailed Godwit,5,#e8527a,Malaysia,MYS,Asia,postbreeding_migration,Post-breeding Migration,1.975,3.754,133,2023-11-15
+Bar-tailed Godwit,5,#e8527a,Malaysia,MYS,Asia,prebreeding_migration,Pre-breeding Migration,0.377,3.536,91,2023-03-08
+Bar-tailed Godwit,5,#e8527a,Namibia,NAM,Africa,nonbreeding,Non-breeding,0.253,0.201,7,2023-11-29
+Bar-tailed Godwit,5,#e8527a,Namibia,NAM,Africa,postbreeding_migration,Post-breeding Migration,0.715,2.413,84,2023-10-18
+Bar-tailed Godwit,5,#e8527a,Northern Ireland,NIR,Europe,breeding,Breeding,0.097,0.105,21,2023-06-14
+Bar-tailed Godwit,5,#e8527a,Northern Ireland,NIR,Europe,nonbreeding,Non-breeding,0.171,0.426,98,2023-01-04
+Bar-tailed Godwit,5,#e8527a,Northern Ireland,NIR,Europe,postbreeding_migration,Post-breeding Migration,0.072,0.195,147,2023-07-19
+Bar-tailed Godwit,5,#e8527a,Northern Ireland,NIR,Europe,prebreeding_migration,Pre-breeding Migration,0.017,0.17,98,2023-03-08
+Bar-tailed Godwit,5,#e8527a,Netherlands,NLD,Europe,breeding,Breeding,3.575,3.83,21,2023-06-14
+Bar-tailed Godwit,5,#e8527a,Netherlands,NLD,Europe,nonbreeding,Non-breeding,0.393,0.681,98,2023-01-18
+Bar-tailed Godwit,5,#e8527a,Netherlands,NLD,Europe,postbreeding_migration,Post-breeding Migration,2.014,8.848,147,2023-07-19
+Bar-tailed Godwit,5,#e8527a,Netherlands,NLD,Europe,prebreeding_migration,Pre-breeding Migration,0.84,3.879,98,2023-06-07
+Bar-tailed Godwit,5,#e8527a,Norway,NOR,Europe,breeding,Breeding,2.877,3.279,21,2023-06-28
+Bar-tailed Godwit,5,#e8527a,Norway,NOR,Europe,postbreeding_migration,Post-breeding Migration,0.392,1.505,105,2023-07-05
+Bar-tailed Godwit,5,#e8527a,Norway,NOR,Europe,prebreeding_migration,Pre-breeding Migration,0.086,1.267,70,2023-06-07
+Bar-tailed Godwit,5,#e8527a,New Zealand,NZL,Oceania,breeding,Breeding,34.291,36.838,21,2023-06-21
+Bar-tailed Godwit,5,#e8527a,New Zealand,NZL,Oceania,nonbreeding,Non-breeding,30.737,47.45,98,2023-12-27
+Bar-tailed Godwit,5,#e8527a,New Zealand,NZL,Oceania,postbreeding_migration,Post-breeding Migration,15.815,35.403,147,2023-10-04
+Bar-tailed Godwit,5,#e8527a,New Zealand,NZL,Oceania,prebreeding_migration,Pre-breeding Migration,3.101,34.728,98,2023-03-08
+Bar-tailed Godwit,5,#e8527a,Oman,OMN,Asia,breeding,Breeding,0.2,0.22,21,2023-06-21
+Bar-tailed Godwit,5,#e8527a,Oman,OMN,Asia,nonbreeding,Non-breeding,1.804,5.13,98,2023-03-01
+Bar-tailed Godwit,5,#e8527a,Oman,OMN,Asia,postbreeding_migration,Post-breeding Migration,4.517,14.05,147,2023-10-25
+Bar-tailed Godwit,5,#e8527a,Oman,OMN,Asia,prebreeding_migration,Pre-breeding Migration,5.352,20.577,56,2023-03-15
+Bar-tailed Godwit,5,#e8527a,Pakistan,PAK,Asia,nonbreeding,Non-breeding,0.411,0.57,21,2023-01-25
+Bar-tailed Godwit,5,#e8527a,Pakistan,PAK,Asia,postbreeding_migration,Post-breeding Migration,0.778,1.946,63,2023-10-25
+Bar-tailed Godwit,5,#e8527a,Pakistan,PAK,Asia,prebreeding_migration,Pre-breeding Migration,0.218,0.831,56,2023-03-15
+Bar-tailed Godwit,5,#e8527a,Philippines,PHL,Asia,nonbreeding,Non-breeding,0.611,2.366,98,2023-01-11
+Bar-tailed Godwit,5,#e8527a,Philippines,PHL,Asia,postbreeding_migration,Post-breeding Migration,0.231,0.246,84,2023-10-11
+Bar-tailed Godwit,5,#e8527a,Philippines,PHL,Asia,prebreeding_migration,Pre-breeding Migration,0.047,0.13,7,2023-03-08
+Bar-tailed Godwit,5,#e8527a,Poland,POL,Europe,postbreeding_migration,Post-breeding Migration,0.057,0.313,119,2023-07-19
+Bar-tailed Godwit,5,#e8527a,North Korea,PRK,Asia,postbreeding_migration,Post-breeding Migration,2.01,4.954,105,2023-08-23
+Bar-tailed Godwit,5,#e8527a,North Korea,PRK,Asia,prebreeding_migration,Pre-breeding Migration,18.516,25.78,77,2023-05-03
+Bar-tailed Godwit,5,#e8527a,Portugal,PRT,Europe,breeding,Breeding,0.112,0.126,21,2023-06-14
+Bar-tailed Godwit,5,#e8527a,Portugal,PRT,Europe,nonbreeding,Non-breeding,0.166,0.316,98,2023-12-27
+Bar-tailed Godwit,5,#e8527a,Portugal,PRT,Europe,postbreeding_migration,Post-breeding Migration,0.113,0.414,147,2023-09-27
+Bar-tailed Godwit,5,#e8527a,Portugal,PRT,Europe,prebreeding_migration,Pre-breeding Migration,0.026,0.128,98,2023-06-07
+Bar-tailed Godwit,5,#e8527a,Qatar,QAT,Asia,breeding,Breeding,0.281,0.328,21,2023-06-14
+Bar-tailed Godwit,5,#e8527a,Qatar,QAT,Asia,nonbreeding,Non-breeding,0.185,0.323,98,2023-01-18
+Bar-tailed Godwit,5,#e8527a,Qatar,QAT,Asia,postbreeding_migration,Post-breeding Migration,0.165,0.305,147,2023-07-19
+Bar-tailed Godwit,5,#e8527a,Qatar,QAT,Asia,prebreeding_migration,Pre-breeding Migration,0.053,0.339,98,2023-03-15
+Bar-tailed Godwit,5,#e8527a,Russia,RUS,Asia,breeding,Breeding,3.077,3.075,21,2023-06-28
+Bar-tailed Godwit,5,#e8527a,Russia,RUS,Asia,postbreeding_migration,Post-breeding Migration,0.325,1.85,21,2023-07-05
+Bar-tailed Godwit,5,#e8527a,Russia,RUS,Asia,prebreeding_migration,Pre-breeding Migration,0.186,2.003,21,2023-06-07
+Bar-tailed Godwit,5,#e8527a,Western Sahara,SAH,Africa,nonbreeding,Non-breeding,0.048,0.159,98,2023-02-01
+Bar-tailed Godwit,5,#e8527a,Saudi Arabia,SAU,Asia,breeding,Breeding,1.028,1.234,21,2023-06-14
+Bar-tailed Godwit,5,#e8527a,Saudi Arabia,SAU,Asia,nonbreeding,Non-breeding,1.65,2.432,98,2023-01-18
+Bar-tailed Godwit,5,#e8527a,Saudi Arabia,SAU,Asia,postbreeding_migration,Post-breeding Migration,0.952,1.469,147,2023-09-20
+Bar-tailed Godwit,5,#e8527a,Saudi Arabia,SAU,Asia,prebreeding_migration,Pre-breeding Migration,0.376,1.457,63,2023-03-15
+Bar-tailed Godwit,5,#e8527a,Scotland,SCT,Europe,breeding,Breeding,1.398,1.556,21,2023-06-28
+Bar-tailed Godwit,5,#e8527a,Scotland,SCT,Europe,nonbreeding,Non-breeding,0.823,1.928,98,2023-01-04
+Bar-tailed Godwit,5,#e8527a,Scotland,SCT,Europe,postbreeding_migration,Post-breeding Migration,0.618,1.964,147,2023-09-20
+Bar-tailed Godwit,5,#e8527a,Scotland,SCT,Europe,prebreeding_migration,Pre-breeding Migration,0.134,1.27,98,2023-06-07
+Bar-tailed Godwit,5,#e8527a,Sudan,SDN,Africa,nonbreeding,Non-breeding,0.164,0.135,0,2023-03-01
+Bar-tailed Godwit,5,#e8527a,Sudan,SDN,Africa,prebreeding_migration,Pre-breeding Migration,0.041,0.07,0,2023-03-15
+Bar-tailed Godwit,5,#e8527a,Senegal,SEN,Africa,nonbreeding,Non-breeding,1.163,5.441,98,2023-01-11
+Bar-tailed Godwit,5,#e8527a,Senegal,SEN,Africa,postbreeding_migration,Post-breeding Migration,0.631,1.76,70,2023-10-18
+Bar-tailed Godwit,5,#e8527a,Senegal,SEN,Africa,prebreeding_migration,Pre-breeding Migration,0.246,0.673,63,2023-03-15
+Bar-tailed Godwit,5,#e8527a,Sweden,SWE,Europe,breeding,Breeding,0.342,0.413,21,2023-06-28
+Bar-tailed Godwit,5,#e8527a,Sweden,SWE,Europe,postbreeding_migration,Post-breeding Migration,0.381,2.709,140,2023-07-19
+Bar-tailed Godwit,5,#e8527a,Sweden,SWE,Europe,prebreeding_migration,Pre-breeding Migration,0.109,0.647,77,2023-05-24
+Bar-tailed Godwit,5,#e8527a,Thailand,THA,Asia,nonbreeding,Non-breeding,0.695,1.379,98,2023-03-01
+Bar-tailed Godwit,5,#e8527a,Thailand,THA,Asia,postbreeding_migration,Post-breeding Migration,0.572,1.02,126,2023-11-15
+Bar-tailed Godwit,5,#e8527a,Thailand,THA,Asia,prebreeding_migration,Pre-breeding Migration,0.168,1.403,84,2023-03-08
+Bar-tailed Godwit,5,#e8527a,East Timor,TLS,Asia,postbreeding_migration,Post-breeding Migration,0.012,0.017,70,2023-11-08
+Bar-tailed Godwit,5,#e8527a,United Republic of Tanzania,TZA,Africa,postbreeding_migration,Post-breeding Migration,0.082,0.157,63,2023-09-27
+Bar-tailed Godwit,5,#e8527a,United States,USA,North America,breeding,Breeding,11.23,15.357,21,2023-06-14
+Bar-tailed Godwit,5,#e8527a,United States,USA,North America,postbreeding_migration,Post-breeding Migration,0.38,1.61,14,2023-07-05
+Bar-tailed Godwit,5,#e8527a,United States,USA,North America,prebreeding_migration,Pre-breeding Migration,1.298,27.291,28,2023-06-07
+Bar-tailed Godwit,5,#e8527a,Vietnam,VNM,Asia,postbreeding_migration,Post-breeding Migration,0.138,0.222,35,2023-09-13
+Bar-tailed Godwit,5,#e8527a,Wales,WLS,Europe,breeding,Breeding,0.191,0.218,21,2023-06-21
+Bar-tailed Godwit,5,#e8527a,Wales,WLS,Europe,nonbreeding,Non-breeding,0.165,0.304,98,2023-12-27
+Bar-tailed Godwit,5,#e8527a,Wales,WLS,Europe,postbreeding_migration,Post-breeding Migration,0.083,0.288,147,2023-07-19
+Bar-tailed Godwit,5,#e8527a,Wales,WLS,Europe,prebreeding_migration,Pre-breeding Migration,0.036,0.167,98,2023-03-08
+Bar-tailed Godwit,5,#e8527a,Yemen,YEM,Asia,nonbreeding,Non-breeding,0.458,0.802,49,2023-01-18
+Bar-tailed Godwit,5,#e8527a,Yemen,YEM,Asia,postbreeding_migration,Post-breeding Migration,0.088,0.257,7,2023-10-25
+Bar-tailed Godwit,5,#e8527a,Yemen,YEM,Asia,prebreeding_migration,Pre-breeding Migration,0.048,0.057,14,2023-03-29
+Bar-tailed Godwit,5,#e8527a,South Africa,ZAF,Africa,nonbreeding,Non-breeding,0.055,0.118,77,2023-01-04
+Bar-tailed Godwit,5,#e8527a,South Africa,ZAF,Africa,postbreeding_migration,Post-breeding Migration,0.041,0.073,49,2023-10-25
+Far Eastern Curlew,6,#f0a500,Australia,AUS,Oceania,nonbreeding,Non-breeding,80.853,97.769,91,2023-12-20
+Far Eastern Curlew,6,#f0a500,Australia,AUS,Oceania,postbreeding_migration,Post-breeding Migration,7.675,79.542,154,2023-11-22
+Far Eastern Curlew,6,#f0a500,Australia,AUS,Oceania,prebreeding_migration,Pre-breeding Migration,5.399,94.137,98,2023-03-01
+Far Eastern Curlew,6,#f0a500,Brunei,BRN,Asia,nonbreeding,Non-breeding,0.095,0.274,14,2023-01-25
+Far Eastern Curlew,6,#f0a500,Brunei,BRN,Asia,postbreeding_migration,Post-breeding Migration,0.021,0.251,14,2023-11-15
+Far Eastern Curlew,6,#f0a500,China,CHN,Asia,postbreeding_migration,Post-breeding Migration,35.441,60.425,147,2023-07-12
+Far Eastern Curlew,6,#f0a500,China,CHN,Asia,prebreeding_migration,Pre-breeding Migration,46.463,49.642,84,2023-04-19
+Far Eastern Curlew,6,#f0a500,Indonesia,IDN,Asia,nonbreeding,Non-breeding,8.883,5.992,70,2023-11-29
+Far Eastern Curlew,6,#f0a500,Indonesia,IDN,Asia,postbreeding_migration,Post-breeding Migration,0.772,7.493,70,2023-11-22
+Far Eastern Curlew,6,#f0a500,Indonesia,IDN,Asia,prebreeding_migration,Pre-breeding Migration,0.071,0.575,7,2023-03-01
+Far Eastern Curlew,6,#f0a500,Japan,JPN,Asia,postbreeding_migration,Post-breeding Migration,6.203,13.633,105,2023-08-23
+Far Eastern Curlew,6,#f0a500,Japan,JPN,Asia,prebreeding_migration,Pre-breeding Migration,0.579,3.071,56,2023-03-29
+Far Eastern Curlew,6,#f0a500,South Korea,KOR,Asia,postbreeding_migration,Post-breeding Migration,28.187,42.32,147,2023-08-09
+Far Eastern Curlew,6,#f0a500,South Korea,KOR,Asia,prebreeding_migration,Pre-breeding Migration,24.491,42.467,91,2023-03-15
+Far Eastern Curlew,6,#f0a500,Malaysia,MYS,Asia,nonbreeding,Non-breeding,6.51,9.502,77,2023-01-25
+Far Eastern Curlew,6,#f0a500,Malaysia,MYS,Asia,postbreeding_migration,Post-breeding Migration,0.772,8.219,70,2023-11-15
+Far Eastern Curlew,6,#f0a500,Malaysia,MYS,Asia,prebreeding_migration,Pre-breeding Migration,0.187,1.29,63,2023-03-01
+Far Eastern Curlew,6,#f0a500,New Zealand,NZL,Oceania,nonbreeding,Non-breeding,0.016,0.038,7,2023-02-15
+Far Eastern Curlew,6,#f0a500,Philippines,PHL,Asia,nonbreeding,Non-breeding,3.304,6.652,91,2023-02-01
+Far Eastern Curlew,6,#f0a500,Philippines,PHL,Asia,postbreeding_migration,Post-breeding Migration,1.828,10.591,70,2023-11-15
+Far Eastern Curlew,6,#f0a500,Philippines,PHL,Asia,prebreeding_migration,Pre-breeding Migration,0.38,3.559,49,2023-03-01
+Far Eastern Curlew,6,#f0a500,North Korea,PRK,Asia,postbreeding_migration,Post-breeding Migration,15.815,20.81,140,2023-06-28
+Far Eastern Curlew,6,#f0a500,North Korea,PRK,Asia,prebreeding_migration,Pre-breeding Migration,22.096,33.673,91,2023-05-03
+Far Eastern Curlew,6,#f0a500,Russia,RUS,Asia,postbreeding_migration,Post-breeding Migration,3.221,2.176,21,2023-08-23
+Far Eastern Curlew,6,#f0a500,Russia,RUS,Asia,prebreeding_migration,Pre-breeding Migration,0.276,1.494,21,2023-05-17
+Far Eastern Curlew,6,#f0a500,Thailand,THA,Asia,nonbreeding,Non-breeding,0.076,0.177,56,2023-02-15
+Far Eastern Curlew,6,#f0a500,Thailand,THA,Asia,prebreeding_migration,Pre-breeding Migration,0.012,0.111,56,2023-03-01
+Far Eastern Curlew,6,#f0a500,East Timor,TLS,Asia,nonbreeding,Non-breeding,0.149,0.299,91,2023-01-04
+Far Eastern Curlew,6,#f0a500,East Timor,TLS,Asia,postbreeding_migration,Post-breeding Migration,0.024,0.191,126,2023-11-15
+Far Eastern Curlew,6,#f0a500,Taiwan,TWN,Asia,nonbreeding,Non-breeding,0.032,0.075,91,2023-02-22
+Far Eastern Curlew,6,#f0a500,Taiwan,TWN,Asia,prebreeding_migration,Pre-breeding Migration,0.026,0.108,91,2023-03-01

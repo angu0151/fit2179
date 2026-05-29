@@ -1,0 +1,15 @@
+species,aus_status,pct_change,ci_lower,ci_upper,pct_annual_change,trend_category,colour
+Black-tailed Godwit,Endangered,-77.5,-89.93,-50.41,-5.51,Endangered (>50% decline),#dc2626
+Eastern Curlew,Endangered,-63.64,-72.84,-51.61,-5.2,Endangered (>50% decline),#dc2626
+Common Greenshank,Vulnerable,-60.49,-77.94,-31.13,-4.48,Endangered (>50% decline),#dc2626
+Curlew Sandpiper,Endangered,-52.99,-72.34,-18.76,-6.44,Endangered (>50% decline),#dc2626
+Nunivak Bar-tailed Godwit,Endangered,-47.19,-64.56,-23.2,-2.56,Vulnerable (>30% decline),#f97316
+Grey Plover,Vulnerable,-37.04,-63.56,8.96,-1.87,Vulnerable (>30% decline),#f97316
+Great Knot,Near Threatened,-32.41,-69.2,48.48,-2.1,Vulnerable (>30% decline),#f97316
+Ruddy Turnstone,Endangered,-26.11,-53.57,21.81,-1.56,Stable (<30% decline),#94a3b8
+Terek Sandpiper,Vulnerable,-19.59,-77.44,222.2,-1.53,Stable (<30% decline),#94a3b8
+Latham's Snipe,Vulnerable,-16.8,-85.29,404.3,-1.84,Stable (<30% decline),#94a3b8
+Greater Sand Plover,Near Threatened,-14.09,-75.15,226.0,-0.76,Stable (<30% decline),#94a3b8
+N. Siberian Bar-tailed Godwit,Endangered,-6.3,-66.96,152.6,-0.23,Stable (<30% decline),#94a3b8
+Red Knot,Vulnerable,6.11,-63.93,207.4,0.29,Increasing,#16a34a
+Sharp-tailed Sandpiper,Vulnerable,19.77,-51.86,235.2,1.22,Increasing,#16a34a
