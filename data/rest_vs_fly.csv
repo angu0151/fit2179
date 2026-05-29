@@ -1,9 +1,0 @@
-species,state,days,total,pct
-Barn Swallow,Flying (>20 km/day),174,1000,17.4
-Barn Swallow,Resting (<20 km/day),826,1000,82.6
-Grey Plover,Flying (>20 km/day),658,1000,65.8
-Grey Plover,Resting (<20 km/day),342,1000,34.2
-Red Knot,Flying (>20 km/day),54,55,98.2
-Red Knot,Resting (<20 km/day),1,55,1.8
-Upland Sandpiper,Flying (>20 km/day),51,117,43.6
-Upland Sandpiper,Resting (<20 km/day),66,117,56.4
