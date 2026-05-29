@@ -22,7 +22,8 @@ body{font-family:var(--fb);background:var(--bg);color:var(--text);line-height:1.
 
 /* heading title */
 .hero{background:linear-gradient(150deg,#1a5f8a 0%,#1e6fa0 55%,#1a7ab5 100%);
-  padding:5rem 7% 4.5rem;overflow:hidden;border-bottom:4px solid var(--accent);position:relative}
+  padding:5rem 0 4.5rem;overflow:hidden;border-bottom:4px solid var(--accent);position:relative}
+.hero-inner{max-width:1140px;margin:0 auto;padding:0 5%}
 .hero::after{content:'';position:absolute;inset:0;
   background:radial-gradient(ellipse 70% 60% at 85% 30%,rgba(255,255,255,0.06) 0%,transparent 65%);
   pointer-events:none}
@@ -160,6 +161,7 @@ footer a{color:var(--accent);text-decoration:none}
 
 <!-- title heading -->
 <header class="hero">
+  <div class="hero-inner">
   <div class="hero-eyebrow">FIT2179 · DV2 · Annie Nguyen · 33898855</div>
   <h1>On the <em>Wing</em></h1>
 
@@ -177,6 +179,7 @@ footer a{color:var(--accent);text-decoration:none}
     <span class="sp-tag" style="color:var(--c4)"><span class="sp-dot" style="background:var(--c4)"></span>Red Knot</span>
     <span class="sp-tag" style="color:var(--c5)"><span class="sp-dot" style="background:var(--c5)"></span>Bar-tailed Godwit</span>
     <span class="sp-tag" style="color:var(--c6)"><span class="sp-dot" style="background:var(--c6)"></span>Far Eastern Curlew</span>
+  </div>
   </div>
 </header>
 
